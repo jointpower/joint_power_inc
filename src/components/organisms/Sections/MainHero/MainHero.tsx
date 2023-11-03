@@ -16,30 +16,33 @@ const MainHero = () => {
 
   return (
     <Dialog open={show}>
-      <div className="container flex flex-col items-center w-full my-32 text-black md:flex-row gap-20">
+      <div className="container flex flex-col items-center w-full my-32 text-black md:flex-row gap-14">
         <div className="flex flex-col ">
           <div className={`w-[100%] md:mx-0 mt-5`}>
             <Heading
               level={1}
-              className="text-[40px] md:text-[40px] lg:text-[65px] uppercase  w-full flex-1 font-bold md:mb-[30px]"
+              className="text-[40px] md:text-[40px] lg:text-[60px] uppercase  w-full flex-1 font-bold md:mb-[30px]"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
                 {" "}
                 Joint{" "}
               </span>
-              <span className="text-[40px] lg:text-[65px] text-secondary ">
+              <span className="text-[40px] lg:text-[60px] text-secondary ">
                 Power
-              </span>
-              <span className="text-[38px] md:text-[40px] lg:text-[65px] text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
+              </span>{" "}
+              <br className="hidden md:block" />
+              <span className="text-[38px] md:text-[40px] lg:text-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
                 {" "}
                 Security{" "}
               </span>
-              <span className="text-[38px]  md:text-[40px] lg:text-[65px] text-secondary ">
-                Services Incorporation.
+              <span className="text-[38px]  md:text-[40px] lg:text-[60px] text-secondary ">
+                Services
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-[#2D324B] from-secondary"> Incorporation.</span>
               </span>
             </Heading>
-            <Text className="font-medium mt-3 w-[84%] xl:w-[85%] leading-loose md:leading-snug text-lg md:text-[30px]">
-              The best security guard company in California. We are watching over you!!
+            <Text className=" text-gray-600 font-medium mt-3 w-[84%] xl:w-[85%] leading-loose md:leading-snug text-lg md:text-[30px]">
+              The best security guard company in California. We are watching
+              over you!!
             </Text>
           </div>
           <div>
@@ -56,7 +59,7 @@ const MainHero = () => {
           <NextImage
             src={HeroImage}
             alt="contactUs-hero image"
-            className="w-[384px] md:w-full h-[290.5px] md:hidden"
+            className="w-[400px] md:w-full h-[290.5px] md:hidden"
             priority
           />
           <NextImage

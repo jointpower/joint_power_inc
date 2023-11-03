@@ -99,7 +99,7 @@ const ContactDetails = () => {
           onChange={(e) => setComment(e.target.value)}
           value={comment}
           required={true}
-          className="p-5 border border-line lg:w-[431px] text-grey-2 h-[150px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
+          className="p-5 border border-line lg:w-[431px] text-grey-2 h-[130px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
         />
         <button
           type="submit"

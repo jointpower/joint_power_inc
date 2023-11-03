@@ -11,10 +11,10 @@ import { GrClose } from 'react-icons/gr';
 const Header = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="z-10 fixed left-0 right-0 top-0 bg-white md:shadow-xl">
+    <header className="z-10 fixed left-0 right-0 top-0 bg-white md:shadow">
       <div
         className="md:flex items-center left-0 right-0 container
-            bg-primary md:bg-white md:text-grey-1 justify-between md:flex-row flex py-2"
+            bg-primary md:bg-white md:text-grey-1 justify-between md:flex-row flex py-3"
       >
         <Links url="/" className="">
           <NextImage className="w-20 h-12" src={JpsLogo} alt="brand_logo" />
