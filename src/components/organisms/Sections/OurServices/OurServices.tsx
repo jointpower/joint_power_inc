@@ -12,8 +12,8 @@ const OurServices = () => {
   return (
     <section className="mt-20">
       <Heading
-        className="text-black font-medium text-center  md:text-[25.36px] lg:tracking-[16px] tracking-[12px]"
-        level={2}
+        className="text-black font-medium text-center  md:text-[30px]  tracking-[5px]"
+        level={1}
       >
         OUR SERVICES
       </Heading>
