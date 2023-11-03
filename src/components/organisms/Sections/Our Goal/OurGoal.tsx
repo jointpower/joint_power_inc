@@ -40,7 +40,7 @@ export const OurGoal = () => {
   return (
     <section className="flex flex-col">
       <div className="container">
-        <div className="flex flex-col justify-between gap-2 text-white md:flex-row bg bg-normal h-max">
+        <div className="flex flex-col justify-between gap-2 text-white md:flex-row bg h-max">
           {goals.map(
             (
               {

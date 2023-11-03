@@ -17,7 +17,7 @@ export const Goals = ({
 }: GoalsProps) => {
   return (
     <div
-      className={`text-[1.1rem] w-full md:w-[30rem] border-2 border-[#aaaaaa] p-2`}
+      className={`bg-normal/95 text-[1.1rem] w-full md:w-[30rem] border-2 border-[#aaaaaa] p-2 rounded-lg`}
     >
       <Heading
         level={3}
@@ -25,7 +25,7 @@ export const Goals = ({
       >
         {messageHead}
       </Heading>
-      <Text className=" leading-relaxed font-normal mt-1 ">
+      <Text className="opacity-90 p-2 text-justify text-base leading-relaxed font-normal mt-1 ">
         {messageBody || messageBodyMoblie}
       </Text>
     </div>

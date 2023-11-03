@@ -10,6 +10,8 @@ import { useState } from "react";
 import ContactUsModal from "@/components/form/ContactUsModal";
 import Form from "@/components/form/Form";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
+import { FaCheck } from "react-icons/fa";
+import { BsFillPatchCheckFill } from "react-icons/bs";
 
 const AboutHero = () => {
   const xtraSmall = useMediaQuery("(max-width: 390px)");
@@ -23,14 +25,15 @@ const AboutHero = () => {
             <div className={``}>
               <Heading
                 level={1}
-                className="text-[40px] md:text-[40px] lg:text-[65px] xl:text-[80px] w-full flex-1 font-bold md:mb-[30px]"
+                className="text-center text-[40px] md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-[#C1AF6F] ">
                   We Know Our Story
                 </span>
               </Heading>
-              <h2 className="md:text-[1.3rem] text-[1.1rem] capitalize my-2">
-                A PROFESSIONAL SECURITY SERVICE BETWEEN YOU AND THE IMPOSSIBLE
+              <h2 className="mt-10 flex items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2">
+                <BsFillPatchCheckFill size={17} className="text-current" /> A
+                PROFESSIONAL SECURITY SERVICE BETWEEN YOU AND THE IMPOSSIBLE
               </h2>
               <p className="md:text-[1.2rem] text-[1.1rem] text-[#5f5d5d]">
                 Joint Power Security Services Inc offers experienced security
@@ -48,7 +51,8 @@ const AboutHero = () => {
                 <br />
                 <br />
               </p>
-              <h3 className="md:text-[1.2rem] text-[1.1rem] ">
+              <h3 className="mt-5 md:text-[1.2rem] text-[1.1rem] flex items-center gap-2">
+                <BsFillPatchCheckFill size={17} className="text-current" />
                 OUR SECURITY GUARDS ARE SKILLED AND TRAINED.
               </h3>
               <p className="md:text-[1.2rem] text-[1.1rem] mt-2 text-[#5f5d5d]">
@@ -63,28 +67,28 @@ const AboutHero = () => {
                 keep them informed in every steps we make and up to date.
               </p>
             </div>
-            <div className="-mt-[80px] lg:mt-0" onClick={() => setShow(true)}>
+            <div className="-mt-[80px] lg:-mt-[40px]" onClick={() => setShow(true)}>
               <Button className="text-base " variants="primary">
                 Contact us Today
               </Button>
             </div>
           </div>
 
-          <div className="mt-[30px] md:mt-0">
+          {/* <div className="mt-[30px] md:mt-0">
             <NextImage
               src={HeroImage}
               alt="contactUs-hero image"
               className="w-[350px] h-[400px] xl:w-[528.14px] xl:h-[567px] hidden md:flex"
               priority
             />
-          </div>
+          </div> */}
         </div>
-        <NextImage
+        {/* <NextImage
           src={aboutUs}
           alt="group-image image"
           className="w-full h-[267.94px] md:h-[467.94px] xl:w-full container xl:h-[806px] lg:h-[567.94px] mt-[40px] md:mt-[113px]"
           priority
-        />
+        /> */}
 
         <DialogContent>
           <ContactUsModal setShow={setShow} show={show} type="contact us" />
