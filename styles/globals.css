@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+body {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+.nav_bar {
+    background: linear-gradient(
+        180deg,
+        rgba(14, 45, 74, 0.5) 0%,
+        rgba(9, 44, 76, 0) 100%,
+        rgba(9, 44, 76, 0) 100%
+    );
+}
+.bg-color-inTouch{
+    background: linear-gradient(180deg, #EDEDED 0%, #EDEDED 50%, rgba(237, 237, 237, 0) 100%);
+}
+.bg-contact-us{
+    background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+    filter: drop-shadow(0px 2.96324px 2.96324px rgba(0, 0, 0, 0.25));
+    /* transform: matrix(0, -1, -1, 0, 0, 0);    */
+}
+.service_card_section {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #ffffff 39.4%,
+        #ffffff 100%
+    );
+}
+.service_card_overlay {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+}

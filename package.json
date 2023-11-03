@@ -1,0 +1,36 @@
+{
+  "name": "joint-power-security",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.4",
+    "clsx": "^1.2.1",
+    "next": "^13.0.2",
+    "nodemailer": "^6.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-toastify": "^9.1.1",
+    "sib-api-v3-sdk": "^8.5.0",
+    "sib-api-v3-typescript": "^2.2.2",
+    "sib-api-v3-typescript-type-error-fixed": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.5",
+    "@types/react": "18.0.22",
+    "@types/react-dom": "18.0.7",
+    "autoprefixer": "^10.4.12",
+    "dotenv": "^16.0.3",
+    "eslint": "8.26.0",
+    "eslint-config-next": "^13.0.2",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
+    "typescript": "4.8.4"
+  }
+}

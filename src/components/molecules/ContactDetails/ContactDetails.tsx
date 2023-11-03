@@ -1,0 +1,127 @@
+import Button from "@/components/atom/Button/Button";
+import InputText from "@/components/atom/InputText/InputText";
+import { sendContactForm, sendContactForm2 } from "@/lib/App";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const ContactDetails = () => {
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      await sendContactForm2({ name, email, phoneNumber, comment, address });
+      await sendContactForm({
+        name,
+        email,
+        phoneNumber,
+        comment,
+        address,
+      });
+
+      toast("success");
+    } catch (error) {
+      setError(true);
+    } finally {
+      setName("");
+      setEmail("");
+      setComment("");
+      setPhoneNumber("");
+      setAddress("");
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="container lg:w-[431px] w-full">
+      {error ? (
+        <span className="bg-[red] text-[#fff] w-full  block p-4">
+          Wrong Text
+        </span>
+      ) : null}
+
+      {loading ? (
+        <span className="block w-full py-4 text-center text-normal">
+          Loading ...
+        </span>
+      ) : null}
+      <form action="" className="flex flex-col " onSubmit={handleSubmit}>
+        <InputText
+          placeholder="Name"
+          name={"name"}
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          type="text"
+          required={true}
+          classNames="px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+        />
+        <InputText
+          placeholder="Phone Number"
+          name={"phoneNumber"}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          value={phoneNumber}
+          type="text"
+          required={true}
+          classNames=" px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+        />
+        <InputText
+          placeholder="Email Address"
+          name={"email"}
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          required={true}
+          classNames=" lg:w-[431px] px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+        />
+        <InputText
+          placeholder="Enter City and Zip Code"
+          name={"address"}
+          type="text"
+          onChange={(e) => setAddress(e.target.value)}
+          value={address}
+          required={true}
+          classNames=" lg:w-[431px] px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+        />
+
+        <textarea
+          name="more-info"
+          placeholder="How can we help you ?"
+          onChange={(e) => setComment(e.target.value)}
+          value={comment}
+          required={true}
+          className="border border-line lg:w-[431px] text-grey-2 h-[241.24px] mb-[49px] mt-2 md:mt-4 py-2 px-4 focus:outline-none rounded shadow-lg"
+        />
+        <button
+          type="submit"
+          className="w-full py-3 m-auto mb-2 text-white rounded bg-normal"
+        >
+          Submit
+        </button>
+      </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </div>
+  );
+};
+
+export default ContactDetails;
