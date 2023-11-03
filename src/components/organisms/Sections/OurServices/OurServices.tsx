@@ -19,7 +19,7 @@ const OurServices = () => {
       </Heading>
 
       {/* Services Card */}
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <div className="mt-8 flex flex-wrap justify-center gap-6">
         <ServicesCard alt="" image_src={ApartmentOfficerImg} />
         <ServicesCard alt="" image_src={MedicalOfficerImg} />
 

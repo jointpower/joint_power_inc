@@ -8,8 +8,8 @@ import { ContactUs } from "../ContactUs/ContactUs";
 const Opportunities = () => {
   return (
     <section>
-      <div className="w-full mt-10 flex flex-col justify-center items-center relative h-[70px]">
-        <span className="absolute font-bold tracking-wider text-black md:text-3xl">
+      <div className="w-full mt-40 md:mb-10 flex flex-col justify-center items-center">
+        <span className="uppercase absolute font-medium tracking-wider text-black md:text-4xl">
           Make Your Own Opportunities
         </span>
       </div>
@@ -20,9 +20,9 @@ const Opportunities = () => {
       />
 
       <div className="container lg:px-5">
-        <div className="md:text-2xl  mt-[32px] mb-[92px]">
-          <Text className="text-black">
-            <span className="font-bold md:text-secondary ">
+        <div className="text-gray-400 md:text-2xl mt-[32px] mb-[92px]">
+          <Text className="text-justify">
+            <span className=" md:text-secondary ">
               Joint Power Security Services,
             </span>{" "}
             has a vision of working with its team, making it's environs one of
@@ -31,7 +31,7 @@ const Opportunities = () => {
             towers, apartment building, malls, hotels, individual stores, both
             commercial and private buildings and much more.
           </Text>
-          <Text className="text-black pt-[24px]">
+          <Text className="pt-[24px]">
             We oﬀer experienced security guards chosen from strict screening
             process and background check. Our guards cover all domains of
             private security in protecting life and properties with an excellent
