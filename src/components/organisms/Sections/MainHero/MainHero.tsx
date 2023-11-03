@@ -18,7 +18,7 @@ const MainHero = () => {
     <Dialog open={show}>
       <div className="container flex flex-col items-center w-full my-32 text-black md:flex-row gap-20">
         <div className="flex flex-col ">
-          <div className={`w-[100%] md:mx-0`}>
+          <div className={`w-[100%] md:mx-0 mt-5`}>
             <Heading
               level={1}
               className="text-[40px] md:text-[40px] lg:text-[65px] uppercase  w-full flex-1 font-bold md:mb-[30px]"

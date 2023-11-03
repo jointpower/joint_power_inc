@@ -1,6 +1,6 @@
-import Heading from '@/components/atom/Heading/Heading';
-import ContactDetails from '@/components/molecules/ContactDetails/ContactDetails';
-import ContactInfo from '@/components/molecules/ContactInfo/ContactInfo';
+import Heading from "@/components/atom/Heading/Heading";
+import ContactDetails from "@/components/molecules/ContactDetails/ContactDetails";
+import ContactInfo from "@/components/molecules/ContactInfo/ContactInfo";
 
 interface ContactUsProps {
   isContactDetailsRequired?: boolean;
@@ -12,20 +12,13 @@ export const ContactUs = ({
   className,
 }: ContactUsProps) => {
   return (
-    <div
-      className={` ${
-        className ?? className
-      } flex flex-col items-center w-full mt-20 `}
-    >
-      <Heading
-        level={1}
-        className="text-black text-lg font-bold md:text-3xl bg-contact-us shadow-xl px-16 py-2 mb-[28.92px] md:mb-[45px] "
-      >
+    <div className={` ${className ?? className} flex flex-col w-full mt-20 `}>
+      <p className="!text-left pl-24 text-gray-800 text-lg font-medium md:text-3xl px-16 py-2 mb-7 md:mb-12">
         CONTACT US
-      </Heading>
+      </p>
 
       <div className="flex flex-col lg:flex-row justify-between w-full gap-2">
-        {isContactDetailsRequired ? <ContactInfo /> : ' '}
+        {isContactDetailsRequired ? <ContactInfo /> : " "}
         <ContactDetails />
       </div>
     </div>

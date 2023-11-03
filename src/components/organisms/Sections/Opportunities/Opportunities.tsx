@@ -4,6 +4,7 @@ import LineMask from "public/line-mask.png";
 import JpsCar from "public/jps-car.png";
 import Text from "@/components/atom/Text/Text";
 import { ContactUs } from "../ContactUs/ContactUs";
+import Heading from "@/components/atom/Heading/Heading";
 
 const Opportunities = () => {
   return (
@@ -39,12 +40,30 @@ const Opportunities = () => {
           </Text>
         </div>
 
-        <div className="flex mt-5 bg-white">
-          <NextImage
-            className="lg:w-full lg:h-[732px]"
-            src={JpsCar}
-            alt="joint power security car"
-          />
+        <div className="grid grid-cols-2 mt-5 bg-white">
+          <div className="flex justify-center flex-col gap-4 lg:px-4">
+            <span className="text-base uppercase font-semibold text-secondary">
+              Joint Power Security Services
+            </span>
+            <p className="text-black text-sm md:text-3xl lg:text-5x xl:leading-[37px]">
+              Our security guards are properly skilled and trained in modern
+              security trainings.
+            </p>
+            <Text
+              className="hidden md:block md:text-base lg:text-xl md:text-grey-6
+              md:leading-9 xl:mb-[20px]"
+            >
+              You can now rest easily, sleep with your two eyes closed, knowing
+              that you have Joint Power Security Services; The best private
+              security company service in california, watching over you.
+            </Text>
+            <button
+              className={`w-fit bg-normal text-white px-5 py-1 md:px-12 md:py-4 rounded-[.2rem] cursor-pointer font-medium `}
+            >
+              Get in Touch
+            </button>
+          </div>
+
           <ContactUs
             isContactDetailsRequired={false}
             className="-mt-[30px] md:mt-0"

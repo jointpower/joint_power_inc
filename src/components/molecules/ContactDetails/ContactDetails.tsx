@@ -63,7 +63,7 @@ const ContactDetails = () => {
           value={name}
           type="text"
           required={true}
-          classNames="px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+          classNames="px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         <InputText
           placeholder="Phone Number"
@@ -72,7 +72,7 @@ const ContactDetails = () => {
           value={phoneNumber}
           type="text"
           required={true}
-          classNames=" px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+          classNames=" px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         <InputText
           placeholder="Email Address"
@@ -81,17 +81,17 @@ const ContactDetails = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           required={true}
-          classNames=" lg:w-[431px] px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
+          classNames=" lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
-        <InputText
+        {/* <InputText
           placeholder="Enter City and Zip Code"
           name={"address"}
           type="text"
           onChange={(e) => setAddress(e.target.value)}
           value={address}
           required={true}
-          classNames=" lg:w-[431px] px-[21px] py-[14.4px] text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow-lg"
-        />
+          classNames=" lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
+        /> */}
 
         <textarea
           name="more-info"
@@ -99,13 +99,13 @@ const ContactDetails = () => {
           onChange={(e) => setComment(e.target.value)}
           value={comment}
           required={true}
-          className="border border-line lg:w-[431px] text-grey-2 h-[241.24px] mb-[49px] mt-2 md:mt-4 py-2 px-4 focus:outline-none rounded shadow-lg"
+          className="p-5 border border-line lg:w-[431px] text-grey-2 h-[150px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
         />
         <button
           type="submit"
-          className="w-full py-3 m-auto mb-2 text-white rounded bg-normal"
+          className="w-full py-4 m-auto mb-2 text-white rounded bg-normal"
         >
-          Submit
+          Submit Request
         </button>
       </form>
       <ToastContainer

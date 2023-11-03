@@ -31,64 +31,66 @@ const Footer = () => {
   const year = date.getFullYear();
 
   return (
-    <footer className=" bg-primary text-white md:pt-[240px] lg:pt-[252px] mt-[120px] w-full">
-      <div className=" bg-secondary w-full h-[10px] lg:h-[15px] relative -top-[20px] md:-top-[260px] lg:-top-[280px]" />
-      <div className="container bg-primary ">
-        <div className="flex justify-between ">
-          <div className="hidden md:flex">
+    <footer className=" text-white pt-20 mt-32 w-full">
+      <div className=" bg-secondary w-full h-[10px] mb-1" />
+      <div className="bg-primary p-10 pb-0">
+        <div className="container">
+          <div className="flex justify-between ">
+            <div className="hidden md:flex md:-mt-5">
+              <NextImage
+                className=" w-[180px] h-[196px] "
+                src={JpsBadge}
+                alt="Joint power security badge"
+              />
+            </div>
+            <div className="flex gap-12 lg:gap-24 mb-[80px]">
+              <div className="flex flex-col gap-6 md:flex">
+                <Heading className="uppercase text-secondary" level={5}>
+                  Opening Hours
+                </Heading>
+                {opening_hours.map((opening, index) => (
+                  <Links url={opening.url} key={index}>
+                    {opening.name}
+                  </Links>
+                ))}
+              </div>
+              <div className="flex flex-col gap-6 md:order-last">
+                <Heading className="capitalize text-secondary" level={5}>
+                  Services
+                </Heading>
+                {services_links.map((link, index) => (
+                  <Links url={link.url} key={index} className="capitalize">
+                    {link.name}
+                  </Links>
+                ))}
+              </div>
+              <div className="flex flex-col gap-6">
+                <Heading className="uppercase text-secondary" level={5}>
+                  Company
+                </Heading>
+
+                {company_links.map((link, index) => (
+                  <Links url={link.url} key={index}>
+                    {link.name}
+                  </Links>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between mt-8 md:hidden">
             <NextImage
-              className=" w-[180px] h-[196px] -top-[190px]"
+              className=" w-[37px] h-[39px]"
               src={JpsBadge}
               alt="Joint power security badge"
             />
+            <SocialLinks />
           </div>
-          <div className="flex gap-12 lg:gap-24 mb-[80px]">
-            <div className="flex flex-col gap-6 md:flex">
-              <Heading className="uppercase text-secondary" level={5}>
-                Opening Hours
-              </Heading>
-              {opening_hours.map((opening, index) => (
-                <Links url={opening.url} key={index}>
-                  {opening.name}
-                </Links>
-              ))}
-            </div>
-            <div className="flex flex-col gap-6 md:order-last">
-              <Heading className="capitalize text-secondary" level={5}>
-                Services
-              </Heading>
-              {services_links.map((link, index) => (
-                <Links url={link.url} key={index} className="capitalize">
-                  {link.name}
-                </Links>
-              ))}
-            </div>
-            <div className="flex flex-col gap-6">
-              <Heading className="uppercase text-secondary" level={5}>
-                Company
-              </Heading>
-
-              {company_links.map((link, index) => (
-                <Links url={link.url} key={index}>
-                  {link.name}
-                </Links>
-              ))}
-            </div>
+          <div className="justify-between py-8 mt-10 border-t-2 md:flex">
+            <Text className="text-sm text-white/80">
+              © {year} Joint Power Security Services
+            </Text>
+            <SocialLinks className="hidden md:flex" />
           </div>
-        </div>
-        <div className="flex items-center justify-between mt-8 md:hidden">
-          <NextImage
-            className=" w-[37px] h-[39px]"
-            src={JpsBadge}
-            alt="Joint power security badge"
-          />
-          <SocialLinks />
-        </div>
-        <div className="justify-between py-8 mt-10 border-t-2 md:flex">
-          <Text className="text-sm text-white/80">
-            © {year} Joint Power Security Services
-          </Text>
-          <SocialLinks className="hidden md:flex" />
         </div>
       </div>
     </footer>
