@@ -21,16 +21,16 @@ const HospitalSecurity = () => {
           <div className=" w-[100%] md:mt-[30px] ">
             <Heading
               level={1}
-              className={`text-[24px] md:text-[40px] xl:text-[65px] md:w-full flex-1 font-semibold leading-tight  md:mb-[30px] text-secondary`}
+              className={`text-[24px] md:text-[40px] xl:text-[45px] md:w-full flex-1 font-semibold leading-tight  md:mb-[30px]`}
             >
               Hospital Security
             </Heading>
-            <Text className="font-medium mt-3 w-[90%] md:w-[70%] xl:w-[80%] text-base text-black  lg:text-2xl xl:text-4xl">
+            <Text className="font-medium mt-3 w-[90%] text-base text-gray-800  lg:text-2xl">
               Our goal is to supply all clients with the highest quality
-              security force services available.
+              security force services available for hospitals in califonia.
             </Text>
           </div>
-          <div onClick={() => setShow(true)} className={`my-2`}>
+          <div onClick={() => setShow(true)} className={`my-2 mt-5`}>
             <button
               className={`bg-normal text-[#fff] px-2 py-1 md:px-8 md:py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
@@ -49,7 +49,7 @@ const HospitalSecurity = () => {
           <NextImage
             src={HospitalDesktop}
             alt="Hospital-sercurity-image"
-            className="w-[343px] h-[408px] lg:w-[500.44px] xl:w-[700.44px] xl:h-[598px] hidden md:flex"
+            className="w-[343px] h-[408px] lg:w-[500.44px] xl:w-[600px] xl:h-[400px] hidden md:flex"
             priority
           />
         </div>
@@ -57,7 +57,6 @@ const HospitalSecurity = () => {
           <ContactUsModal setShow={setShow} show={show} type="contact us" />
         </DialogContent>
       </div>
-      <hr></hr>
     </Dialog>
   );
 };

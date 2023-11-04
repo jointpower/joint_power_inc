@@ -1,5 +1,5 @@
-import Heading from '@/components/atom/Heading/Heading';
-import Text from '@/components/atom/Text/Text';
+import Heading from "@/components/atom/Heading/Heading";
+import Text from "@/components/atom/Text/Text";
 
 interface GoalsProps {
   messageHead: string;
@@ -7,6 +7,7 @@ interface GoalsProps {
   messageBodyMoblie?: string;
   className: string;
   headerClass?: string;
+  index: number;
 }
 export const Goals = ({
   messageBody,
@@ -14,10 +15,13 @@ export const Goals = ({
   className,
   messageBodyMoblie,
   headerClass,
+  index,
 }: GoalsProps) => {
   return (
     <div
-      className={`bg-normal/95 text-[1.1rem] w-full md:w-[30rem] border-2 border-[#aaaaaa] p-2 rounded-lg`}
+      className={`${
+        (index + 1) % 2 == 1 ? "md:mt-10" : "md:h-fit md:min-h-[270px]"
+      } bg-normal/95 text-[1.1rem] w-full md:w-[30rem] border-2 border-[#aaaaaa] p-2 rounded-lg`}
     >
       <Heading
         level={3}

@@ -56,6 +56,7 @@ export const OurGoal = () => {
                 messageHead={messageHead}
                 messageBody={xtraSmall ? messageBodyMobile : messageBody}
                 key={index}
+                index={index}
                 className={className}
                 headerClass={headerClass}
               />

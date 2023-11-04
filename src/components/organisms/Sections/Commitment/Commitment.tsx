@@ -1,46 +1,46 @@
-import Heading from '@/components/atom/Heading/Heading';
-import NextImage from '@/components/atom/NextImage/NextImage';
-import { Goals } from '@/components/molecules/Goal/Goals';
-import LineMask from 'public/line-mask.png';
-import { useMediaQuery } from '@/base/MediaQuery';
-import Text from '@/components/atom/Text/Text';
+import Heading from "@/components/atom/Heading/Heading";
+import NextImage from "@/components/atom/NextImage/NextImage";
+import { Goals } from "@/components/molecules/Goal/Goals";
+import LineMask from "public/line-mask.png";
+import { useMediaQuery } from "@/base/MediaQuery";
+import Text from "@/components/atom/Text/Text";
 
 const services = [
   {
     id: 1,
-    service: 'Loss Prevention',
+    service: "Loss Prevention",
   },
   {
     id: 2,
-    service: 'Roving Patrol ',
+    service: "Roving Patrol ",
   },
   {
     id: 3,
-    service: 'Construction Site Security',
+    service: "Construction Site Security",
   },
   {
     id: 4,
-    service: 'Warehouse Security',
+    service: "Warehouse Security",
   },
   {
     id: 5,
-    service: 'Power/Gas Station Security',
+    service: "Power/Gas Station Security",
   },
   {
     id: 6,
-    service: 'Social Event Security',
+    service: "Social Event Security",
   },
   {
     id: 7,
-    service: 'Alarm Monitoring & Response',
+    service: "Alarm Monitoring & Response",
   },
   {
     id: 8,
-    service: 'Distribution Centers Security  ',
+    service: "Distribution Centers Security  ",
   },
   {
     id: 9,
-    service: 'Schools & Church Security  ',
+    service: "Schools & Church Security  ",
   },
   // {
   //   id: 10,
@@ -49,39 +49,39 @@ const services = [
 
   {
     id: 11,
-    service: 'Apartment & Office Building Security ',
+    service: "Apartment & Office Building Security ",
   },
   {
     id: 12,
-    service: 'Restaurants Security ',
+    service: "Restaurants Security ",
   },
   {
     id: 13,
-    service: 'Gated Community Security ',
+    service: "Gated Community Security ",
   },
   {
     id: 14,
-    service: 'Hospitals & Care Facilities Security ',
+    service: "Hospitals & Care Facilities Security ",
   },
   {
     id: 15,
-    service: 'Access Control',
+    service: "Access Control",
   },
   {
     id: 16,
-    service: 'Performing Foot Patrol',
+    service: "Performing Foot Patrol",
   },
   {
     id: 17,
-    service: 'Parking Lot Control',
+    service: "Parking Lot Control",
   },
   {
     id: 18,
-    service: 'Hotel Security',
+    service: "Hotel Security",
   },
   {
     id: 19,
-    service: 'Security Consulting',
+    service: "Security Consulting",
   },
   // {
   //   id: 20,
@@ -128,11 +128,11 @@ const services = [
 // Hotel Security
 
 export const Commitment = () => {
-  const xtraSmall = useMediaQuery('(max-width: 720px)');
+  const xtraSmall = useMediaQuery("(max-width: 720px)");
   const commitments = [
     {
       messageBody:
-        'Joint Power  provide personnal for hotel, apartments and social events which provides premium sercurity services to businesses and indivisuals.',
+        "Joint Power  provide personnal for hotel, apartments and social events which provides premium sercurity services to businesses and indivisuals.",
     },
     // {
     //   messageBody:
@@ -146,11 +146,11 @@ export const Commitment = () => {
 
   return (
     <section className="flex flex-col container ">
-      <div className="mt-[40px] bg-normal">
+      <div className="mt-48 bg-normal">
         <div>
           <Heading
             level={2}
-            className="  font-medium  mb-[.5rem] pt-[30px] md:mb-[80px] lg:mt-[30px]   text-2xl text-center uppercase"
+            className="  font-medium  mb-[.5rem] pt-[30px]  text-3xl text-center uppercase"
           >
             {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
               Commited{' '}
@@ -158,9 +158,12 @@ export const Commitment = () => {
             <span className="text-secondary">our services</span>
           </Heading>
         </div>
-
+        <p className="text-base md:text-2xl text-center md:mb-[80px] lg:mt-[10px] text-gray-200">
+          At JPS, We offer a whole range of services which ranges from the
+          following..
+        </p>
         <div
-          className={`bg-normal text-white text-center py-2 h-[40rem] overflow-y-auto`}
+          className={`px-10 pb-10 grid grid-cols-4 gap-5 text-white text-center py-2 h-[40rem] overflow-y-auto`}
         >
           {/* {commitments.map(({ messageBody }, index) => (
             <div
@@ -176,11 +179,12 @@ export const Commitment = () => {
           {services?.length
             ? services?.map((data, index) => {
                 return (
-                  <div key={index} className={`font-medium capitalize py-2`}>
-                    <ul>
-                      <li>{data.service}</li>
-                    </ul>
-                  </div>
+                  <button
+                    key={index}
+                    className={`hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
+                  >
+                      <p>{data.service}</p>
+                  </button>
                 );
               })
             : null}
