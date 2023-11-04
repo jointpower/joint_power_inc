@@ -1,12 +1,12 @@
-import Links from '@/components/atom/Links/Links';
-import NextImage from '@/components/atom/NextImage/NextImage';
-import NavLinks from '@/components/molecules/NavLinks/NavLinks';
-import SocialLinks from '@/components/molecules/SocialLinks/SocialLinks';
-import JpsLogo from 'public/jps-brand-logo.png';
-import { useState } from 'react';
-import { BiMenu } from 'react-icons/bi';
-import { MdOutlineClose } from 'react-icons/md';
-import { GrClose } from 'react-icons/gr';
+import Links from "@/components/atom/Links/Links";
+import NextImage from "@/components/atom/NextImage/NextImage";
+import NavLinks from "@/components/molecules/NavLinks/NavLinks";
+import SocialLinks from "@/components/molecules/SocialLinks/SocialLinks";
+import JpsLogo from "public/jps-brand-logo.png";
+import { useState } from "react";
+import { BiMenu } from "react-icons/bi";
+import { MdOutlineClose } from "react-icons/md";
+import { GiSmartphone } from "react-icons/gi";
 
 const Header = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -33,7 +33,10 @@ const Header = (): JSX.Element => {
         <nav className="md:flex bg-white text-grey-1 flex-row  hidden">
           <NavLinks />
         </nav>
-        <button className='hidden md:block bg-normal text-white py-4 px-8 rounded font-medium'> +34 384 9834 098</button>
+        <button className="items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded font-medium">
+          <GiSmartphone />
+          +34 384 9834 098
+        </button>
       </div>
 
       {isOpen && (
