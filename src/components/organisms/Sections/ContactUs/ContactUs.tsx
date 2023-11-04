@@ -17,7 +17,7 @@ export const ContactUs = ({
     <div className={` ${className ?? className} container flex flex-col w-full mt-20 `}>
       {noHeader ? null : (
         <p className="!text-center pl-24 text-gray-800 text-xl font-semibold md:text-3xl px-16 py-2 mb-7 md:mb-12">
-          LET'S HEAR FROM YOU
+          LET&apos;S HEAR FROM YOU
         </p>
       )}
 
