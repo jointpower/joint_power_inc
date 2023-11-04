@@ -11,12 +11,16 @@ const Footer = () => {
     { name: "Fire watch", url: "/services" },
     { name: "apartment security", url: "/services" },
     { name: "hotel security", url: "/services" },
+  ];
+
+  const services_links_2 = [
     { name: "Health facilities", url: "/services" },
     { name: "Telecommunication towers", url: "/services" },
     { name: "aviation security", url: "/services" },
     { name: "access control security", url: "/services" },
     { name: "Event security", url: "/services" },
   ];
+
   const company_links = [
     { name: "About us", url: "/about" },
     { name: "Contact us", url: "/contact-us" },
@@ -35,7 +39,7 @@ const Footer = () => {
       <div className=" bg-secondary w-full h-[10px] mb-1" />
       <div className="bg-primary p-10 pb-0">
         <div className="container">
-          <div className="flex justify-between ">
+          <div className="text-sm flex justify-between ">
             <div className="hidden md:flex md:-mt-5">
               <NextImage
                 className=" w-[180px] h-[196px] "
@@ -44,18 +48,9 @@ const Footer = () => {
               />
             </div>
             <div className="flex gap-12 lg:gap-24 mb-[80px]">
-              <div className="flex flex-col gap-6 md:flex">
-                <Heading className="uppercase text-secondary" level={5}>
-                  Opening Hours
-                </Heading>
-                {opening_hours.map((opening, index) => (
-                  <Links url={opening.url} key={index}>
-                    {opening.name}
-                  </Links>
-                ))}
-              </div>
-              <div className="flex flex-col gap-6 md:order-last">
-                <Heading className="capitalize text-secondary" level={5}>
+              {" "}
+              <div className="flex flex-col gap-6">
+                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
                   Services
                 </Heading>
                 {services_links.map((link, index) => (
@@ -64,8 +59,28 @@ const Footer = () => {
                   </Links>
                 ))}
               </div>
+              <div className="mt-6 flex flex-col gap-6">
+                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                  {""}
+                </Heading>
+                {services_links_2.map((link, index) => (
+                  <Links url={link.url} key={index} className="capitalize">
+                    {link.name}
+                  </Links>
+                ))}
+              </div>
+              <div className="flex flex-col gap-6 md:flex">
+                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                  Opening Hours
+                </Heading>
+                {opening_hours.map((opening, index) => (
+                  <Links url={opening.url} key={index}>
+                    {opening.name}
+                  </Links>
+                ))}
+              </div>
               <div className="flex flex-col gap-6">
-                <Heading className="uppercase text-secondary" level={5}>
+                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
                   Company
                 </Heading>
 
@@ -85,7 +100,7 @@ const Footer = () => {
             />
             <SocialLinks />
           </div>
-          <div className="justify-between py-8 mt-10 border-t-2 md:flex">
+          <div className="justify-between py-8 mt-10 border-t md:flex">
             <Text className="text-sm text-white/80">
               © {year} Joint Power Security Services
             </Text>
