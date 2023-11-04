@@ -35,7 +35,7 @@ const Testimonials = () => {
     <section className="bg-grey-7/10 ">
       <Heading
         level={3}
-        className="text-black text-[24px] text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
+        className="text-black text-xl md:text-3xl text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
       >
         Few Testimonials
       </Heading>

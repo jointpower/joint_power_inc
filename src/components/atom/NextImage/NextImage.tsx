@@ -22,8 +22,6 @@ const NextImage = ({
         alt={alt}
         src={src}
         fill
-        //   width={500}
-        //   height={500}
         placeholder="blur"
         className={`${isImage ? 'object-cover' : ''}`}
       ></Image>

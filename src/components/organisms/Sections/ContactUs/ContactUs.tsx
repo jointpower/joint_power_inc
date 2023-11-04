@@ -14,10 +14,10 @@ export const ContactUs = ({
   noHeader,
 }: ContactUsProps) => {
   return (
-    <div className={` ${className ?? className} flex flex-col w-full mt-20 `}>
+    <div className={` ${className ?? className} container flex flex-col w-full mt-20 `}>
       {noHeader ? null : (
-        <p className="!text-left pl-24 text-gray-800 text-lg font-medium md:text-3xl px-16 py-2 mb-7 md:mb-12">
-          CONTACT US
+        <p className="!text-center pl-24 text-gray-800 text-xl font-semibold md:text-3xl px-16 py-2 mb-7 md:mb-12">
+          LET'S HEAR FROM YOU
         </p>
       )}
 

@@ -71,11 +71,11 @@ const ContactInfo = () => {
         </footer>
       </div>
 
-      <div className=" md:bg-[grey] bg-normal  w-full md:w-[60%]  flex items-center justify-center md:border-none border border-[#aaa]">
+      <div className=" md:bg-[grey] bg-normal  w-full md:w-[50%]  flex items-center justify-center md:border-none border border-[#aaa]">
         {logo.map(({ logo }, index) => {
           return (
-            <div key={index} className="w-[5rem]  ">
-              <Image src={logo} alt="image logo" />
+            <div key={index} className="">
+              <Image width={200} className="w-[200px]" src={logo} alt="image logo" />
             </div>
           );
         })}
