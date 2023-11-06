@@ -21,7 +21,7 @@ export const ContactUs = ({
         </p>
       )}
 
-      <div className="flex flex-col lg:flex-row justify-between w-full gap-2">
+      <div className="flex flex-col lg:flex-row justify-between w-full gap-2 px-5">
         {isContactDetailsRequired ? <ContactInfo /> : " "}
         <ContactDetails />
       </div>

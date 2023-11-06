@@ -21,12 +21,12 @@ const Testimony = ({
   const xtraSmall = useMediaQuery('(max-width: 395px)');
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center ">
       <div
         className={`${className}
-           w-[205.26px] h-[130.18px] md:w-[255px] md:h-[176px] lg:w-[327px] lg:h-[255px] xl:w-[480px] xl:h-[306px] shadow-lg relative rounded-2xl flex flex-col items-center justify-center lg:mb-[40px]`}
+           w-[205.26px] h-[130.18px] lg:w-[327px] lg:h-[255px] xl:w-[480px] xl:h-[206px] shadow-lg relative rounded-2xl flex flex-col items-center justify-center lg:mb-[40px]`}
       >
-        <Text className="w-[63%]  text-[12px] md:text-[18px] lg:text-xl xl:text-2xl font-medium">
+        <Text className="w-[63%]  text-[12px] md:text-[18px] lg:text-xl font-medium">
           {testimony}
         </Text>
         <Avatar
