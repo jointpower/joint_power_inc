@@ -7,7 +7,7 @@ import Heading from "@/components/atom/Heading/Heading";
 
 export const Security = () => {
   return (
-    <section className="mb-20 max-w-[332px] md:max-w-none bg-grey-7 rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col md:flex-row container md:justify-center gap-5 md:mb-[51px] items-center ">
+    <section className="mb-20 max-w-[332px] md:max-w-none bg-grey-7 md:bg-[unset] rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col md:flex-row container md:justify-center gap-5 md:mb-[51px] items-center ">
       <div>
         {/* <NextImage
           src={SercurityMobile}

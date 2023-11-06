@@ -15,7 +15,7 @@ const HospitalSecurity = () => {
   return (
     <Dialog open={show}>
       <div
-        className={`max-w-[332px] md:max-w-none bg-grey-7 rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col-reverse md:flex-row w-full text-black md:pt-[120px] mb-[24px] container relative`}
+        className={`w-[332px] bg-grey-7 md:bg-[unset] rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col-reverse md:flex-row md:w-full text-black md:pt-[120px] mb-[24px] container relative`}
       >
         <div className="flex flex-col p-5 text-center md:text-left">
           <div className=" w-[100%] md:mt-[30px] ">

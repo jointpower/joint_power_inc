@@ -36,11 +36,11 @@ const Testimonials = () => {
       <div className="container">
         <Heading
           level={3}
-          className="text-black text-xl md:text-3xl text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
+          className="text-black text-2xl md:text-3xl text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
         >
           Few Testimonials
         </Heading>
-        <div className="flex flex-col md:flex-row justify-center  pt-[50px] md:pb-[50px] lg:pt-[120px] xl:mt-[100px] mb-[30px] md:mb-[50px] relative">
+        <div className="flex flex-col gap-5 md:gap-0 md:flex-row justify-center  pt-[50px] md:pb-[50px] lg:pt-[120px] xl:mt-[100px] mb-[30px] md:mb-[50px] relative">
           {testimonies.map(
             ({ testimony, avatarUrl, className, textClass, name }, index) => (
               <li key={index}>

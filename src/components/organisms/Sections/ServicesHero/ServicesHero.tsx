@@ -38,14 +38,14 @@ const ServicesHero = () => {
             <div>
               <Heading
                 level={1}
-                className="font-bold text-2xl md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
+                className=" opacity-75 font-bold text-2xl md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
               >
                 <span className="block  "> Joint Power</span>
                 <span className="md:mt-[-8px] leading-none">
                   Security Services.
                 </span>
               </Heading>
-              <Text className="font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
+              <Text className="opacity-75 font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
                 ..providing protection you can count on and security <br className="hidden md:block" /> you
                 can trust.
               </Text>

@@ -32,7 +32,7 @@ const ContactInfo = () => {
 
   return (
     <div className=" flex flex-wrap md:flex-nowrap mb-2 ">
-      <div className="bg-normal   w-full md:w-[30rem]  flex justify-center items-center flex-col p-3">
+      <div className="bg-normal w-full py-10  md:w-[30rem]  flex justify-center items-center flex-col px-3 md:py-3">
         <footer className="">
           <section className="flex items-center gap-[2rem] mb-3">
             <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
@@ -62,7 +62,7 @@ const ContactInfo = () => {
               </a>
             </p>
           </section>
-          <section className="mb-3 flex items-center gap-[2rem]">
+          <section className="flex items-center gap-[2rem]">
             <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
               <FaPhone fill="blue" />
             </div>
@@ -71,7 +71,7 @@ const ContactInfo = () => {
         </footer>
       </div>
 
-      <div className=" md:bg-[grey] bg-normal  w-full md:w-[50%]  flex items-center justify-center md:border-none border border-[#aaa]">
+      <div className=" md:bg-[grey] bg-normal  w-full md:w-[50%] hidden md:flex items-center justify-center">
         {logo.map(({ logo }, index) => {
           return (
             <div key={index} className="">

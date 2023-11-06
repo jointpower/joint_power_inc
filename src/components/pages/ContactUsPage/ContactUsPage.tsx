@@ -8,7 +8,9 @@ const ContactUsPage = () => {
   return (
     <div>
       {/* @ts-ignore */}
-      <Banner text={"Contact Us"} />
+      <div className="mt-16 md:mt-5">
+        <Banner text={"Contact Us"} />
+      </div>
       <ContactHero />
       <div className="w-full">
         <iframe

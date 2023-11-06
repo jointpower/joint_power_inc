@@ -31,8 +31,8 @@ const ContactHero = () => {
 
               <span className="text-[#727272]"> YOU.</span>
             </Heading>
-            <Text className="text-gray-700 font-medium mt-3 w-[90%] xl:w-full text-lg md:text-3xl leading-10 ">
-              Don&apos;t hestitate to reach out to us in case you have <br /> questions, enquiries or request.
+            <Text className="text-gray-700 font-medium mt-3 md:w-[90%] xl:w-full text-lg md:text-3xl leading-7 md:leading-10 ">
+              Don&apos;t hestitate to reach out to us in case you have <br className="hidden md:block" /> questions, enquiries or request.
             </Text>
           </div>
           <div onClick={() => setShow(true)}>
