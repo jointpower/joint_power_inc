@@ -20,18 +20,18 @@ const InTouch = () => {
           />
         </div> */}
         <div className="w-full flex flex-col items-center">
-          <div className="px-10 text-center xl:text-start mt-[50px] md:mt-[32.34px] md:mb-[43.5px]">
-            <Heading level={5} className="text-center  md:text-4xl ">
+          <div className="px-2 sm:px-10 text-center xl:text-start mt-[50px] md:mt-[32.34px] md:mb-[43.5px]">
+            <Heading level={5} className="text-center text-2xl md:text-4xl ">
               {/* We provide <span className="font-bold ">temporary security</span>{' '}
               for special events such as corporate meetings, conventions and
               concerts. */}
-              <div className="flex justify-center items-center text-center gap-5">
+              <div className="flex flex-col md:flex-row justify-center items-center text-center gap-5">
                 <p>JOINT POWER SECURITY. </p>
                 <p>LOW RATES. </p>
                 <p>NO CONTRACT.</p>
               </div>
             </Heading>
-            <Text className="text-center mt-4 text-sm text-gray-400 md:text-2xl">
+            <Text className="text-center mt-4 text-base text-gray-400 md:text-2xl">
               We provide temporary and permanent security services. Our security
               guard services are the most comprehensive you will find. No matter
               what the industry, Joint Power Security Service guarantees to have

@@ -9,8 +9,8 @@ import Heading from "@/components/atom/Heading/Heading";
 const Opportunities = () => {
   return (
     <section>
-      <div className="w-full mt-40 md:mb-10 flex flex-col justify-center items-center">
-        <span className="uppercase absolute font-medium tracking-wider text-black md:text-4xl">
+      <div className="w-full mt-32 md:mt-40 mb-10 flex flex-col justify-center items-center">
+        <span className="uppercase absolute font-medium tracking-wide md:tracking-wider text-black text-3xl text-center md:text-4xl">
           Make Your Own Opportunities
         </span>
       </div>
@@ -21,7 +21,7 @@ const Opportunities = () => {
       />
 
       <div className="container lg:px-5">
-        <div className="text-gray-400 md:text-2xl mt-[32px] mb-[92px]">
+        <div className="text-gray-400 text-base md:text-2xl mt-[32px] mb-[92px]">
           <Text className="text-justify">
             <span className=" md:text-secondary ">
               Joint Power Security Services,
@@ -32,7 +32,7 @@ const Opportunities = () => {
             towers, apartment building, malls, hotels, individual stores, both
             commercial and private buildings and much more.
           </Text>
-          <Text className="pt-[24px]">
+          <Text className="text-justify pt-[24px]">
             We oﬀer experienced security guards chosen from strict screening
             process and background check. Our guards cover all domains of
             private security in protecting life and properties with an excellent
@@ -40,12 +40,12 @@ const Opportunities = () => {
           </Text>
         </div>
 
-        <div className="grid grid-cols-2 mt-5 bg-white">
-          <div className="flex justify-center flex-col gap-4 lg:px-4">
-            <span className="text-lg uppercase font-semibold text-secondary">
+        <div className="grid md:grid-cols-2 mt-5 bg-white">
+          <div className="text-center md:text-left flex justify-center flex-col gap-4 lg:px-4">
+            <span className="text-2xl md:text-lg uppercase font-semibold text-secondary">
               Contact JPSS
             </span>
-            <p className="text-black text-sm md:text-3xl lg:text-5x xl:leading-[37px]">
+            <p className="text-black text-lg md:text-3xl lg:text-5x xl:leading-[37px]">
               Our security guards are properly skilled and trained in modern
               security trainings.
             </p>
@@ -58,7 +58,7 @@ const Opportunities = () => {
               security company service in california, watching over you.
             </Text>
             <button
-              className={`w-fit bg-normal text-white px-5 py-1 md:px-12 md:py-4 rounded-[.2rem] cursor-pointer font-medium `}
+              className={`w-fit m-auto md:m-[unset] bg-normal text-white px-12 py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
               Request Demo
             </button>
@@ -66,7 +66,7 @@ const Opportunities = () => {
 
           <ContactUs
             isContactDetailsRequired={false}
-            className="-mt-[30px] md:mt-0"
+            className="md:mt-0"
             noHeader={true}
           />
         </div>

@@ -43,7 +43,7 @@ const ContactDetails = () => {
   };
 
   return (
-    <div className="container lg:w-[431px] w-full">
+    <div className="container w-full lg:w-[431px]">
       {error ? (
         <span className="bg-[red] text-[#fff] w-full  block p-4">
           Wrong Text
@@ -81,7 +81,7 @@ const ContactDetails = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           required={true}
-          classNames=" lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
+          classNames=" w-full lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         {/* <InputText
           placeholder="Enter City and Zip Code"
@@ -90,7 +90,7 @@ const ContactDetails = () => {
           onChange={(e) => setAddress(e.target.value)}
           value={address}
           required={true}
-          classNames=" lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
+          classNames=" w-full lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         /> */}
 
         <textarea
@@ -99,7 +99,7 @@ const ContactDetails = () => {
           onChange={(e) => setComment(e.target.value)}
           value={comment}
           required={true}
-          className="p-5 border border-line lg:w-[431px] text-grey-2 h-[130px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
+          className="p-5 border border-line w-full lg:w-[431px] text-grey-2 h-[130px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
         />
         <button
           type="submit"

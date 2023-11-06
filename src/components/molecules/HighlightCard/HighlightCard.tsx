@@ -15,20 +15,20 @@ const HighlightCard = () => {
   return (
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">
-        <div className="flex flex-row md:flex-row-reverse justify-between items-center px-3 gap-1 py-16 rounded-2xl  bg-normal md:mt-[52px]  lg:mt-[92px] md:mb-[78px] lg:mb-0">
+        <div className="flex flex-col md:flex-row-reverse justify-between items-center px-3 gap-1 py-16 rounded-2xl  bg-normal md:mt-[52px]  lg:mt-[92px] md:mb-[78px] lg:mb-0">
           <div>
             <NextImage
               src={ServiceImage}
               alt="joint security officer"
-              className=" w-[170px] h-[148px] md:mt-[-90px] xl:mt-[-140px] md:w-[270.59px] md:h-[248.54px] lg:w-[550px] lg:h-[400px]"
+              className="h-[200px] md:mt-[-90px] xl:mt-[-140px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[550px] lg:h-[400px]"
             />
           </div>
-          <div className="flex flex-col lg:mt-[-90px] gap-4 lg:px-4 lg:w-[53%]">
-            <span className="text-xs uppercase font-medium md:text-sm text-secondary">
+          <div className="flex flex-col text-center md:text-left lg:mt-[-90px] gap-4 lg:px-4 lg:w-[53%]">
+            <span className="uppercase font-medium mt-10 md:mt-0 text-secondary">
               Joint Power Security Services
             </span>
             <div>
-              <Heading className="text-sm md:text-3xl lg:text-5xl" level={3}>
+              <Heading className="text-2xl md:text-3xl lg:text-5xl" level={3}>
                 <span className="xl:leading-[52px]">
                   Our security guards are properly skilled and trained in modern
                   security trainings.
@@ -36,7 +36,7 @@ const HighlightCard = () => {
               </Heading>
             </div>
             <Text
-              className="hidden md:block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
+              className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
           md:leading-9 xl:mb-[20px]"
             >
               You can now rest easily, sleep with your two eyes closed, knowing
@@ -45,7 +45,7 @@ const HighlightCard = () => {
             </Text>
             <p onClick={() => setShow(true)}>
               <button
-                className={`bg-[#fff] text-normal px-2 py-1 md:px-8 md:py-4 rounded-[.2rem] cursor-pointer font-medium `}
+                className={`bg-[#fff] mt-2 text-normal px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
               >
                 Get in Touch
               </button>

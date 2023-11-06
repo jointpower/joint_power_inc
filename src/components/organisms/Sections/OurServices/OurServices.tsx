@@ -12,14 +12,14 @@ const OurServices = () => {
   return (
     <section className="mt-20">
       <Heading
-        className="text-black font-medium text-center  md:text-[30px]  tracking-[5px]"
+        className="text-black font-medium text-center  text-3xl md:text-[30px] tracking-[2px] sm:tracking-[5px]"
         level={1}
       >
         OUR SERVICES
       </Heading>
 
       {/* Services Card */}
-      <div className="mt-8 flex flex-wrap justify-center gap-6">
+      <div className="mt-8 grid sm:flex flex-wrap justify-center gap-6">
         <ServicesCard alt="" image_src={ApartmentOfficerImg} />
         <ServicesCard alt="" image_src={MedicalOfficerImg} />
 
