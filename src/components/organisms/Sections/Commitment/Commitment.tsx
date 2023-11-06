@@ -146,11 +146,11 @@ export const Commitment = () => {
 
   return (
     <section className="flex flex-col container ">
-      <div className="mt-48 bg-normal">
+      <div className="mt-24 md:mt-48 bg-normal">
         <div>
           <Heading
             level={2}
-            className="  font-medium  mb-[.5rem] pt-[30px]  text-3xl text-center uppercase"
+            className="font-medium  mb-[.5rem] pt-[30px]  text-3xl text-center uppercase"
           >
             {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
               Commited{' '}
@@ -158,12 +158,12 @@ export const Commitment = () => {
             <span className="text-secondary">our services</span>
           </Heading>
         </div>
-        <p className="text-base md:text-2xl text-center md:mb-[80px] lg:mt-[10px] text-gray-200">
+        <p className="text-base md:text-2xl text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
           At JPS, We offer a whole range of services which ranges from the
           following..
         </p>
         <div
-          className={`px-10 pb-10 grid grid-cols-4 gap-5 text-white text-center py-2 h-[40rem] overflow-y-auto`}
+          className={`px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2 lg:h-[40rem] overflow-y-auto`}
         >
           {/* {commitments.map(({ messageBody }, index) => (
             <div
@@ -181,7 +181,7 @@ export const Commitment = () => {
                 return (
                   <button
                     key={index}
-                    className={`hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
+                    className={`min-h-[70px] md:min-h-[unset] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
                   >
                       <p>{data.service}</p>
                   </button>

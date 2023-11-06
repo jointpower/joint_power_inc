@@ -14,9 +14,9 @@ const ServicesHero = () => {
   const [show, setShow] = useState(false);
   return (
     <Dialog open={show}>
-      <section className="text-black mt-[64px] mb-[40px]">
+      <section className="text-black mt-20 md;mt-[64px] mb-[40px]">
         <div className="relative">
-          <div className="overlay z10 absolute inset-0 bg-black/70"></div>
+          <div className="overlay z-10 absolute inset-0 bg-black/70"></div>
           <NextImage
             src={serviceBlur}
             alt="about-main-hero image"
@@ -32,21 +32,21 @@ const ServicesHero = () => {
         </div>
 
         <div
-          className={`w-full flex  text-[#fff] flex-col items-end lg:flex-row items- absolute top-[100px] md:top-[200px] container`}
+          className={`z-20 w-full flex  text-[#fff] flex-col items-end lg:flex-row items- absolute top-[150px] md:top-[200px] container`}
         >
           <div className="text-center md:container w-[98%] lg:w-[90%] md:flex md:flex-col md:align-start">
             <div>
               <Heading
                 level={1}
-                className="font-bold md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
+                className="font-bold text-2xl md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
               >
                 <span className="block  "> Joint Power</span>
                 <span className="md:mt-[-8px] leading-none">
-                  Security Services,
+                  Security Services.
                 </span>
               </Heading>
-              <Text className="font-medium mt-3 text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
-                ..providing protection you can count on and security <br /> you
+              <Text className="font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
+                ..providing protection you can count on and security <br className="hidden md:block" /> you
                 can trust.
               </Text>
             </div>

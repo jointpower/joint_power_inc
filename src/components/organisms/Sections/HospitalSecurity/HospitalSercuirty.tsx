@@ -15,9 +15,9 @@ const HospitalSecurity = () => {
   return (
     <Dialog open={show}>
       <div
-        className={`flex w-full text-black pt-[45px] md:pt-[120px] mb-[24px] container relative`}
+        className={`max-w-[332px] md:max-w-none bg-grey-7 rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col-reverse md:flex-row w-full text-black md:pt-[120px] mb-[24px] container relative`}
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col p-5 text-center md:text-left">
           <div className=" w-[100%] md:mt-[30px] ">
             <Heading
               level={1}
@@ -25,25 +25,25 @@ const HospitalSecurity = () => {
             >
               Hospital Security
             </Heading>
-            <Text className="font-medium mt-3 w-[90%] text-base text-gray-800  lg:text-2xl">
+            <Text className="font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
               Our goal is to supply all clients with the highest quality
               security force services available for hospitals in califonia.
             </Text>
           </div>
           <div onClick={() => setShow(true)} className={`my-2 mt-5`}>
             <button
-              className={`bg-normal text-[#fff] px-2 py-1 md:px-8 md:py-4 rounded-[.2rem] cursor-pointer font-medium `}
+              className={`bg-normal text-[#fff] px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
               Get in Touch
             </button>
           </div>
         </div>
 
-        <div className="mt-[8px] md:mt-0">
+        <div className="">
           <NextImage
             src={HospitalMobile}
             alt="Hospital-sercurity-image"
-            className="w-[154px] h-[186px] md:hidden"
+            className="w-full md:w-[154px] h-[186px] md:hidden"
             priority
           />
           <NextImage

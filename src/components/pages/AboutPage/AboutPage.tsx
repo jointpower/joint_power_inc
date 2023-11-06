@@ -1,7 +1,4 @@
 import Heading from "@/components/atom/Heading/Heading";
-import NextImage from "@/components/atom/NextImage/NextImage";
-import { Goals } from "@/components/molecules/Goal/Goals";
-import { Team } from "@/components/molecules/Team/Team";
 import AboutHero from "@/components/organisms/Sections/AboutHero/AboutHero";
 import { OurGoal } from "@/components/organisms/Sections/Our Goal/OurGoal";
 import OurTeam from "@/components/organisms/Sections/OurTeam/OurTeam";
@@ -16,7 +13,7 @@ const AboutPage = () => {
 
       <Heading
         level={2}
-        className="mt-32 flex justify-center  text-4xl md:text-[40px] font-bold mb-[30px] md:mb-[50px] lg:text-start text-center"
+        className="mt-32 flex justify-center  text-3xl md:text-[40px] font-bold mb-[30px] md:mb-[50px] lg:text-start text-center"
       >
         <span className="text-normal">
           {" "}

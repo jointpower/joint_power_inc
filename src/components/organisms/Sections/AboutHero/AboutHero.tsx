@@ -22,7 +22,7 @@ const AboutHero = () => {
       <div className="flex w-full flex-col text-black mt-[4rem] mb-[24px] items-start container">
         <div className="flex ">
           <div className="flex flex-col">
-            <div className={``}>
+            <div className={`text-justify sm:text-left`}>
               <Heading
                 level={1}
                 className="text-center text-2xl md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
@@ -31,7 +31,7 @@ const AboutHero = () => {
                   We Know Our Story
                 </span>
               </Heading>
-              <h2 className="mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2">
+              <h2 className="text-left mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2">
                 <div className="min-w-[15px] mt-2 md:mt-0">
                   <BsFillPatchCheckFill
                     size={17}
@@ -56,7 +56,7 @@ const AboutHero = () => {
                 <br />
                 <br />
               </p>
-              <h3 className="mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2">
+              <h3 className="text-left mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2">
                 <div className="mt-2 md:mt-0 min-w-[15px]">
                   <BsFillPatchCheckFill size={17} className="text-current" />
                 </div>

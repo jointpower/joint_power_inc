@@ -7,32 +7,33 @@ import Heading from "@/components/atom/Heading/Heading";
 
 export const Security = () => {
   return (
-    <section className="flex flex-col md:flex-row container md:justify-center gap-5 md:mb-[51px] items-center ">
+    <section className="mb-20 max-w-[332px] md:max-w-none bg-grey-7 rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col md:flex-row container md:justify-center gap-5 md:mb-[51px] items-center ">
       <div>
-        <NextImage
+        {/* <NextImage
           src={SercurityMobile}
           alt="sercurity image"
           className="w-[300px] h-[429px] md:hidden"
           priority
-        />
+        /> */}
         <div className="rounded-md overflow-hidden">
           <NextImage
             src={SER1}
             alt="sercurity image"
-            className="w-[350px] h-[350px] lg:w-[550px] object-cover rounded-md lg:h-[370px] hidden md:flex"
+            className="w-[330px] h-[300px] lg:w-[550px] object-cover rounded-md lg:h-[370px] flex"
             priority
           />
         </div>
       </div>
 
-      <div className=" flex flex-col md:mt-[10px] lg:mt-0 w-[300px] lg:w-[650px]">
-        <Text className="bg-transparent px-12 py-[30px] w-full hidden md:block text-[20px] lg:text-xl text-black  leading-9">
+      <div className="text-center md:text-left flex flex-col md:mt-[10px] lg:mt-0 w-[300px] lg:w-[650px]">
+        <Text className="text-lg bg-transparent px-1 md:px-12 py-[30px] w-full block lg:text-xl text-black  leading-9">
           <Heading
             level={1}
-            className={`text-black text-[24px] md:text-[40px] xl:text-[45px] md:w-full flex-1 font-semibold leading-tight  md:mb-[30px]`}
+            className={`text-black text-[28px] md:text-[40px] xl:text-[45px] md:w-full flex-1 font-semibold leading-tight mb-3 md:mb-[30px]`}
           >
             Emergency
           </Heading>
+         
           Joint Power Security has{" "}
           <span className="text-secondary">24 Hours</span> Emergency Security
           Guard Services. Whether you need security guards for an hospital,
