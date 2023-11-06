@@ -25,24 +25,29 @@ const AboutHero = () => {
             <div className={``}>
               <Heading
                 level={1}
-                className="text-center text-[40px] md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
+                className="text-center text-2xl md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-[#C1AF6F] ">
                   We Know Our Story
                 </span>
               </Heading>
-              <h2 className="mt-10 flex items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2">
-                <BsFillPatchCheckFill size={17} className="text-current" /> A
+              <h2 className="mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2">
+                <div className="min-w-[15px] mt-2 md:mt-0">
+                  <BsFillPatchCheckFill
+                    size={17}
+                    className="text-current w-4"
+                  />{" "}
+                </div>
                 PROFESSIONAL SECURITY SERVICE BETWEEN YOU AND THE IMPOSSIBLE
               </h2>
-              <p className="md:text-[1.2rem] text-[1.1rem] text-[#5f5d5d]">
+              <p className="md:text-[1.2rem] text-base text-[#5f5d5d]">
                 Joint Power Security Services Inc offers experienced security
                 guards chosen from strict screening process that can offer the
                 best security services in California.
                 <br />
                 <br />
               </p>
-              <p className="md:text-[1.2rem] text-[1.1rem] text-[#5f5d5d]">
+              <p className=" md:text-[1.2rem] text-base text-[#5f5d5d]">
                 Our guards cover all domains of private security in protecting
                 life and properties with excellent and superior service. We make
                 the impossible turn possible . We cover a diverse set of clients
@@ -51,23 +56,28 @@ const AboutHero = () => {
                 <br />
                 <br />
               </p>
-              <h3 className="mt-5 md:text-[1.2rem] text-[1.1rem] flex items-center gap-2">
-                <BsFillPatchCheckFill size={17} className="text-current" />
+              <h3 className="mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2">
+                <div className="mt-2 md:mt-0 min-w-[15px]">
+                  <BsFillPatchCheckFill size={17} className="text-current" />
+                </div>
                 OUR SECURITY GUARDS ARE SKILLED AND TRAINED.
               </h3>
-              <p className="md:text-[1.2rem] text-[1.1rem] mt-2 text-[#5f5d5d]">
+              <p className=" md:text-[1.2rem] text-base mt-2 text-[#5f5d5d]">
                 You can be at rest knowing that you have Joint Power Security
                 Services inc, the best private security company in the industry
                 watching over you and your properties.
                 <br />
                 <br />
               </p>
-              <p className="md:text-[1.2rem] text-[1.1rem] text-[#5f5d5d]">
+              <p className="md:text-[1.2rem] text-base text-[#5f5d5d]">
                 We oﬀer a crystal transparent approach with our clients and we
                 keep them informed in every steps we make and up to date.
               </p>
             </div>
-            <div className="-mt-[80px] lg:-mt-[40px]" onClick={() => setShow(true)}>
+            <div
+              className="-mt-[80px] lg:-mt-[40px]"
+              onClick={() => setShow(true)}
+            >
               <Button className="text-base " variants="primary">
                 Contact us Today
               </Button>

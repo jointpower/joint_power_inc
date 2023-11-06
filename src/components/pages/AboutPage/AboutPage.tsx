@@ -36,7 +36,7 @@ const AboutPage = () => {
       {/* <div> */}
       <Heading
         level={1}
-        className="text-black text-base  md:text-[40px] font-bold leading-[47px] text-center tracking-[3px] mt-44 mb-[40px] "
+        className="text-black text-3xl md:text-[40px] font-bold md:leading-[47px] text-center tracking-[2px] mt-28 md:mt-44 mb-[40px] "
       >
         {" "}
         Meet Our Team
