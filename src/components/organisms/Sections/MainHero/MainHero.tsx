@@ -16,7 +16,7 @@ const MainHero = () => {
 
   return (
     <Dialog open={show}>
-      <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[unset] text-black md:flex-row gap-4 md:gap-14">
+      <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[150px] text-black md:flex-row gap-4 md:gap-14">
         <div className="flex flex-col text-center md:text-left">
           <div className={`w-[100%] md:mx-0 mt-5`}>
             <Heading
