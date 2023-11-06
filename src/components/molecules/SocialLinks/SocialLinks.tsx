@@ -18,7 +18,7 @@ const SocialLinks = ({ className }: SocialLinksProps) => {
     ];
 
     return (
-        <div className={`${className ?? className} px-5 flex gap-4`}>
+        <div className={`${className ?? className} px-5 flex justify-center md:justify-start gap-4`}>
             {social_links.map((link, index) =>
                 link?.type === "instagram" ? (
                     <a

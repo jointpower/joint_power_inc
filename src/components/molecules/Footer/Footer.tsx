@@ -37,17 +37,17 @@ const Footer = () => {
   return (
     <footer className=" text-white pt-20 mt-32 w-full">
       <div className=" bg-secondary w-full h-[10px] mb-1" />
-      <div className="bg-primary p-10 pb-0">
+      <div className="bg-primary md:p-10 pb-0">
         <div className="container">
-          <div className="text-sm flex justify-between ">
-            <div className="hidden md:flex md:-mt-5">
+          <div className="text-sm flex flex-col md:flex-row  gap-10 md:gap-0 justify-between ">
+            <div className="flex md:-mt-5">
               <NextImage
                 className=" w-[180px] h-[196px] "
                 src={JpsBadge}
                 alt="Joint power security badge"
               />
             </div>
-            <div className="flex gap-12 lg:gap-24 mb-[80px]">
+            <div className=" grid grid-cols-2 md:flex gap-x-6 gap-y-12 lg:gap-x-24 lg:gap-y-24 mb-[80px]">
               {" "}
               <div className="flex flex-col gap-6">
                 <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
@@ -92,9 +92,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between mt-8 md:hidden">
+          <div className="flex items-center md:justify-between justify-center mt-8 md:hidden">
             <NextImage
-              className=" w-[37px] h-[39px]"
+              className="hidden md:block w-[37px] h-[39px]"
               src={JpsBadge}
               alt="Joint power security badge"
             />
