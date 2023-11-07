@@ -35,6 +35,7 @@ const Testimonials = () => {
     <section className="bg-grey-7/10">
       <div className="container pb-5">
         <Heading
+        data-aos="fade-up"
           level={3}
           className="text-black text-2xl md:text-3xl text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
         >
