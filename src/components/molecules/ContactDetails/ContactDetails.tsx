@@ -57,6 +57,7 @@ const ContactDetails = () => {
       ) : null}
       <form action="" className="flex flex-col " onSubmit={handleSubmit}>
         <InputText
+          data-aos="fade-up"
           placeholder="Name"
           name={"name"}
           onChange={(e) => setName(e.target.value)}
@@ -66,6 +67,7 @@ const ContactDetails = () => {
           classNames="px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         <InputText
+          data-aos="fade-up"
           placeholder="Phone Number"
           name={"phoneNumber"}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -75,6 +77,7 @@ const ContactDetails = () => {
           classNames=" px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         <InputText
+          data-aos="fade-up"
           placeholder="Email Address"
           name={"email"}
           type="email"
@@ -94,6 +97,7 @@ const ContactDetails = () => {
         /> */}
 
         <textarea
+          data-aos="fade-up"
           name="more-info"
           placeholder="How can we help you ?"
           onChange={(e) => setComment(e.target.value)}
@@ -102,6 +106,7 @@ const ContactDetails = () => {
           className="p-5 border border-line w-full lg:w-[431px] text-grey-2 h-[130px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
         />
         <button
+          data-aos="fade-up"
           type="submit"
           className="w-full py-4 m-auto mb-2 text-white rounded bg-normal"
         >

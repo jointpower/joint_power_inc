@@ -1,6 +1,9 @@
+"use client";
 import Head from "next/head";
 import Footer from "../../molecules/Footer/Footer";
 import Header from "../../molecules/Header/Header";
+import AOS from "aos";
+import { useEffect } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,6 +21,14 @@ const Layout = ({ children, ...customMeta }: LayoutProps) => {
       "JPS - Joint Power Security is among the best security service industry that offers 100% security to lives and property.They also train people that has interest in safeguarding lives and properties. They are simply the best with affordable service charge ",
     ...customMeta,
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="w-full max-w-[1440px] mx-auto overflow-x-hidden">
       <Head>

@@ -17,9 +17,13 @@ const MainHero = () => {
   return (
     <Dialog open={show}>
       <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[150px] text-black md:flex-row gap-4 md:gap-14">
-        <div className="flex flex-col text-center md:text-left">
-          <div className={`w-[100%] md:mx-0 mt-5`}>
+        <div
+          
+          className="flex flex-col text-center md:text-left"
+        >
+          <div data-aos="fade-up" className={`w-[100%] md:mx-0 mt-5`}>
             <Heading
+            data-aos="fade-up"
               level={1}
               className="text-[30px] lg:text-[60px] uppercase  w-full flex-1 font-bold md:mb-[30px]"
             >
@@ -37,10 +41,13 @@ const MainHero = () => {
               </span>
               <span className="text-[30px]  md:text-[40px] lg:text-[60px] text-secondary ">
                 Services
-                <span className="text-transparent bg-clip-text bg-gradient-to-r to-[#2D324B] from-secondary"> Incorporation.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-[#2D324B] from-secondary">
+                  {" "}
+                  Incorporation.
+                </span>
               </span>
             </Heading>
-            <Text className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]">
+            <Text data-aos="fade-up" className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]">
               The best security guard company in California. We are watching
               over you!!
             </Text>
@@ -48,14 +55,14 @@ const MainHero = () => {
           <div>
             {/* ${xtraSmall ? "mx-0" : "mx-6"} might add later*/}
             <p onClick={() => setShow(true)}>
-              <Button className={`mt-8 md:mt-10md:mx-0`} variants="primary">
+              <Button data-aos="fade-up" className={`mt-8 md:mt-10md:mx-0`} variants="primary">
                 Get in Touch
               </Button>
             </p>
           </div>
         </div>
 
-        <div className="mt-[70px] md:mt-10">
+        <div data-aos="fade-up" className="mt-[70px] md:mt-10">
           <NextImage
             src={HeroImage}
             alt="contactUs-hero image"

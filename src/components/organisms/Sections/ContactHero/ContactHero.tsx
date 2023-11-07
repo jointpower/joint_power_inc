@@ -18,7 +18,7 @@ const ContactHero = () => {
       <div className="container relative flex w-full text-black mt-20 mb-10">
         <div className="flex flex-col items-center text-center justify-center m-auto">
           <div className="">
-            <Heading
+            <Heading data-aos="fade-up"
               level={1}
               className="text-[1.2rem] md:text-[1.5rem] xl:text-[2.5rem] md:w-full flex-1 font-semibold leading-tight  md:mb-[1.875rem]"
             >
@@ -31,12 +31,12 @@ const ContactHero = () => {
 
               <span className="text-[#727272]"> YOU.</span>
             </Heading>
-            <Text className="text-gray-700 font-medium mt-3 md:w-[90%] xl:w-full text-lg md:text-3xl leading-7 md:leading-10 ">
+            <Text data-aos="fade-up" className="text-gray-700 font-medium mt-3 md:w-[90%] xl:w-full text-lg md:text-3xl leading-7 md:leading-10 ">
               Don&apos;t hestitate to reach out to us in case you have <br className="hidden md:block" /> questions, enquiries or request.
             </Text>
           </div>
           <div onClick={() => setShow(true)}>
-            <button
+            <button data-aos="fade-up"
               className={`md:px-8 md:py-3 md:my-6 px-6 py-3 bg-normal text-white my-2 rounded-[.2rem] cursor-pointer`}
             >
               Get in Touch

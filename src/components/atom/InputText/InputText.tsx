@@ -17,6 +17,7 @@ const InputText = ({
     required,
     type,
     onChange,
+    ...rest
 }: InputTextProps) => {
     return (
         <input
@@ -27,6 +28,7 @@ const InputText = ({
             name={name}
             type={type}
             required={required}
+            {...rest}
         />
             
     );

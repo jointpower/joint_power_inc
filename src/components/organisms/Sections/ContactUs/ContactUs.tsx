@@ -18,7 +18,7 @@ export const ContactUs = ({
       className={` ${className ?? className} sm:container flex flex-col 20 `}
     >
       {noHeader ? null : (
-        <p className="!text-center pl-24 text-gray-800 text-xl font-semibold md:text-3xl px-16 py-2 my-10 mt-20">
+        <p data-aos="fade-up" className="!text-center pl-24 text-gray-800 text-xl font-semibold md:text-3xl px-16 py-2 my-10 mt-20">
           LET&apos;S HEAR FROM YOU
         </p>
       )}

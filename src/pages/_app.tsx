@@ -1,9 +1,22 @@
 import "../../styles/globals.css";
 import type { AppProps } from "next/app";
+import { useEffect } from 'react'
 
 import Script from "next/script";
+import Aos from "aos";
+import "aos/dist/aos.css";
+// import "../scss/style.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+    useEffect(() => {
+        Aos.init({
+          duration: 800,
+          once: true,
+          
+        });
+      }, []);
+
     return (
         <>
             <Component {...pageProps} />

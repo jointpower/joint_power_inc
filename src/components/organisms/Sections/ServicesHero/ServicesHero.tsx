@@ -36,7 +36,7 @@ const ServicesHero = () => {
         >
           <div className="text-center md:container w-[98%] lg:w-[90%] md:flex md:flex-col md:align-start">
             <div>
-              <Heading
+              <Heading data-aos="fade-up"
                 level={1}
                 className=" opacity-75 font-bold text-2xl md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
               >
@@ -45,14 +45,14 @@ const ServicesHero = () => {
                   Security Services.
                 </span>
               </Heading>
-              <Text className="opacity-75 font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
+              <Text data-aos="fade-up" className="opacity-75 font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
                 ..providing protection you can count on and security <br className="hidden md:block" /> you
                 can trust.
               </Text>
             </div>
 
             <div onClick={() => setShow(true)}>
-              <Button className="mt-4 mb-[59px]" variants="primary">
+              <Button data-aos="fade-up" className="mt-4 mb-[59px]" variants="primary">
                 Get in Touch
               </Button>
             </div>

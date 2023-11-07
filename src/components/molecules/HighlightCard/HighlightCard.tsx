@@ -16,19 +16,19 @@ const HighlightCard = () => {
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">
         <div className="flex flex-col md:flex-row-reverse justify-between items-center px-3 gap-1 py-16 rounded-2xl  bg-normal md:mt-[52px]  lg:mt-[92px] md:mb-[78px] lg:mb-0">
-          <div>
+          <div data-aos='fade-up'>
             <NextImage
               src={ServiceImage}
               alt="joint security officer"
               className="h-[200px] md:mt-[-90px] xl:mt-[-140px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[550px] lg:h-[400px]"
             />
           </div>
-          <div className="flex flex-col text-center md:text-left lg:mt-[-90px] gap-4 lg:px-4 lg:w-[53%]">
-            <span className="uppercase font-medium mt-10 md:mt-0 text-secondary">
+          <div data-aos='fade-up' className="flex flex-col text-center md:text-left lg:mt-[-90px] gap-4 lg:px-4 lg:w-[53%]">
+            <span data-aos='fade-up' className="uppercase font-medium mt-10 md:mt-0 text-secondary">
               Joint Power Security Services
             </span>
             <div>
-              <Heading className="text-2xl md:text-3xl lg:text-5xl" level={3}>
+              <Heading data-aos='fade-up' className="text-2xl md:text-3xl lg:text-5xl" level={3}>
                 <span className="xl:leading-[52px]">
                   Our security guards are properly skilled and trained in modern
                   security trainings.
@@ -36,6 +36,7 @@ const HighlightCard = () => {
               </Heading>
             </div>
             <Text
+            data-aos='fade-up'
               className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
@@ -43,7 +44,7 @@ const HighlightCard = () => {
               that you have Joint Power Security Services; The best private
               security company service in california, watching over you.
             </Text>
-            <p onClick={() => setShow(true)}>
+            <p className="w-fit md:m-[unset] m-auto" data-aos='fade-up' onClick={() => setShow(true)}>
               <button
                 className={`bg-[#fff] mt-2 text-normal px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
               >
