@@ -16,7 +16,7 @@ const ServicesHero = () => {
     <Dialog open={show}>
       <section className="text-black mt-20 md:mt-[64px] mb-[40px]">
         <div className="relative">
-          <div className="overlay z-10 absolute inset-0 bg-black/70"></div>
+          <div data-aos="fade-up" className="overlay z-10 absolute inset-0 bg-black/70"></div>
           <NextImage
             src={serviceBlur}
             alt="about-main-hero image"

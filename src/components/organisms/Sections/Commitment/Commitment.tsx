@@ -148,7 +148,7 @@ export const Commitment = () => {
     <section className="flex flex-col container ">
       <div className="mt-24 md:mt-48 bg-normal">
         <div>
-          <Heading
+          <Heading data-aos="fade-up"
             level={2}
             className="font-medium  mb-[.5rem] pt-[30px]  text-3xl text-center uppercase"
           >
@@ -158,7 +158,7 @@ export const Commitment = () => {
             <span className="text-secondary">our services</span>
           </Heading>
         </div>
-        <p className="text-base md:text-2xl text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
+        <p data-aos="fade-up" className="text-base md:text-2xl text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
           At JPS, We offer a whole range of services which ranges from the
           following..
         </p>
@@ -179,7 +179,7 @@ export const Commitment = () => {
           {services?.length
             ? services?.map((data, index) => {
                 return (
-                  <button
+                  <button data-aos="fade-up"
                     key={index}
                     className={`min-h-[70px] md:min-h-[unset] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
                   >

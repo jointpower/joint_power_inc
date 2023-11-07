@@ -20,17 +20,18 @@ const HospitalSecurity = () => {
         <div className="flex flex-col p-5 text-center md:text-left">
           <div className=" w-[100%] md:mt-[30px] ">
             <Heading
+            data-aos="fade-up"
               level={1}
               className={`text-[24px] md:text-[40px] xl:text-[45px] md:w-full flex-1 font-semibold leading-tight  md:mb-[30px]`}
             >
               Hospital Security
             </Heading>
-            <Text className="font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
+            <Text data-aos="fade-up" className="font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
               Our goal is to supply all clients with the highest quality
               security force services available for hospitals in califonia.
             </Text>
           </div>
-          <div onClick={() => setShow(true)} className={`my-2 mt-5`}>
+          <div data-aos="fade-up" onClick={() => setShow(true)} className={`my-2 mt-5`}>
             <button
               className={`bg-normal text-[#fff] px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
@@ -39,7 +40,7 @@ const HospitalSecurity = () => {
           </div>
         </div>
 
-        <div className="">
+        <div data-aos="fade-up" className="">
           <NextImage
             src={HospitalMobile}
             alt="Hospital-sercurity-image"
