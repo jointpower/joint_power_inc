@@ -8,7 +8,7 @@ const ServicesPage = () => {
   return (
     <>
       <ServicesHero />
-      <h3 className='text-gray-800 text-center text-3xl font-semibold mt-40 mb-16 opacity-90'>Our Top Services</h3>
+      <h3 className='text-gray-800 text-center text-3xl font-semibold mt-20 md:mt-40 mb-16 opacity-90'>Our Top Services</h3>
       <Security />
       <HospitalSecurity />
       <MallSecurity />
