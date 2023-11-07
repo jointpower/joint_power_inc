@@ -9,7 +9,7 @@ import Heading from "@/components/atom/Heading/Heading";
 const Opportunities = () => {
   return (
     <section>
-      <div className="w-full mt-32 md:mt-40 mb-10 flex flex-col justify-center items-center">
+      <div className="min-h-[50px] w-full mt-32 md:mt-40 mb-10 flex flex-col justify-center items-center">
         <span className="uppercase absolute font-medium tracking-wide md:tracking-wider text-black text-3xl text-center md:text-4xl">
           Make Your Own Opportunities
         </span>
@@ -21,7 +21,7 @@ const Opportunities = () => {
       />
 
       <div className="container lg:px-5">
-        <div className="text-gray-400 text-base md:text-2xl mt-[32px] mb-[92px]">
+        <div className="text-gray-600 text-base md:text-2xl mt-[32px] mb-[92px]">
           <Text className="text-justify">
             <span className=" md:text-secondary ">
               Joint Power Security Services,
@@ -51,7 +51,7 @@ const Opportunities = () => {
             </p>
             <Text
               className="hidden md:block md:text-base lg:text-xl md:text-grey-6
-              md:leading-9 xl:mb-[20px]"
+               md:leading-9 xl:mb-[20px]"
             >
               You can now rest easily, sleep with your two eyes closed, knowing
               that you have Joint Power Security Services; The best private

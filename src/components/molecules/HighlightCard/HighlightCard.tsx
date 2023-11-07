@@ -37,7 +37,7 @@ const HighlightCard = () => {
             </div>
             <Text
               className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
-          md:leading-9 xl:mb-[20px]"
+              leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
               You can now rest easily, sleep with your two eyes closed, knowing
               that you have Joint Power Security Services; The best private

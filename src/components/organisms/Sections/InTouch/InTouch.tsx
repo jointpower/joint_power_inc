@@ -31,7 +31,7 @@ const InTouch = () => {
                 <p>NO CONTRACT.</p>
               </div>
             </Heading>
-            <Text className="text-center mt-4 text-base text-gray-400 md:text-2xl">
+            <Text className="text-center mt-4 text-base text-gray-600 md:text-2xl">
               We provide temporary and permanent security services. Our security
               guard services are the most comprehensive you will find. No matter
               what the industry, Joint Power Security Service guarantees to have
