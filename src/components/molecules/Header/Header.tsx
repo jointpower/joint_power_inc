@@ -4,16 +4,27 @@ import NavLinks from "@/components/molecules/NavLinks/NavLinks";
 import SocialLinks from "@/components/molecules/SocialLinks/SocialLinks";
 import JpsLogo from "public/jps-brand-logo.png";
 import { useState } from "react";
-import { BiMenu } from "react-icons/bi";
+import { BiMenu, BiPhoneCall } from "react-icons/bi";
 import { MdOutlineClose } from "react-icons/md";
 import { GiSmartphone } from "react-icons/gi";
+import { HiMail } from "react-icons/hi";
 
 const Header = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="z-30 fixed left-0 right-0 top-0 bg-white md:shadow h-20 flex justify-center">
+    <header className="z-30 fixed left-0 right-0 top-10 w-full bg-white md:shadow h-20 flex flex-col justify-center">
+      <div className="h-10 fixed top-0 bg-gray-600 font-medium w-full flex gap-10 justify-center items-center">
+        <div className="flex items-center gap-1">
+          <BiPhoneCall />
+          <span className="text-sm sm:text-base font-medium">+14244637600</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <HiMail />
+          <span className="text-sm sm:text-base font-medium">info@jointpowersecurity.com</span>
+        </div>
+      </div>
       <div
-        className="md:flex items-center left-0 right-0 container
+        className="h-full md:flex items-center left-0 right-0 container absolute 
             bg-primary md:bg-white md:text-grey-1 justify-between md:flex-row flex py-3"
       >
         <Links url="/" className="">
@@ -33,9 +44,8 @@ const Header = (): JSX.Element => {
         <nav className="md:flex bg-white text-grey-1 flex-row  hidden">
           <NavLinks />
         </nav>
-        <button className="items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded font-medium">
-          <GiSmartphone />
-          +34 384 9834 098
+        <button className="font-semibold items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded">
+          Get in Touch
         </button>
       </div>
 

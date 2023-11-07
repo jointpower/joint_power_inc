@@ -55,7 +55,7 @@ const MainHero = () => {
           </div>
         </div>
 
-        <div className="mt-[30px] md:mt-0">
+        <div className="mt-[70px] md:mt-10">
           <NextImage
             src={HeroImage}
             alt="contactUs-hero image"

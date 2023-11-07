@@ -14,7 +14,7 @@ const ServicesHero = () => {
   const [show, setShow] = useState(false);
   return (
     <Dialog open={show}>
-      <section className="text-black mt-20 md;mt-[64px] mb-[40px]">
+      <section className="text-black mt-20 md:mt-[64px] mb-[40px]">
         <div className="relative">
           <div className="overlay z-10 absolute inset-0 bg-black/70"></div>
           <NextImage
@@ -32,7 +32,7 @@ const ServicesHero = () => {
         </div>
 
         <div
-          className={`z-20 w-full flex  text-[#fff] flex-col items-end lg:flex-row items- absolute top-[150px] md:top-[200px] container`}
+          className={`z-20 w-full flex  text-[#fff] flex-col items-end lg:flex-row items- absolute top-[170px] md:top-[250px] container`}
         >
           <div className="text-center md:container w-[98%] lg:w-[90%] md:flex md:flex-col md:align-start">
             <div>
