@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import NextImage from "@/components/atom/NextImage/NextImage";
 import LineMask from "public/line-mask.png";
-import JpsCar from "public/jps-car.png";
+import JpsCar from "public/car_1.png";
 import Text from "@/components/atom/Text/Text";
 import { ContactUs } from "../ContactUs/ContactUs";
 import Heading from "@/components/atom/Heading/Heading";
@@ -19,7 +19,7 @@ const Opportunities = () => {
       </div>
       <NextImage
         data-aos="fade-up"
-        className="w-[331.45px] h-[349px] md:hidden container mt-[35.19px]"
+        className="w-[331.45px] h-[209px] md:hidden container mt-[35.19px]"
         src={JpsCar}
         alt="joint power security car"
       />
