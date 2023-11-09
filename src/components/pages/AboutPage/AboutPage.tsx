@@ -6,7 +6,7 @@ import Banner from "../../molecules/Banner/Banner";
 
 const AboutPage = () => {
   return (
-    <div className="text-[150px] text-grey-2 pt-12">
+    <div className="text-[150px] text-grey-2 pt-24">
       {/* @ts-ignore */}
       <Banner text={"About Us"} />
       <AboutHero />

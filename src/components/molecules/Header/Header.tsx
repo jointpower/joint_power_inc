@@ -14,14 +14,16 @@ const Header = (): JSX.Element => {
   return (
     <header className="z-30 fixed left-0 right-0 top-10 w-full bg-white md:shadow h-20 flex flex-col justify-center">
       <div className="h-10 fixed top-0 bg-gray-600 font-medium w-full flex gap-10 justify-center items-center">
-        <div className="flex items-center gap-1">
+        <a href="tel:+1234567890" className="flex items-center gap-1">
           <BiPhoneCall />
           <span className="text-sm sm:text-base font-medium">+14244637600</span>
-        </div>
-        <div className="flex items-center gap-1">
+        </a>
+        <a href="mailto:info@jpsblabla.com" className="flex items-center gap-1">
           <HiMail />
-          <span className="text-sm sm:text-base font-medium">info@jointpowersecurity.com</span>
-        </div>
+          <span className="text-sm sm:text-base font-medium">
+            info@jointpowersecurity.com
+          </span>
+        </a>
       </div>
       <div
         className="h-full md:flex items-center left-0 right-0 container absolute 

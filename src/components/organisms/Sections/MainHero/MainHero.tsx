@@ -2,7 +2,7 @@ import Button from "@/components/atom/Button/Button";
 import Heading from "@/components/atom/Heading/Heading";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
-import HeroImage from "public/jps-hero-mobile.png";
+import HeroImage from "public/mobile-hero.jpg";
 import HeroImageDesktop from "public/jps-hero-desktop.png";
 import { useMediaQuery } from "@/base/MediaQuery";
 import { useState } from "react";
@@ -66,7 +66,7 @@ const MainHero = () => {
           <NextImage
             src={HeroImage}
             alt="contactUs-hero image"
-            className="w-[400px] md:w-full h-[290.5px] md:hidden"
+            className="mt-5 w-[400px] md:w-full h-[290.5px] md:hidden"
             priority
           />
           <NextImage

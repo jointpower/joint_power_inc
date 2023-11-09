@@ -8,7 +8,7 @@ const ContactUsPage = () => {
   return (
     <div>
       {/* @ts-ignore */}
-      <div className="mt-24 md:mt-7">
+      <div className="mt-24 md:mt-20">
         <Banner text={"Contact Us"} />
       </div>
       <ContactHero />

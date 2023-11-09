@@ -40,11 +40,10 @@ export const Security = () => {
           <p data-aos="fade-up">
             Joint Power Security has{" "}
             <span className="text-secondary">24 Hours</span> Emergency Security
-            Guard Services. Whether you need security guards for an hospital,
-            shopping mall, hotel, apartments and social security.
+            Guard Services. Whether you need security guards for a hospital, shopping mall, hotel, apartments and construction sites.
             <br />
             <br />
-            Trained security guards are available{" "}
+            Our trained security guards are available{" "}
             <span className="text-secondary">
               24 Hours per day – 7 days per week.
             </span>
