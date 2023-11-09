@@ -18,7 +18,7 @@ const Header = (): JSX.Element => {
           <BiPhoneCall />
           <span className="text-sm sm:text-base font-medium">+14244637600</span>
         </a>
-        <a href="mailto:info@jpsblabla.com" className="flex items-center gap-1">
+        <a href="mailto:info@jointpowersecurity.com" className="flex items-center gap-1">
           <HiMail />
           <span className="text-sm sm:text-base font-medium">
             info@jointpowersecurity.com
