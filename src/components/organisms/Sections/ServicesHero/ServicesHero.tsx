@@ -5,7 +5,7 @@ import Text from "@/components/atom/Text/Text";
 import HeroImage from "public/servicesHero-mobile.png";
 import HeroImageDesktop from "public/servicesHero-desktop.png";
 import HeroBadge from "public/jps-hero-badge.png";
-import serviceBlur from "public/serviceBlur.png";
+import serviceBlur from "public/team-members.jpg";
 import { useState } from "react";
 import ContactUsModal from "@/components/form/ContactUsModal";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
@@ -45,8 +45,8 @@ const ServicesHero = () => {
                   Security Services.
                 </span>
               </Heading>
-              <Text data-aos="fade-up" className="opacity-75 font-medium mt-3 text-lg sm:text-[24px] lg:text-[32px] md:mb-10 mb-[41px]">
-                ..providing protection you can count on and security <br className="hidden md:block" /> you
+              <Text data-aos="fade-up" className="leading-10 italic opacity-75 font-medium mt-3 text-base sm:text-[24px] lg:text-2xl md:mb-10 mb-[41px]">
+                ... providing protection you can count on and security <br className="hidden md:block" /> you
                 can trust.
               </Text>
             </div>

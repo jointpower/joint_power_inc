@@ -2,7 +2,7 @@ import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import SercurityMobile from "public/sercurity-mobile.png";
 import SercurityDesktop from "public/sercurity-desktop.png";
-import SER1 from "public/SER1.png";
+import SER1 from "public/young-boy.jpg";
 import Heading from "@/components/atom/Heading/Heading";
 
 export const Security = () => {
@@ -20,7 +20,7 @@ export const Security = () => {
             data-aos="fade-up"
             src={SER1}
             alt="sercurity image"
-            className="w-[330px] h-[300px] lg:w-[550px] object-cover rounded-md lg:h-[370px] flex"
+            className="w-[330px] h-[300px] lg:w-[550px] object-cover rounded-md lg:h-[400px] flex"
             priority
           />
         </div>

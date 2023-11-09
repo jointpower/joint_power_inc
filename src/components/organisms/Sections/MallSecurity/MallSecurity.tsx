@@ -7,7 +7,7 @@ import ContactUsModal from "@/components/form/ContactUsModal";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
 import MallDesktop from "public/mallSecurity-desktop.png";
 import MallMobile from "public/mallSecurity-mobile.png";
-import SER2 from "public/SER2.png";
+import SER2 from "public/two-girls.jpg";
 import { useState } from "react";
 
 const MallSecurity = () => {
