@@ -1,4 +1,6 @@
+// import ResponsiveSlider from "@/components/molecules/Slider/ResponsiveSlider";
 import Heading from "@/components/atom/Heading/Heading";
+import ResponsiveSlider from "@/components/molecules/Slider/ResponsiveSlider";
 import Testimony from "@/components/molecules/Testimony/Testimony";
 import maryJune1 from "public/maryJune-1.png";
 import maryJune2 from "public/maryJune-2.png";
@@ -35,27 +37,14 @@ const Testimonials = () => {
     <section className="bg-grey-7/10">
       <div className="container pb-5">
         <Heading
-        data-aos="fade-up"
+          data-aos="fade-up"
           level={3}
-          className="text-black text-2xl md:text-3xl text-center mt-[60px] pt-[50px] md:pt-[80px] font-semibold"
+          className="text-black text-2xl md:text-3xl text-center mt-[60px] mb-12 pt-[50px] md:pt-[80px] font-semibold"
         >
           Few Testimonials
         </Heading>
-        <div className="flex flex-col gap-5 md:gap-0 md:flex-row justify-center  pt-[50px] md:pb-[50px] lg:pt-[120px] xl:mt-[100px] mb-[30px] md:mb-[50px] relative">
-          {testimonies.map(
-            ({ testimony, avatarUrl, className, textClass, name }, index) => (
-              <li key={index}>
-                <Testimony
-                  name={name}
-                  avatarUrl={avatarUrl}
-                  testimony={testimony}
-                  className={className}
-                  textClass={textClass}
-                />
-              </li>
-            )
-          )}
-        </div>
+      
+        <ResponsiveSlider />
       </div>
     </section>
   );
