@@ -24,37 +24,25 @@ const OurServices = () => {
         data-aos="fade-up"
         className="mt-8 grid sm:flex flex-wrap justify-center gap-6"
       >
-        <ServicesCard
-          children={
-            <div className="font-medium text-2xl m-auto text-center">
-              Apartment <br />
-              Security
-            </div>
-          }
-          alt=""
-          image_src={ApartmentOfficerImg}
-        />
-        <ServicesCard
-          children={
-            <div className="font-medium text-2xl m-auto text-center">
-              Medical Office <br />
-              Security
-            </div>
-          }
-          alt=""
-          image_src={MedicalOfficerImg}
-        />
+        <ServicesCard alt="" image_src={ApartmentOfficerImg}>
+          <div className="font-medium text-2xl m-auto text-center">
+            Apartment <br />
+            Security
+          </div>
+        </ServicesCard>
+        <ServicesCard alt="" image_src={MedicalOfficerImg}>
+          <div className="font-medium text-2xl m-auto text-center">
+            Medical Office <br />
+            Security
+          </div>
+        </ServicesCard>
 
-        <ServicesCard
-          children={
-            <div className="font-medium text-2xl m-auto text-center">
-              Bank <br />
-              Security
-            </div>
-          }
-          alt=""
-          image_src={BankSecurityOfficerImg}
-        />
+        <ServicesCard alt="" image_src={BankSecurityOfficerImg}>
+          <div className="font-medium text-2xl m-auto text-center">
+            Bank <br />
+            Security
+          </div>
+        </ServicesCard>
 
         {/* 
         <img src={BankSecurityOfficerImg} alt="bank" /> */}
