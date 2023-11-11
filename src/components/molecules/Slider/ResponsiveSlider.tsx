@@ -64,7 +64,6 @@ const ResponsiveSlider = () => {
         "Join our ever-growing community of satisfied riders today! Download our app and experience a new level of transportation that's just a tap away.",
     },
   ];
-
   return (
     <div>
       <Slider ref={sliderRef} {...settings}>
