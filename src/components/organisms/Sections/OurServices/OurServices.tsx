@@ -47,16 +47,12 @@ const OurServices = () => {
         {/* 
         <img src={BankSecurityOfficerImg} alt="bank" /> */}
 
-        <ServicesCard
-          children={
-            <div className="font-medium text-2xl m-auto text-center">
-              Hotel <br />
-              Security
-            </div>
-          }
-          alt=""
-          image_src={HotelSecurityOfficerImg}
-        />
+        <ServicesCard alt="" image_src={HotelSecurityOfficerImg}>
+          <div className="font-medium text-2xl m-auto text-center">
+            Hotel <br />
+            Security
+          </div>
+        </ServicesCard>
       </div>
     </section>
   );
