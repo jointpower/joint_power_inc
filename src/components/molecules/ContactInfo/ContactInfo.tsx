@@ -36,7 +36,7 @@ const ContactInfo = () => {
         <footer className="">
           <section
             data-aos="fade-up"
-            className="flex items-center gap-[2rem] mb-3"
+            className="flex items-center gap-[2rem] mb-5"
           >
             <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
               <FaHome fill="blue" />
@@ -53,7 +53,24 @@ const ContactInfo = () => {
           </section>
           <section
             data-aos="fade-up"
-            className="mb-3 flex items-center gap-[2rem]"
+            className="flex items-center gap-[2rem] mb-5"
+          >
+            <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
+              <FaHome fill="blue" />
+            </div>
+            <div>
+              <p className="text-[#aaa] text-[1rem] uppercase">
+              336 DAKOTA RIDGE DR,
+              </p>
+
+              <p className="text-[1rem] text-white font-bold uppercase">
+              FORT WORTH, TX 76134
+              </p>
+            </div>
+          </section>
+          <section
+            data-aos="fade-up"
+            className="mb-5 flex items-center gap-[2rem]"
           >
             <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
               <FaEnvelope fill="blue" />

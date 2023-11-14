@@ -16,11 +16,14 @@ const HighlightCard = () => {
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">
         <div className="flex flex-col md:flex-row-reverse justify-between items-center px-3 gap-1 py-16 rounded-2xl  bg-normal md:mt-[52px]  lg:mt-[92px] md:mb-[78px] lg:mb-0">
-          <div data-aos="fade-up">
+          <div
+            data-aos="fade-up"
+            className="pr-0 md:pr-4 rounded-xl"
+          >
             <NextImage
               src={ServiceImage}
               alt="joint security officer"
-              className="rounded-xl h-[200px] md:mt-[-90px] xl:mt-[-140px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[550px] lg:h-[400px]"
+              className="!rounded-xl h-[200px] md:mt-[-90px] xl:mt-[-140px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[550px] lg:h-[400px]"
             />
           </div>
           <div
