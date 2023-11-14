@@ -161,7 +161,7 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 style={{ resize: "none" }}
-                placeholder="Why do you want to join us or reason for contacting us?"
+                placeholder="How may we help you?"
                 className={`w-full  min-h-[10rem] px-2 py-4 border border-[#aaaaaa] tracking-[1px] focus:outline-none active:outline-none active:border-none text-[black]  my-4`}
               ></textarea>
 

@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import Form from "@/components/form/Form";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
+import ContactUsModal from "@/components/form/ContactUsModal";
 
 const MainHero = () => {
   const xtraSmall = useMediaQuery("(max-width: 390px)");
@@ -17,13 +18,10 @@ const MainHero = () => {
   return (
     <Dialog open={show}>
       <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[120px] text-black md:flex-row gap-4 md:gap-14">
-        <div
-          
-          className="flex flex-col text-center md:text-left"
-        >
+        <div className="flex flex-col text-center md:text-left">
           <div data-aos="fade-up" className={`w-[100%] md:mx-0 mt-5`}>
             <Heading
-            data-aos="fade-up"
+              data-aos="fade-up"
               level={1}
               className="text-[30px] lg:text-[60px] uppercase  w-full flex-1 font-bold md:mb-[30px]"
             >
@@ -47,7 +45,10 @@ const MainHero = () => {
                 </span>
               </span>
             </Heading>
-            <Text data-aos="fade-up" className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]">
+            <Text
+              data-aos="fade-up"
+              className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]"
+            >
               The best security guard company in California. We are watching
               over you!!
             </Text>
@@ -55,7 +56,11 @@ const MainHero = () => {
           <div>
             {/* ${xtraSmall ? "mx-0" : "mx-6"} might add later*/}
             <p onClick={() => setShow(true)}>
-              <Button data-aos="fade-up" className={`mt-8 md:mt-10md:mx-0`} variants="primary">
+              <Button
+                data-aos="fade-up"
+                className={`mt-8 md:mt-10md:mx-0`}
+                variants="primary"
+              >
                 Get in Touch
               </Button>
             </p>
@@ -77,7 +82,7 @@ const MainHero = () => {
           />
 
           <DialogContent className="w-full md:!w-2/4">
-            <Form show={show} setShow={setShow} />
+            <ContactUsModal type="get in touch" show={show} setShow={setShow} />
           </DialogContent>
         </div>
       </div>

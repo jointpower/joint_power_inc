@@ -66,11 +66,6 @@ const Opportunities = () => {
               that you have Joint Power Security Services; The best private
               security company service in california, watching over you.
             </Text>
-            <button data-aos="fade-up"
-              className={`w-fit m-auto md:m-[unset] bg-normal text-white px-12 py-4 rounded-[.2rem] cursor-pointer font-medium `}
-            >
-              Request Demo
-            </button>
           </div>
 
           <ContactUs

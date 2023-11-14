@@ -4,6 +4,7 @@ import Hightlight from "@/components/organisms/Sections/Highlight/Highlight";
 import OurServices from "@/components/organisms/Sections/OurServices/OurServices";
 import InTouch from "@/components/organisms/Sections/InTouch/InTouch";
 import Opportunities from "@/components/organisms/Sections/Opportunities/Opportunities";
+import Testimonials from "@/components/organisms/Sections/Testmonials/Testimonials";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <InTouch />
       <OurServices />
       <Opportunities />
+      <Testimonials />
     </>
   );
 };

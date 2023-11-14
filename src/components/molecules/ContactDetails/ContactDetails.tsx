@@ -86,7 +86,7 @@ const ContactDetails = () => {
           required={true}
           classNames=" w-full lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
-        {/* <InputText
+        <InputText
           placeholder="Enter City and Zip Code"
           name={"address"}
           type="text"
@@ -94,7 +94,7 @@ const ContactDetails = () => {
           value={address}
           required={true}
           classNames=" w-full lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
-        /> */}
+        />
 
         <textarea
           data-aos="fade-up"

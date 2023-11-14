@@ -24,7 +24,7 @@ const ContactUsPage = () => {
         ></iframe>
       </div>
       <ContactUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </div>
   );
 };
