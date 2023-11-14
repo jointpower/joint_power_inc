@@ -16,7 +16,7 @@ const MainHero = () => {
 
   return (
     <Dialog open={show}>
-      <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[150px] text-black md:flex-row gap-4 md:gap-14">
+      <div className="container flex flex-col-reverse items-center w-full my-32 mt-[37px] md:mt-[120px] text-black md:flex-row gap-4 md:gap-14">
         <div
           
           className="flex flex-col text-center md:text-left"
@@ -70,9 +70,9 @@ const MainHero = () => {
             priority
           />
           <NextImage
-            src={HeroImageDesktop}
+            src={HeroImage}
             alt="contactUs-hero image"
-            className="w-[343px] h-[408px] xl:w-[455.85px] xl:h-[391.12px] hidden md:flex"
+            className="w-[403px] h-[408px] xl:w-[555.85px] xl:h-[451.12px] hidden md:flex"
             priority
           />
 
