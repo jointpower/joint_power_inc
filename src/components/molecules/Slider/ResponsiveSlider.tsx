@@ -7,10 +7,10 @@ import {
 } from "react-icons/md";
 
 import person1 from "public/person1.webp";
-import person2 from "public/person6.webp";
-import person3 from "public/person3.webp";
+import person2 from "public/person9.webp";
+import person3 from "public/person10.webp";
 import person4 from "public/sj.jpeg";
-import person5 from "public/person7.webp";
+import person5 from "public/person8.webp";
 
 import NextImage from "@/components/atom/NextImage/NextImage";
 const ResponsiveSlider = () => {
