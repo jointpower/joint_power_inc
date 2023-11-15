@@ -62,7 +62,6 @@ const Header = (): JSX.Element => {
             Get in Touch
           </button>
         </div>
-
         {isOpen && (
           <nav className="fixed top-0 left-0 bottom-0 right-0 bg-normal md:hidden  text-white z-2 pt-20">
             <MdOutlineClose
@@ -74,7 +73,6 @@ const Header = (): JSX.Element => {
           </nav>
         )}
       </header>
-
       <DialogContent className="w-full md:!w-2/4">
         <ContactUsModal type="get in touch" show={show} setShow={setShow} />
       </DialogContent>

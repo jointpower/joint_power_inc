@@ -5,7 +5,7 @@ import Text from "@/components/atom/Text/Text";
 import HeroImage from "public/servicesHero-mobile.png";
 import HeroImageDesktop from "public/servicesHero-desktop.png";
 import HeroBadge from "public/jps-hero-badge.png";
-import serviceBlur from "public/team-members.jpg";
+import serviceBlur from "public/team-members.jpeg";
 import { useState } from "react";
 import ContactUsModal from "@/components/form/ContactUsModal";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";

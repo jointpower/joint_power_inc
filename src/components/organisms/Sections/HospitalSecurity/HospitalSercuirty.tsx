@@ -4,8 +4,8 @@ import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import ContactUsModal from "@/components/form/ContactUsModal";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
-import HospitalDesktop from "public/hospitalSecurity-desktop.png";
-import HospitalMobile from "public/hospitalSecurity-mobile.png";
+import HospitalDesktop from "public/extra.jpg";
+import HospitalMobile from "public/extra.jpg";
 import { useState } from "react";
 
 const HospitalSecurity = () => {

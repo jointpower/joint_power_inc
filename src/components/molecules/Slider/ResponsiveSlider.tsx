@@ -6,11 +6,13 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-import lieslie from "public/maryJune-1.png";
-import howard from "public/maryJune-2.png";
-import admin from "public/maryJune-3.png";
-import NextImage from "@/components/atom/NextImage/NextImage";
+import person1 from "public/person1.webp";
+import person2 from "public/person2.jpg";
+import person3 from "public/person3.webp";
+import person4 from "public/person4.webp";
+import person5 from "public/person5.jpg";
 
+import NextImage from "@/components/atom/NextImage/NextImage";
 const ResponsiveSlider = () => {
   const sliderRef = useRef<Slider>(null);
 
@@ -43,27 +45,42 @@ const ResponsiveSlider = () => {
 
   const reviews = [
     {
-      img: lieslie,
-      name: "Leslie Alexander",
+      img: person4,
+      name: "Sarah Johnson",
       rating: 5,
       review:
-        "Join our ever-growing community of satisfied riders today! Download our app and experience a new level of transportation that's just a tap away.",
+      "Joint Power Security Inc. has truly been a game-changer for our business. Their attention to detail and prompt response have ensured our premises are always secure. I highly recommend them!",
     },
     {
-      img: howard,
-      name: "Joseph Howard",
+      img: person1,
+      name: "David Williams",
       rating: 5,
       review:
-        "Join our ever-growing community of satisfied riders today! Download our app and experience a new level of transportation that's just a tap away.",
+        "I've had the pleasure of working with Joint Power Security Inc. for over a year now, and I must say, their professionalism is unmatched. Their team's commitment to our safety is commendable.",
     },
     {
-      img: admin,
-      name: "Isah Hamza",
+      img: person2,
+      name: "Emily Rodriguez",
       rating: 4,
       review:
-        "Join our ever-growing community of satisfied riders today! Download our app and experience a new level of transportation that's just a tap away.",
+        "Joint Power Security Inc. has been our go-to security partner for events, and they've consistently exceeded our expectations. Their proactive approach and reliability make them stand out.",
+    },
+    {
+      img: person3,
+      name: "Michael Brown",
+      rating: 4,
+      review:
+        "Security is paramount in our line of work, and Joint Power Security Inc. has been instrumental in providing top-notch service. Their expertise and reliability are second to none.",
+    },
+    {
+      img: person5,
+      name: "Jennifer Thompson",
+      rating: 4,
+      review:
+      "I can't speak highly enough of Joint Power Security Inc. Their dedication to ensuring our safety is evident in every interaction. Trustworthy, professional, and highly recommended!",
     },
   ];
+  
   return (
     <div>
       <Slider ref={sliderRef} {...settings}>
@@ -77,7 +94,7 @@ const ResponsiveSlider = () => {
           >
             <p className="text-base sm:text-lg font-semibold">{item.review}</p>
             <div className=" flex gap-3 sm:gap-5 mt-7 items-center">
-              <NextImage className="h-24 w-[80px]" src={item.img} alt="img" />
+              <NextImage className="overflow-hidden !rounded-full h-24 w-24" src={item.img} alt="img" />
               <div className="">
                 <p className="font-bold text-base md:text-xl mb-2.5">
                   {item.name}

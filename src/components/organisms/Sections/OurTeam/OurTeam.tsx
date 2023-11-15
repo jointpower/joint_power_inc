@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import controller from "public/boss.jpg";
-import funder from "public/CEO.jpg";
+import funder from "public/CEO.jpeg";
 
 const teams = [
   {
