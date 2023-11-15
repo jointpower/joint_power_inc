@@ -6,11 +6,11 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-import person1 from "public/dw.jpeg";
+import person1 from "public/person1.webp";
 import person2 from "public/er.jpeg";
-import person3 from "public/mb.jpeg";
+import person3 from "public/person3.webp";
 import person4 from "public/sj.jpeg";
-import person5 from "public/jt.jpeg";
+import person5 from "public/person5-1.jpg";
 
 import NextImage from "@/components/atom/NextImage/NextImage";
 const ResponsiveSlider = () => {
