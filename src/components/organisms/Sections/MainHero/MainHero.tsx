@@ -3,16 +3,12 @@ import Heading from "@/components/atom/Heading/Heading";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import HeroImage from "public/mobile-hero.jpg";
-import HeroImageDesktop from "public/jps-hero-desktop.png";
-import { useMediaQuery } from "@/base/MediaQuery";
 import { useState } from "react";
 
-import Form from "@/components/form/Form";
 import { Dialog, DialogContent } from "@/components/molecules/Dialog";
 import ContactUsModal from "@/components/form/ContactUsModal";
 
 const MainHero = () => {
-  const xtraSmall = useMediaQuery("(max-width: 390px)");
   const [show, setShow] = useState(false);
 
   return (
