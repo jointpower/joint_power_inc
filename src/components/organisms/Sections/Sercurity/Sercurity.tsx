@@ -20,7 +20,7 @@ export const Security = () => {
             data-aos="fade-up"
             src={SER1}
             alt="sercurity image"
-            className="w-[330px] h-[300px] lg:w-[550px] object-cover rounded-md lg:h-[400px] flex"
+            className="w-[330px] h-[300px] lg:w-[550px] object-cover rounded-md lg:h-[500px] flex"
             priority
           />
         </div>

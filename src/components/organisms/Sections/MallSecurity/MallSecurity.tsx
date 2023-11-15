@@ -28,7 +28,7 @@ const MallSecurity = () => {
             <NextImage
               src={SER2}
               alt="Hospital-sercurity-image"
-              className="w-[362px] h-[555px] lg:w-[562px] lg:h-[400px] hidden md:flex"
+              className="w-[362px] h-[555px] lg:w-[562px] hidden md:flex"
               priority
             />
           </div>

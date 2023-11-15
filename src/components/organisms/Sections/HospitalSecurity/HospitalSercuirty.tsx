@@ -15,7 +15,7 @@ const HospitalSecurity = () => {
   return (
     <Dialog open={show}>
       <div
-        className={`w-[332px] bg-grey-7 md:bg-[unset] rounded-md md:rounded-none shadow-lg md:shadow-none flex flex-col-reverse md:flex-row md:w-full text-black md:pt-[120px] mb-[24px] container relative`}
+        className={`w-[332px] bg-grey-7 md:bg-[unset] rounded-md md:rounded-none shadow-lg md:shadow-none flex md:items-center flex-col-reverse md:flex-row md:w-full text-black md:pt-[120px] mb-[24px] container relative`}
       >
         <div className="flex flex-col p-5 text-center md:text-left">
           <div className=" w-[100%] md:mt-[30px] ">
@@ -44,13 +44,13 @@ const HospitalSecurity = () => {
           <NextImage
             src={HospitalMobile}
             alt="Hospital-sercurity-image"
-            className="w-full md:w-[154px] h-[186px] md:hidden"
+            className="w-full md:w-[154px] h-[256px] md:hidden"
             priority
           />
           <NextImage
             src={HospitalDesktop}
             alt="Hospital-sercurity-image"
-            className="w-[343px] h-[408px] lg:w-[500.44px] xl:w-[600px] xl:h-[400px] hidden md:flex"
+            className="w-[343px] h-[458px] lg:w-[500.44px] xl:w-[600px] xl:h-[570px] hidden md:flex"
             priority
           />
         </div>
