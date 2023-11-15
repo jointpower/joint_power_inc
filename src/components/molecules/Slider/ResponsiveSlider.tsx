@@ -6,7 +6,7 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-import person1 from "public/person1.webp";
+import person1 from "public/person11.webp";
 import person2 from "public/person9.webp";
 import person3 from "public/person10.webp";
 import person4 from "public/sj.jpeg";

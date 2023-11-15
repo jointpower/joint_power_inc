@@ -1,7 +1,5 @@
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
-import SercurityMobile from "public/sercurity-mobile.png";
-import SercurityDesktop from "public/sercurity-desktop.png";
 import SER1 from "public/HOUSE.jpg";
 import Heading from "@/components/atom/Heading/Heading";
 
