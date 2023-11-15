@@ -41,7 +41,7 @@ const MainHero = () => {
                 Services
                 <span className="text-transparent bg-clip-text bg-gradient-to-r to-[#2D324B] from-secondary">
                   {" "}
-                  Incorporation.
+                  Inc.
                 </span>
               </span>
             </Heading>
@@ -49,8 +49,8 @@ const MainHero = () => {
               data-aos="fade-up"
               className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]"
             >
-              The best security guard company in California. We are watching
-              over you!!
+              The best security guard company in California. Your safety is our
+              priority!
             </Text>
           </div>
           <div>

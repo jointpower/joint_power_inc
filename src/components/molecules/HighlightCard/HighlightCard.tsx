@@ -16,10 +16,7 @@ const HighlightCard = () => {
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">
         <div className="flex flex-col md:flex-row-reverse justify-between items-center px-3 gap-1 py-16 rounded-2xl  bg-normal md:mt-[52px]  lg:mt-[92px] md:mb-[78px] lg:mb-0">
-          <div
-            data-aos="fade-up"
-            className="pr-0 md:pr-4 rounded-xl"
-          >
+          <div data-aos="fade-up" className="pr-0 md:pr-4 rounded-xl">
             <NextImage
               src={ServiceImage}
               alt="joint security officer"
@@ -43,8 +40,9 @@ const HighlightCard = () => {
                 level={3}
               >
                 <span className="xl:leading-[52px]">
-                  Our security guards are properly skilled and trained in modern
-                  security trainings.
+                  Our security guards are extensively trained in the latest
+                  security methods and techniques to ensure top-notch
+                  protection.
                 </span>
               </Heading>
             </div>
@@ -53,9 +51,10 @@ const HighlightCard = () => {
               className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
-              You can now rest easily, sleep with your two eyes closed, knowing
-              that you have Joint Power Security Services; The best private
-              security company service in california, watching over you.
+              ind peace of mind with Joint Power Security Services, the foremost
+              private security company in California. With our vigilant watch,
+              rest assured and sleep soundly, knowing your safety is our
+              priority.
             </Text>
             <p
               className="w-fit md:m-[unset] m-auto"

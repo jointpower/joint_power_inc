@@ -60,6 +60,23 @@ const ContactInfo = () => {
             </div>
             <div>
               <p className="text-[#aaa] text-[1rem] uppercase">
+              8706 S NORMANDIE AVE,
+              </p>
+
+              <p className="text-[1rem] text-white font-bold uppercase">
+              LOS ANGELES, CA 90044
+              </p>
+            </div>
+          </section>
+          <section
+            data-aos="fade-up"
+            className="flex items-center gap-[2rem] mb-5"
+          >
+            <div className=" w-[2rem] h-[2rem] bg-white p-2 rounded-[100%] text-center">
+              <FaHome fill="blue" />
+            </div>
+            <div>
+              <p className="text-[#aaa] text-[1rem] uppercase">
               336 DAKOTA RIDGE DR,
               </p>
 
