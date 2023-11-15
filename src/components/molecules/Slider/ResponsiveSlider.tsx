@@ -6,11 +6,11 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-import person1 from "public/person1.webp";
-import person2 from "public/person2.jpg";
-import person3 from "public/person3.webp";
-import person4 from "public/person4.webp";
-import person5 from "public/person5.jpg";
+import person1 from "public/dw.jpeg";
+import person2 from "public/er.jpeg";
+import person3 from "public/mb.jpeg";
+import person4 from "public/sj.jpeg";
+import person5 from "public/jt.jpeg";
 
 import NextImage from "@/components/atom/NextImage/NextImage";
 const ResponsiveSlider = () => {
@@ -49,7 +49,7 @@ const ResponsiveSlider = () => {
       name: "Sarah Johnson",
       rating: 5,
       review:
-      "Joint Power Security Inc. has truly been a game-changer for our business. Their attention to detail and prompt response have ensured our premises are always secure. I highly recommend them!",
+        "Joint Power Security Inc. has truly been a game-changer for our business. Their attention to detail and prompt response have ensured our premises are always secure. I highly recommend them!",
     },
     {
       img: person1,
@@ -77,10 +77,10 @@ const ResponsiveSlider = () => {
       name: "Jennifer Thompson",
       rating: 4,
       review:
-      "I can't speak highly enough of Joint Power Security Inc. Their dedication to ensuring our safety is evident in every interaction. Trustworthy, professional, and highly recommended!",
+        "I can't speak highly enough of Joint Power Security Inc. Their dedication to ensuring our safety is evident in every interaction. Trustworthy, professional, and highly recommended!",
     },
   ];
-  
+
   return (
     <div>
       <Slider ref={sliderRef} {...settings}>
@@ -94,7 +94,11 @@ const ResponsiveSlider = () => {
           >
             <p className="text-base sm:text-lg font-semibold">{item.review}</p>
             <div className=" flex gap-3 sm:gap-5 mt-7 items-center">
-              <NextImage className="overflow-hidden !rounded-full h-24 w-24" src={item.img} alt="img" />
+              <NextImage
+                className="overflow-hidden !rounded-full h-24 w-24"
+                src={item.img}
+                alt="img"
+              />
               <div className="">
                 <p className="font-bold text-base md:text-xl mb-2.5">
                   {item.name}

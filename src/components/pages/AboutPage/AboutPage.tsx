@@ -26,7 +26,7 @@ const AboutPage = () => {
 
         <span className="text-normal">als</span>
       </Heading>
-      <div className="overflow-y-auto">
+      <div className="">
         <OurGoal />
       </div>
 
