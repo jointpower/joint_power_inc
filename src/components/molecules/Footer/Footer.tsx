@@ -6,19 +6,19 @@ import SocialLinks from "@/components/molecules/SocialLinks/SocialLinks";
 import JpsBadge from "public/jps.png";
 const Footer = () => {
   const services_links = [
-    { name: "Construction site security", url: "/services" },
-    { name: "retail store security", url: "/services" },
-    { name: "Fire watch", url: "/services" },
-    { name: "apartment security", url: "/services" },
-    { name: "hotel security", url: "/services" },
+    { name: "Construction site security", url: "#" },
+    { name: "retail store security", url: "#" },
+    { name: "Fire watch", url: "#" },
+    { name: "apartment security", url: "#" },
+    { name: "hotel security", url: "#" },
   ];
 
   const services_links_2 = [
-    { name: "Health facilities", url: "/services" },
-    { name: "Telecommunication towers", url: "/services" },
-    { name: "aviation security", url: "/services" },
-    { name: "access control security", url: "/services" },
-    { name: "Event security", url: "/services" },
+    { name: "Health facilities", url: "#" },
+    { name: "Telecommunication towers", url: "#" },
+    { name: "aviation security", url: "#" },
+    { name: "access control security", url: "#" },
+    { name: "Event security", url: "#" },
   ];
 
   const company_links = [
@@ -26,9 +26,9 @@ const Footer = () => {
     { name: "Contact us", url: "/contact-us" },
   ];
   const opening_hours = [
-    { name: "Office: Mon-Fri", url: "/" },
-    { name: "Time: 9am-5pm", url: "/" },
-    { name: "Dispatch: 24/7", url: "/" },
+    { name: "Office: Mon-Fri", url: "#" },
+    { name: "Time: 9am-5pm", url: "#" },
+    { name: "Dispatch: 24/7", url: "#" },
   ];
 
   const date = new Date();
@@ -50,37 +50,47 @@ const Footer = () => {
             <div className=" grid grid-cols-2 md:flex gap-x-6 gap-y-12 lg:gap-x-24 lg:gap-y-24 mb-[80px]">
               {" "}
               <div className="flex flex-col gap-6">
-                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                <Heading
+                  className="uppercase text-base font-semibold tracking-[1px] text-secondary"
+                  level={5}
+                >
                   Services
                 </Heading>
                 {services_links.map((link, index) => (
-                  <Links url={link.url} key={index} className="capitalize">
+                  <p key={index} className="capitalize">
                     {link.name}
-                  </Links>
+                  </p>
                 ))}
               </div>
               <div className="mt-6 flex flex-col gap-6">
-                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                <Heading
+                  className="uppercase text-base font-semibold tracking-[1px] text-secondary"
+                  level={5}
+                >
                   {""}
                 </Heading>
                 {services_links_2.map((link, index) => (
-                  <Links url={link.url} key={index} className="capitalize">
+                  <p key={index} className="capitalize">
                     {link.name}
-                  </Links>
+                  </p>
                 ))}
               </div>
               <div className="flex flex-col gap-6 md:flex">
-                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                <Heading
+                  className="uppercase text-base font-semibold tracking-[1px] text-secondary"
+                  level={5}
+                >
                   Opening Hours
                 </Heading>
                 {opening_hours.map((opening, index) => (
-                  <Links url={opening.url} key={index}>
-                    {opening.name}
-                  </Links>
+                  <p key={index}>{opening.name}</p>
                 ))}
               </div>
               <div className="flex flex-col gap-6">
-                <Heading className="uppercase text-base font-semibold tracking-[1px] text-secondary" level={5}>
+                <Heading
+                  className="uppercase text-base font-semibold tracking-[1px] text-secondary"
+                  level={5}
+                >
                   Company
                 </Heading>
 
