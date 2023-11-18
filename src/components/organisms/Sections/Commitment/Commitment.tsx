@@ -159,8 +159,7 @@ export const Commitment = () => {
           </Heading>
         </div>
         <p data-aos="fade-up" className="text-base md:text-2xl text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
-          At JPS, We offer a whole range of services which ranges from the
-          following..
+        At Joint Power Security service Inc we provide a comprehensive range of services that include…
         </p>
         <div
           className={`px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2 lg:h-[40rem] overflow-y-auto`}
