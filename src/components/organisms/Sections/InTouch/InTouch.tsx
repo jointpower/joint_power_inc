@@ -25,20 +25,25 @@ const InTouch = () => {
               {/* We provide <span className="font-bold ">temporary security</span>{' '}
               for special events such as corporate meetings, conventions and
               concerts. */}
-              <div className="flex flex-col md:flex-row justify-center items-center text-center gap-5">
-                <p data-aos="fade-up">JOINT POWER SECURITY. </p>
-                <p data-aos="fade-up">LOW RATES. </p>
-                <p data-aos="fade-up">NO CONTRACT.</p>
+              <div className="capitalize flex-row justify-center items-center text-center gap-5">
+                <span data-aos="fade-up">Joint Power Security: </span>
+                <span data-aos="fade-up">Low Rates, </span>
+                <span data-aos="fade-up">No Contract.</span>
               </div>
             </Heading>
-            <Text data-aos="fade-up" className="text-center mt-4 text-base text-gray-600 md:text-2xl">
-              We provide temporary and permanent security services. Our security
-              guard services are the most comprehensive you will find. No matter
-              what the industry, Joint Power Security Service guarantees to have
-              a solution for you.
+            <Text
+              data-aos="fade-up"
+              className="text-center mt-4 text-base text-gray-600 md:text-2xl"
+            >
+              We offer both temporary and permanent security services. Our
+              security guard solutions are among the most comprehensive
+              available. Regardless of the industry you're in, we assure you
+              that Joint Power Security Service has a suitable solution for your
+              needs.
             </Text>
           </div>
-          <Button data-aos="fade-up"
+          <Button
+            data-aos="fade-up"
             variants="primary"
             className="mt-3 shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]  md:mb-[43.5px]"
           >
