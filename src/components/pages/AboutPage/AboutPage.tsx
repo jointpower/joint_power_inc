@@ -36,7 +36,7 @@ const AboutPage = () => {
         className="text-black text-3xl md:text-[40px] font-bold md:leading-[47px] text-center tracking-[2px] mt-28 md:mt-44 mb-[40px] "
       >
         {" "}
-        Meet Our Team
+        Get to know our team.
       </Heading>
 
       <OurTeam />
