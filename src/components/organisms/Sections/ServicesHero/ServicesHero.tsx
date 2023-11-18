@@ -42,12 +42,11 @@ const ServicesHero = () => {
               >
                 <span className="block  "> Joint Power</span>
                 <span className="md:mt-[-8px] leading-none">
-                  Security Services.
+                  Security Services Inc.
                 </span>
               </Heading>
               <Text data-aos="fade-up" className="leading-10 italic opacity-75 font-medium mt-3 text-base sm:text-[24px] lg:text-2xl md:mb-10 mb-[41px]">
-                ... providing protection you can count on and security <br className="hidden md:block" /> you
-                can trust.
+              … reliable Protection, Trusted Security.
               </Text>
             </div>
 
