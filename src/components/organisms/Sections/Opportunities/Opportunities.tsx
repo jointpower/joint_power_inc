@@ -34,31 +34,40 @@ const Opportunities = () => {
               Joint Power Security Services,
             </span>{" "}
             <span data-aos="fade-up">
-              has a vision of working with its team, making it's environs one of
-              the safest states in the world. We have experiences in Aviation
-              patrol security, fire watch, health facilities, telecommunication
-              towers, apartment building, malls, hotels, individual stores, both
-              commercial and private buildings and much more.
+              envisions collaborating with its team to make its surroundings one
+              of the safest states in the world. We possess expertise in
+              aviation patrol security, fire watch, healthcare facilities,
+              telecommunication towers, apartment buildings, malls, hotels,
+              individual stores, both commercial and private buildings, and much
+              more.
             </span>
           </Text>
           <Text data-aos="fade-up" className="text-justify pt-[24px]">
-            We oﬀer experienced security guards chosen from strict screening
-            process and background check. Our guards cover all domains of
-            private security in protecting life and properties with an excellent
-            and superior service in all cities in california.
+            We provide experienced security guards carefully selected through a
+            stringent screening process and background checks. Our guards
+            specialize in all aspects of private security, ensuring the
+            protection of lives and properties with excellent and superior
+            service across all cities in California.
           </Text>
         </div>
 
         <div className="grid md:grid-cols-2 mt-5 gap-10 md:gap-0 bg-white">
           <div className="text-center md:text-left flex justify-center flex-col gap-4 lg:px-4">
-            <span data-aos="fade-up" className="text-2xl md:text-lg uppercase font-semibold text-secondary">
+            <span
+              data-aos="fade-up"
+              className="text-2xl md:text-lg uppercase font-semibold text-secondary"
+            >
               Contact JPSS
             </span>
-            <p data-aos="fade-up" className="text-black text-lg md:text-3xl lg:text-5x xl:leading-[37px]">
-              Our security guards are properly skilled and trained in modern
-              security trainings.
+            <p
+              data-aos="fade-up"
+              className="text-black text-lg md:text-3xl lg:text-5x xl:leading-[37px]"
+            >
+              Our security guards are highly skilled and trained in modern
+              security practices.
             </p>
-            <Text data-aos="fade-up"
+            <Text
+              data-aos="fade-up"
               className="hidden md:block md:text-base lg:text-xl md:text-grey-6
                md:leading-9 xl:mb-[20px]"
             >
