@@ -12,7 +12,7 @@ const ServicesPage = () => {
         data-aos="fade-up"
         className="text-gray-800 text-center text-3xl font-semibold mt-20 md:mt-40 mb-16 opacity-90"
       >
-        Our Top Services
+       Our Key Services
       </h3>
       <Security />
       <HospitalSecurity />
