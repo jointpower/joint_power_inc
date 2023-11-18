@@ -8,29 +8,29 @@ export const OurGoal = () => {
   const xtraSmall = useMediaQuery("(max-width: 720px)");
   const goals = [
     {
-      messageHead: " Trusted & Experienced",
-      messageBody: `We are ranked as one of the top security guard companies with many years of experience in the security industry. Joint Power Security is uniquely positioned to address all issues regarding security.`,
-      messageBodyMobile: `We are ranked as one of the top security guard companies with many years of experience in the security industry. Joint Power Security is uniquely positioned to address all issues regarding security.
+      messageHead: " Reliable and seasoned",
+      messageBody: `We're recognized as a leading security guard company, boasting extensive experience in the security industry. Joint Power Security is uniquely equipped to tackle all security-related concerns.`,
+      messageBodyMobile: `We're recognized as a leading security guard company, boasting extensive experience in the security industry. Joint Power Security is uniquely equipped to tackle all security-related concerns.
      `,
       className:
         "lg:bg-white bg-normal text-white lg:text-black  shadow-2xl lg:left-[3vw] -top-[85px] md:top-0 pb-[12px]",
       headerClass: "text-secondary lg:text-black",
     },
     {
-      messageHead: "Bonded & Fully Insured",
+      messageHead: "Licensed and fully insured",
       messageBody:
-        "Joint Power Security services inc carried the standard statutory insurance such as unemployment insurance and worker's compensation, fully bonded.",
+        "Joint Power Security Services Inc carries standard statutory insurances such as unemployment insurance and worker's compensation, fully bonded for added assurance.",
       messageBodyMobile:
-        "Joint Power Security services inc carried the standard statutory insurance such as unemployment insurance and worker's compensation, fully bonded.",
+        "Joint Power Security Services Inc carries standard statutory insurances such as unemployment insurance and worker's compensation, fully bonded for added assurance.",
       className: "bg-normal text-white lg:top-[103px] pb-[45px]",
       headerClass: "text-secondary",
     },
     {
-      messageHead: "Satisfaction Guaranteed",
+      messageHead: "We guarantee satisfaction",
       messageBody:
-        " We guarantee 100% satisfaction of all the security needs. You can choose the best time when you want our security coverage, or we can be present 24/7 for the utmost in security. Our services are the absolute best and most trusted in Northern & Southern California. Our mission is to keep you safe, secure and deliver peace of mind that comes with professional security services coverage.. ",
+        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in both Northern and Southern California. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide. ",
       messageBodyMobile:
-        " We guarantee 100% satisfaction of all the security needs. You can choose the best time when you want our security coverage, or we can be present 24/7 for the utmost in security. Our services are the absolute best and most trusted in Northern & Southern California. Our mission is to keep you safe, secure and deliver peace of mind that comes with professional security services coverage..",
+        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in both Northern and Southern California. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide.",
       className:
         "lg:bg-white bg-normal text-white lg:text-black shadow-2xl lg:right-[3vw] right-[82px] md:-z-10 md:right-0 -top-[172px] md:top-0 pb-[12px]",
       headerClass: "text-secondary lg:text-black",
