@@ -45,15 +45,10 @@ const MallSecurity = () => {
               Shopping Mall Security
             </Heading>
             <Text data-aos="fade-up" className="font-medium mt-3 w-full leading-relaxed md:hidden text-lg text-black  pb-[35px]">
-              Joint Power security. can provide the right plan of action to put
-              a stop to theft and shrinkage. The need for superior retail
-              security guards is increasing.
+            Joint Power Security can devise effective strategies to prevent theft and reduce shrinkage. The demand for top-notch retail security guards is on the rise.
             </Text>
             <Text data-aos="fade-up" className="mt-3 w-full leading-relaxed hidden md:flex text-xl text-black font-medium">
-              Retail shopping stores are facing increasing need for superior
-              security. Thieves routinely fill their bags with merchandise and
-              exit the store undetected. Meanwhile, employee theft can occur
-              right under management’s nose.
+            Joint Power Security can devise effective strategies to prevent theft and reduce shrinkage. The demand for top-notch retail security guards is on the rise.
             </Text>
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)}>
