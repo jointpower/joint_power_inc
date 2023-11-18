@@ -29,12 +29,12 @@ const AboutHero = () => {
                 className="text-center text-2xl md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-[#C1AF6F] ">
-                  We Know Our Story
+                  Understanding our story
                 </span>
               </Heading>
               <h2
                 data-aos="fade-up"
-                className="text-left mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2"
+                className="uppercase text-left mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2"
               >
                 <div className="min-w-[15px] mt-2 md:mt-0">
                   <BsFillPatchCheckFill
@@ -42,15 +42,15 @@ const AboutHero = () => {
                     className="text-current w-4"
                   />{" "}
                 </div>
-                PROFESSIONAL SECURITY SERVICE BETWEEN YOU AND THE IMPOSSIBLE
+                Elite security: making the impossible yours.
               </h2>
               <p
                 data-aos="fade-up"
                 className="md:text-[1.2rem] text-base text-[#5f5d5d]"
               >
-                Joint Power Security Services Inc offers experienced security
-                guards chosen from strict screening process that can offer the
-                best security services in California.
+                Joint Power Security Services Inc provides skilled security
+                guards selected through rigorous screening processes, delivering
+                top-tier security services across Texas and California.
                 <br />
                 <br />
               </p>
@@ -58,30 +58,30 @@ const AboutHero = () => {
                 data-aos="fade-up"
                 className=" md:text-[1.2rem] text-base text-[#5f5d5d]"
               >
-                Our guards cover all domains of private security in protecting
-                life and properties with excellent and superior service. We make
-                the impossible turn possible . We cover a diverse set of clients
-                and have always ensured their residential and commercial
-                properties are safe and secure 24/7.
+                Our guards excel across all aspects of private security,
+                ensuring the safety of lives and properties with exceptional
+                service. We turn the impossible into reality, catering to
+                diverse clients and consistently safeguarding their residential
+                and commercial properties round the clock.
                 <br />
                 <br />
               </p>
               <h3
                 data-aos="fade-up"
-                className="text-left mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2"
+                className="uppercase text-left mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2"
               >
                 <div className="mt-2 md:mt-0 min-w-[15px]">
                   <BsFillPatchCheckFill size={17} className="text-current" />
                 </div>
-                OUR SECURITY GUARDS ARE SKILLED AND TRAINED.
+                Our security guards are highly trained and skilled.
               </h3>
               <p
                 data-aos="fade-up"
                 className=" md:text-[1.2rem] text-base mt-2 text-[#5f5d5d]"
               >
-                You can be at rest knowing that you have Joint Power Security
-                Services inc, the best private security company in the industry
-                watching over you and your properties.
+                Rest assured knowing that Joint Power Security Services Inc, the
+                top private security company in the industry, is safeguarding
+                you and your properties.
                 <br />
                 <br />
               </p>
@@ -89,8 +89,8 @@ const AboutHero = () => {
                 data-aos="fade-up"
                 className="md:text-[1.2rem] text-base text-[#5f5d5d]"
               >
-                We oﬀer a crystal transparent approach with our clients and we
-                keep them informed in every steps we make and up to date.
+                We maintain transparent communication with our clients, ensuring
+                they're informed at every step and kept up to date.
               </p>
             </div>
             <div

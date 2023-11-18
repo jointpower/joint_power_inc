@@ -51,7 +51,7 @@ const HighlightCard = () => {
               className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
-              ind peace of mind with Joint Power Security Services, the foremost
+              Find peace of mind with Joint Power Security Services, the foremost
               private security company in California. With our vigilant watch,
               rest assured and sleep soundly, knowing your safety is our
               priority.
