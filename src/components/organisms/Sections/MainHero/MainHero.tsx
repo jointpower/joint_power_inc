@@ -45,7 +45,7 @@ const MainHero = () => {
               data-aos="fade-up"
               className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]"
             >
-              The best security guard company in California. Your safety is our
+              The best security guard company in California & Texas. Safety is our
               priority!
             </Text>
           </div>
@@ -57,7 +57,7 @@ const MainHero = () => {
                 className={`mt-8 md:mt-10md:mx-0`}
                 variants="primary"
               >
-                Get in Touch
+                GET A FREE QUOTE
               </Button>
             </p>
           </div>
