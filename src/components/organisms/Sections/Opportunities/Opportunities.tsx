@@ -47,7 +47,7 @@ const Opportunities = () => {
             stringent screening process and background checks. Our guards
             specialize in all aspects of private security, ensuring the
             protection of lives and properties with excellent and superior
-            service across all cities in California.
+            service across all cities in California and Texas.
           </Text>
         </div>
 
@@ -73,7 +73,7 @@ const Opportunities = () => {
             >
               You can now rest easily, sleep with your two eyes closed, knowing
               that you have Joint Power Security Services; The best private
-              security company service in california, watching over you.
+              security company service in California and Texas, watching over you.
             </Text>
           </div>
 

@@ -52,7 +52,7 @@ const HighlightCard = () => {
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
               Find peace of mind with Joint Power Security Services, the foremost
-              private security company in California. With our vigilant watch,
+              private security company in California and Texas. With our vigilant watch,
               rest assured and sleep soundly, knowing your safety is our
               priority.
             </Text>

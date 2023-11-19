@@ -27,7 +27,7 @@ const HospitalSecurity = () => {
               Hospital Security
             </Heading>
             <Text data-aos="fade-up" className="font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
-            Our aim is to provide the highest quality security services tailored for hospitals in California to all our clients.
+            Our aim is to provide the highest quality security services tailored for hospitals in California and Texas to all our clients.
             </Text>
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)} className={`my-2 mt-5`}>

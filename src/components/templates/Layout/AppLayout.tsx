@@ -52,7 +52,7 @@ const Layout = ({ children, ...customMeta }: LayoutProps) => {
         <meta property="og:description" content={meta.description} />
         <meta
           name="keywords"
-          content="Los,Angeles,California,all,Bakersfield,Security,guard,service,south,north,affordable,contract,unarmed,nearest,available,provide,hotel,mobile,patrol,joint,power,point,one,night,flat,fee,rate,construction,site,city,cities,Fresno,Hollywood,down,town,Sacramento,Inglewood,Hawthorne,Gardena,valley,watch,fire,urgent,Beverly,medical,property,office,find,license,officer,any,safety,trained,me,near,zip,code,access,control,warehouse,Power,gas,station,gate,gated,community,facilities,Park,parking,lot,school,church,alarm,response,Redding,San,Francisco,Diego,county,state,homeless,secure,supply,client,win,offer, jps, jpss"
+          content="Los,Angeles,California,Texas,all,Bakersfield,Security,guard,service,south,north,affordable,contract,unarmed,nearest,available,provide,hotel,mobile,patrol,joint,power,point,one,night,flat,fee,rate,construction,site,city,cities,Fresno,Hollywood,down,town,Sacramento,Inglewood,Hawthorne,Gardena,valley,watch,fire,urgent,Beverly,medical,property,office,find,license,officer,any,safety,trained,me,near,zip,code,access,control,warehouse,Power,gas,station,gate,gated,community,facilities,Park,parking,lot,school,church,alarm,response,Redding,San,Francisco,Diego,county,state,homeless,secure,supply,client,win,offer, jps, jpss"
         />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
