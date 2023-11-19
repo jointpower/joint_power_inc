@@ -22,10 +22,8 @@ export const Team = ({ src, teamName, founder, Class }: TeamProps) => {
       type: 'instagram',
       url: 'https://www.instagram.com/jointpowersecurity/',
     },
-    { type: 'facebook', url: '' },
-    { type: 'twitter', url: '' },
-    ,
-    { type: 'linkedin', url: '' },
+    { type: "twitter", url: "https://twitter.com/jointpowersec" },
+    { type: "linkedin", url: "https://www.linkedin.com/company/joint-power-security-services-inc/" }
   ];
   return (
     <div
