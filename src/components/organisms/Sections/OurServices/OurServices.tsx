@@ -26,20 +26,20 @@ const OurServices = () => {
       >
         <ServicesCard alt="" image_src={ApartmentOfficerImg}>
           <div className="font-medium text-2xl m-auto text-center">
-          Appartment <br />
+            Appartment <br />
             Security
           </div>
         </ServicesCard>
         <ServicesCard alt="" image_src={MedicalOfficerImg}>
           <div className="font-medium text-2xl m-auto text-center">
-         Bank <br />
+            Bank <br />
             Security
           </div>
         </ServicesCard>
 
         <ServicesCard alt="" image_src={BankSecurityOfficerImg}>
           <div className="font-medium text-2xl m-auto text-center">
-             Hotel <br />
+            Hotel <br />
             Security
           </div>
         </ServicesCard>
@@ -49,8 +49,8 @@ const OurServices = () => {
 
         <ServicesCard alt="" image_src={HotelSecurityOfficerImg}>
           <div className="font-medium text-2xl m-auto text-center">
-        Medical Facilities <br />
-            Security    
+            Medical Facilities <br />
+            Security
           </div>
         </ServicesCard>
       </div>

@@ -29,9 +29,9 @@ const Opportunities = () => {
           data-aos="fade-up"
           className="text-gray-600 text-base md:text-2xl mt-[32px] mb-[92px]"
         >
-          <Text data-aos="fade-up" className="text-justify">
+          <Text data-aos="fade-up" className="">
             <span className=" md:text-secondary ">
-              Joint Power Security Services,
+              Joint Power Security Services
             </span>{" "}
             <span data-aos="fade-up">
               envisions collaborating with its team to make its surroundings one
@@ -42,7 +42,7 @@ const Opportunities = () => {
               more.
             </span>
           </Text>
-          <Text data-aos="fade-up" className="text-justify pt-[24px]">
+          <Text data-aos="fade-up" className=" pt-[24px]">
             We provide experienced security guards carefully selected through a
             stringent screening process and background checks. Our guards
             specialize in all aspects of private security, ensuring the

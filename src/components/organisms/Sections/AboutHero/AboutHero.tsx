@@ -22,7 +22,7 @@ const AboutHero = () => {
       <div className="flex w-full flex-col text-black mt-[4rem] mb-[24px] items-start container">
         <div className="flex ">
           <div className="flex flex-col">
-            <div className={`text-justify sm:text-left`}>
+            <div className={` sm:text-left`}>
               <Heading
                 data-aos="fade-up"
                 level={1}

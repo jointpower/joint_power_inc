@@ -28,9 +28,9 @@ export const OurGoal = () => {
     {
       messageHead: "We guarantee satisfaction",
       messageBody:
-        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in both Northern and Southern California. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide. ",
+        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in California and Texas. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide. ",
       messageBodyMobile:
-        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in both Northern and Southern California. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide.",
+        " We assure 100% satisfaction with all your security needs. You can select the timing for our security coverage or opt for 24/7 presence for maximum security. Our services are unparalleled and highly trusted in California and Texas. Our mission is to ensure your safety, security, and deliver the peace of mind that professional security services provide.",
       className:
         "lg:bg-white bg-normal text-white lg:text-black shadow-2xl lg:right-[3vw] right-[82px] md:-z-10 md:right-0 -top-[172px] md:top-0 pb-[12px]",
       headerClass: "text-secondary lg:text-black",

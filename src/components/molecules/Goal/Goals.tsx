@@ -32,7 +32,7 @@ export const Goals = ({
       </Heading>
       <Text
         data-aos="fade-up"
-        className="opacity-90 p-2 text-justify text-base leading-relaxed font-normal mt-1 "
+        className="opacity-90 p-2  text-base leading-relaxed font-normal mt-1 "
       >
         {messageBody || messageBodyMoblie}
       </Text>
