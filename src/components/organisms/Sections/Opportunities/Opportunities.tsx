@@ -61,7 +61,7 @@ const Opportunities = () => {
             </span>
             <p
               data-aos="fade-up"
-              className="text-black text-lg md:text-3xl lg:text-5x xl:leading-[37px]"
+              className="text-left text-black text-lg md:text-3xl lg:text-5x xl:leading-[37px]"
             >
               Our security guards are highly skilled and trained in modern
               security practices.

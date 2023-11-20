@@ -35,7 +35,7 @@ export const Security = () => {
           >
             Emergency
           </Heading>
-          <p data-aos="fade-up">
+          <p className="text-left" data-aos="fade-up">
             Joint Power Security offers{" "}
             <span className="text-secondary">24 Hours</span> emergency security
             guard services. Whether it's for hospitals, shopping malls, hotels,

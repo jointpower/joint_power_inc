@@ -36,7 +36,7 @@ const HighlightCard = () => {
             <div>
               <Heading
                 data-aos="fade-up"
-                className="text-2xl md:text-3xl lg:text-5xl"
+                className="!text-left text-2xl md:text-3xl lg:text-5xl"
                 level={3}
               >
                 <span className="xl:leading-[52px]">
@@ -48,7 +48,7 @@ const HighlightCard = () => {
             </div>
             <Text
               data-aos="fade-up"
-              className="block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
+              className="text-left block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
               Find peace of mind with Joint Power Security Services, the foremost

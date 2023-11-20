@@ -33,7 +33,7 @@ const InTouch = () => {
             </Heading>
             <Text
               data-aos="fade-up"
-              className="text-center mt-4 text-base text-gray-600 md:text-2xl"
+              className="text-left md:text-center mt-4 text-base text-gray-600 md:text-2xl"
             >
               We offer both temporary and permanent security services. Our
               security guard solutions are among the most comprehensive
