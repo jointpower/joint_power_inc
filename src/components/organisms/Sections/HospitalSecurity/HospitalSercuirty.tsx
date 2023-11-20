@@ -17,7 +17,7 @@ const HospitalSecurity = () => {
       <div
         className={`w-[332px] bg-grey-7 md:bg-[unset] rounded-md md:rounded-none shadow-lg md:shadow-none flex md:items-center flex-col-reverse md:flex-row md:w-full text-black md:pt-[120px] mb-[24px] container relative`}
       >
-        <div className="flex flex-col p-5 text-center md:text-left">
+        <div className="flex flex-col p-5 text-left">
           <div className=" w-[100%] md:mt-[30px] ">
             <Heading
             data-aos="fade-up"
@@ -26,7 +26,7 @@ const HospitalSecurity = () => {
             >
               Hospital Security
             </Heading>
-            <Text data-aos="fade-up" className="font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
+            <Text data-aos="fade-up" className="text-left font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
             Our aim is to provide the highest quality security services tailored for hospitals in California and Texas to all our clients.
             </Text>
           </div>

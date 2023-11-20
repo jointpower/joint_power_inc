@@ -24,7 +24,7 @@ export const Security = () => {
         </div>
       </div>
 
-      <div className="text-center md:text-left flex flex-col md:mt-[10px] lg:mt-0 w-[300px] lg:w-[650px]">
+      <div className="text-left flex flex-col md:mt-[10px] lg:mt-0 w-[300px] lg:w-[650px]">
         <Text
           data-aos="fade-up"
           className="text-lg bg-transparent px-1 md:px-12 py-[30px] w-full block lg:text-xl text-black  leading-9"

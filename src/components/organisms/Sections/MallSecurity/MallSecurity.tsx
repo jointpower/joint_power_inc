@@ -34,7 +34,7 @@ const MallSecurity = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:mx-16 bg-grey-7 rounded-bl-lg shadow-lg md:shadow-none rounded-br-2xl md:rounded-none md:bg-white w-[332px] pt-[28px] md:pt-0 md:w-[100%] items-center lg:items-start text-center  lg:text-start">
+        <div className="flex flex-col md:mx-16 bg-grey-7 rounded-bl-lg shadow-lg md:shadow-none rounded-br-2xl md:rounded-none md:bg-white w-[332px] pt-[28px] md:pt-0 md:w-[100%] items-center lg:items-start">
           <div className=" w-[90%] md:w-full ">
             <Heading data-aos="fade-up"
               level={1}

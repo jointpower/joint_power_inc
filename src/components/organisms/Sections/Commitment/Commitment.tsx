@@ -147,10 +147,10 @@ export const Commitment = () => {
   return (
     <section className="flex flex-col container ">
       <div className="mt-24 md:mt-48 bg-normal">
-        <div>
+        <div className="px-3" >
           <Heading data-aos="fade-up"
             level={2}
-            className="font-medium  mb-[.5rem] pt-[30px]  text-3xl text-center uppercase"
+            className="font-medium  mb-[.5rem] pt-[30px]  text-3xl md:text-center uppercase"
           >
             {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-secondary ">
               Commited{' '}
@@ -158,22 +158,12 @@ export const Commitment = () => {
             <span className="text-secondary">our services</span>
           </Heading>
         </div>
-        <p data-aos="fade-up" className="text-base md:text-2xl text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
+        <p data-aos="fade-up" className="px-3 text-base md:text-2xl md:text-center mb-5 md:mb-[80px] lg:mt-[10px] text-gray-200">
         At Joint Power Security service Inc we provide a comprehensive range of services that include…
         </p>
         <div
-          className={`px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2 lg:h-[40rem] overflow-y-auto`}
+          className={`px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2 lg:h-[40rem]`}
         >
-          {/* {commitments.map(({ messageBody }, index) => (
-            <div
-              className="bg-normal w-[350px] md:w-[417px] rounded-md md:rounded-2xl "
-              key={index}
-            >
-              <Text className="text-white px-[43px] lg:px-[75px] py-[30px] lg:py-[15px] text-2xl text-center font-medium">
-                {messageBody}
-              </Text>
-            </div>
-          ))} */}
 
           {services?.length
             ? services?.map((data, index) => {
