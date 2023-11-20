@@ -37,13 +37,13 @@ export const Security = () => {
           </Heading>
           <p className="text-left" data-aos="fade-up">
             Joint Power Security offers{" "}
-            <span className="text-secondary">24 Hours</span> emergency security
+            <span className="font-medium text-[purple]">24 Hours</span> emergency security
             guard services. Whether it's for hospitals, shopping malls, hotels,
             apartments, or construction sites, we've got you covered.
             <br />
             <br />
             Our skilled security guards are accessible
-            <span className="text-secondary">
+            <span className="font-medium text-[purple]">
               {" "}
               24/7, every day of the week.
             </span>
