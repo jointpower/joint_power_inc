@@ -26,13 +26,13 @@ const AboutHero = () => {
               <Heading
                 data-aos="fade-up"
                 level={1}
-                className="text-center text-2xl md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold md:mb-[30px]"
+                className="text-center text-2xl md:text-[40px] lg:text-[65px] xl:text-[40px] w-full flex-1 font-bold mb-[30px]"
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2D324B] to-[#C1AF6F] ">
                   Understanding our story
                 </span>
               </Heading>
-              <h2
+              {/* <h2
                 data-aos="fade-up"
                 className="uppercase text-left mt-10 flex items-start md:items-center gap-2 md:text-[1.3rem] text-[1.1rem] capitalize my-2"
               >
@@ -42,31 +42,52 @@ const AboutHero = () => {
                     className="text-current w-4"
                   />{" "}
                 </div>
-                Elite security: making the impossible yours.
-              </h2>
+              </h2> */}
               <p
                 data-aos="fade-up"
                 className="md:text-[1.2rem] text-base text-[#5f5d5d]"
               >
-                Joint Power Security Services Inc provides skilled security
-                guards selected through rigorous screening processes, delivering
-                top-tier security services across Texas and California.
+                Joint Power Security Services Inc, an American-owned private
+                security firm, safeguards clients across California and Texas.
+                We're renowned in security and business circles, offering
+                top-notch security solutions. Our core focus is delivering
+                unmatched security guard services.
                 <br />
                 <br />
+                We collaborate with clients from diverse industries, tailoring
+                robust, cost-effective solutions. Our goal is simple, delivering
+                top-tier security services at prices that won't break the bank.
+                <br />
+                <br />
+                At Joint Power Security Services Inc, we cover a wide spectrum
+                of security needs. Our offerings include uniformed and
+                corporate-attired security officers, doormen, concierge
+                services, security escorts, receptionists, audits, consulting,
+                fire watch, mobile patrols, verified alarm response, and round
+                the clock monitoring and surveillance.
+                <br />
+                <br />
+                <br className="hidden sm:block" />
               </p>
               <p
                 data-aos="fade-up"
                 className=" md:text-[1.2rem] text-base text-[#5f5d5d]"
               >
-                Our guards excel across all aspects of private security,
-                ensuring the safety of lives and properties with exceptional
-                service. We turn the impossible into reality, catering to
-                diverse clients and consistently safeguarding their residential
-                and commercial properties round the clock.
+                Joint Power Security Services guards have valid California Guard
+                Card, Onsite field training and strict background check. Our
+                Security Guards have been fully trained for their specified
+                positions.
+                <br />
+                <br />
+                Our team and security professionals are dedicated to going above
+                and beyond to safeguard our clients. At Joint Power Security
+                Services Inc, clients are like family and we will do anything to
+                make sure our family is safe and protected.
+                <br />
                 <br />
                 <br />
               </p>
-              <h3
+              {/* <h3
                 data-aos="fade-up"
                 className="uppercase text-left mt-5 md:text-[1.2rem] text-base flex items-start md:items-center gap-2"
               >
@@ -74,28 +95,11 @@ const AboutHero = () => {
                   <BsFillPatchCheckFill size={17} className="text-current" />
                 </div>
                 Our security guards are highly trained and skilled.
-              </h3>
-              <p
-                data-aos="fade-up"
-                className=" md:text-[1.2rem] text-base mt-2 text-[#5f5d5d]"
-              >
-                Rest assured knowing that Joint Power Security Services Inc, the
-                top private security company in the industry, is safeguarding
-                you and your properties.
-                <br />
-                <br />
-              </p>
-              <p
-                data-aos="fade-up"
-                className="md:text-[1.2rem] text-base text-[#5f5d5d]"
-              >
-                We maintain transparent communication with our clients, ensuring
-                they're informed at every step and kept up to date.
-              </p>
+              </h3> */}
             </div>
             <div
               data-aos="fade-up"
-              className="-mt-[80px] lg:-mt-[40px]"
+              className="mt-10 flex justify-center"
               onClick={() => setShow(true)}
             >
               <Button className="text-base " variants="primary">

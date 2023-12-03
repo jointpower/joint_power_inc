@@ -62,7 +62,6 @@ const MainHero = () => {
             </p>
           </div>
         </div>
-
         <div data-aos="fade-up" className="mt-[70px] md:mt-10">
           <NextImage
             src={HeroImage}
