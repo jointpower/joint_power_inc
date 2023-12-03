@@ -4,7 +4,7 @@ import Heading from "@/components/atom/Heading/Heading";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import ContactUsModal from "@/components/form/ContactUsModal";
-import ServiceImage from "public/two-members.jpg";
+import ServiceImage from "public/new_image.jpg";
 import { useState } from "react";
 import { Dialog, DialogContent } from "../Dialog";
 
