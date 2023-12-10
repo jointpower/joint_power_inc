@@ -59,7 +59,7 @@ const Header = (): JSX.Element => {
             onClick={() => setShow(true)}
             className="font-semibold items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded"
           >
-            Get in Touch
+            Get a Free Quote
           </button>
         </div>
         {isOpen && (

@@ -36,7 +36,8 @@ const MallSecurity = () => {
 
         <div className="flex flex-col md:mx-16 bg-grey-7 rounded-bl-lg shadow-lg md:shadow-none rounded-br-2xl md:rounded-none md:bg-white w-[332px] pt-[28px] md:pt-0 md:w-[100%] items-center lg:items-start">
           <div className=" w-[90%] md:w-full ">
-            <Heading data-aos="fade-up"
+            <Heading
+              data-aos="fade-up"
               level={1}
               className={`${
                 xtraSmall && "text-[22px]"
@@ -44,11 +45,21 @@ const MallSecurity = () => {
             >
               Shopping Mall Security
             </Heading>
-            <Text data-aos="fade-up" className="font-medium mt-3 w-full leading-relaxed md:hidden text-lg text-black  pb-[35px]">
-            Joint Power Security can devise effective strategies to prevent theft and reduce shrinkage. The demand for top-notch retail security guards is on the rise.
+            <Text
+              data-aos="fade-up"
+              className="font-medium mt-3 w-full leading-relaxed md:hidden text-lg text-black  pb-[35px]"
+            >
+              Joint Power Security can devise effective strategies to prevent
+              theft and reduce shrinkage. The demand for top-notch retail
+              security guards is on the rise.
             </Text>
-            <Text data-aos="fade-up" className="mt-3 w-full leading-relaxed hidden md:flex text-xl text-black font-medium">
-            Joint Power Security can devise effective strategies to prevent theft and reduce shrinkage. The demand for top-notch retail security guards is on the rise.
+            <Text
+              data-aos="fade-up"
+              className="mt-3 w-full leading-relaxed hidden md:flex text-xl text-black font-medium"
+            >
+              Joint Power Security can devise effective strategies to prevent
+              theft and reduce shrinkage. The demand for top-notch retail
+              security guards is on the rise.
             </Text>
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)}>
@@ -56,7 +67,7 @@ const MallSecurity = () => {
               className={`mt-4 md:mt-8 ${xtraSmall && "px-4"} hidden md:flex`}
               variants="primary"
             >
-              Contact Us Today
+              Get a Free Quote{" "}
             </Button>
           </div>
         </div>

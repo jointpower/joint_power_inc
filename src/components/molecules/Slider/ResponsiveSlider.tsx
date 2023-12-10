@@ -94,11 +94,11 @@ const ResponsiveSlider = () => {
           >
             <p className="text-base sm:text-lg font-semibold">{item.review}</p>
             <div className=" flex gap-3 sm:gap-5 mt-7 items-center">
-              <NextImage
-                className="overflow-hidden !rounded-full h-24 w-24"
-                src={item.img}
-                alt="img"
-              />
+              {/* <NextImage
+               className="overflow-hidden !rounded-full h-24 w-24"
+               src={item.img}
+               alt="img"
+              /> */}
               <div className="">
                 <p className="font-bold text-base md:text-xl mb-2.5">
                   {item.name}

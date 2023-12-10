@@ -103,7 +103,7 @@ const AboutHero = () => {
               onClick={() => setShow(true)}
             >
               <Button className="text-base " variants="primary">
-                Contact us Today
+                Get a Free Quote{" "}
               </Button>
             </div>
           </div>

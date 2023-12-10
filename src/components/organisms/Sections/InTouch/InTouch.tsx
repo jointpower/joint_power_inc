@@ -48,7 +48,7 @@ const InTouch = () => {
             className="mt-3 shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]  md:mb-[43.5px]"
           >
             <span className="md:hidden " onClick={() => setShow(true)}>
-              Get in Touch
+             Contact Us Today
             </span>
             <span className="hidden md:flex" onClick={() => setShow(true)}>
               Contact Us Today

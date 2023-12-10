@@ -11,7 +11,7 @@ import { Dialog, DialogContent } from "../Dialog";
 const HighlightCard = () => {
   const xtraSmall = useMediaQuery("(max-width: 390px)");
   const [show, setShow] = useState(false);
-
+  
   return (
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">

@@ -16,7 +16,10 @@ const ServicesHero = () => {
     <Dialog open={show}>
       <section className="text-black mt-20 md:mt-[64px] mb-[40px]">
         <div className="relative">
-          <div data-aos="fade-up" className="overlay z-10 absolute inset-0 bg-black/70"></div>
+          <div
+            data-aos="fade-up"
+            className="overlay z-10 absolute inset-0 bg-black/70"
+          ></div>
           <NextImage
             src={serviceBlur}
             alt="about-main-hero image"
@@ -36,7 +39,8 @@ const ServicesHero = () => {
         >
           <div className="text-center md:container w-[98%] lg:w-[90%] md:flex md:flex-col md:align-start">
             <div>
-              <Heading data-aos="fade-up"
+              <Heading
+                data-aos="fade-up"
                 level={1}
                 className=" opacity-75 font-bold text-2xl md:text-[30px] lg:text-[60px] text-[#fff] md:w-full text-[28px] flex-1 drop-shadow-md leading-tight"
               >
@@ -45,14 +49,21 @@ const ServicesHero = () => {
                   Security Services Inc.
                 </span>
               </Heading>
-              <Text data-aos="fade-up" className="leading-10 italic opacity-75 font-medium mt-3 text-base sm:text-[24px] lg:text-2xl md:mb-10 mb-[41px]">
-              … reliable Protection, Trusted Security.
+              <Text
+                data-aos="fade-up"
+                className="leading-10 italic opacity-75 font-medium mt-3 text-base sm:text-[24px] lg:text-2xl md:mb-10 mb-[41px]"
+              >
+                … reliable Protection, Trusted Security.
               </Text>
             </div>
 
             <div onClick={() => setShow(true)}>
-              <Button data-aos="fade-up" className="mt-4 mb-[59px]" variants="primary">
-                Get in Touch
+              <Button
+                data-aos="fade-up"
+                className="mt-4 mb-[59px]"
+                variants="primary"
+              >
+                Get a Free Quote
               </Button>
             </div>
           </div>
