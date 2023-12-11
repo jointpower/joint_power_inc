@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { spawn } from "child_process";
 import { setTimeout } from "timers/promises";
+import { ImSpinner2 } from "react-icons/im";
 // import { toast } from 'react-toastify';
 
 type Props = {
@@ -40,9 +41,10 @@ const Form = ({ show, setShow }: Props) => {
         console.log(res);
       });
 
-      await sendContactForm({ name, email, comment, address, phoneNumber });
+      // await sendContactForm({ name, email, comment, address, phoneNumber });
       setSuccess(true);
       toast("success");
+      setShow(false);
     } catch (error) {
       setSuccess(false);
       setError(true);
@@ -169,11 +171,14 @@ const Form = ({ show, setShow }: Props) => {
               ></textarea>
 
               <div className="text-center">
-                <button
+              <button
                   type="submit"
-                  className="bg-[#fff] text-normal m-auto px-8 py-2 rounded-[.2rem] cursor-pointer border-none "
+                  disabled={loading}
+                  className="gap-2 w-full flex items-center justify-center py-3 text-black bg-white rounded"
                 >
-                  {" "}
+                 {loading ? (
+                    <ImSpinner2 className="animate-spin" size={20} />
+                  ) : null}
                   Submit
                 </button>
               </div>

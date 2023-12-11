@@ -4,6 +4,7 @@ import { sendContactForm, sendContactForm2 } from "@/lib/App";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ImSpinner2 } from "react-icons/im";
 
 const ContactDetails = () => {
   const [name, setName] = useState("");
@@ -21,13 +22,13 @@ const ContactDetails = () => {
       setLoading(true);
 
       await sendContactForm2({ name, email, phoneNumber, comment, address });
-      await sendContactForm({
-        name,
-        email,
-        phoneNumber,
-        comment,
-        address,
-      });
+      // await sendContactForm({
+      //   name,
+      //   email,
+      //   phoneNumber,
+      //   comment,
+      //   address,
+      // });
 
       toast("success");
     } catch (error) {
@@ -106,11 +107,12 @@ const ContactDetails = () => {
           className="p-5 border border-line w-full lg:w-[431px] text-grey-2 h-[130px] mb-[49px] mt-2 md:mt-4 py border-t focus:outline-none rounded shadow"
         />
         <button
-          data-aos="fade-up"
           type="submit"
-          className="w-full py-4 m-auto mb-2 text-white rounded bg-normal"
+          disabled={loading}
+          className="gap-2 w-full flex items-center justify-center py-3 text-black bg-white rounded"
         >
-          Submit Request
+          {loading ? <ImSpinner2 className="animate-spin" size={20} /> : null}
+          Submit
         </button>
       </form>
       <ToastContainer

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ImSpinner2 } from "react-icons/im";
 
 type Props = {
   show: boolean;
@@ -32,15 +33,16 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
 
       await sendContactForm2({ name, email, phoneNumber, address, comment });
 
-      await sendContactForm({
-        name,
-        email,
-        phoneNumber,
-        address,
-        comment,
-      });
+      // await sendContactForm({
+      //   name,
+      //   email,
+      //   phoneNumber,
+      //   address,
+      //   comment,
+      // });
 
       toast("success");
+      setShow(false);
     } catch (error) {
       toast("error");
     } finally {
@@ -174,8 +176,12 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
               >
                 <button
                   type="submit"
-                  className="w-full py-3 text-black bg-white rounded"
+                  disabled={loading}
+                  className="gap-2 w-full flex items-center justify-center py-3 text-black bg-white rounded"
                 >
+                  {loading ? (
+                    <ImSpinner2 className="animate-spin" size={20} />
+                  ) : null}
                   Submit
                 </button>
               </div>
