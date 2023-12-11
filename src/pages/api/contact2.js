@@ -17,7 +17,7 @@ const handler = async (req, res) => {
         ...mailOptions,
         // ...generateEmailContent(data),
         subject: `Message From ${data.name}`,
-        // text: 'This is text string',
+       
         html: `<h1>Sender: ${data.name}</h1> <h6>Sender Email ${
           data.email
         } </h6> <p>Mobile Number : ${
