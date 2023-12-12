@@ -11,7 +11,7 @@ import { Dialog, DialogContent } from "../Dialog";
 const HighlightCard = () => {
   const xtraSmall = useMediaQuery("(max-width: 390px)");
   const [show, setShow] = useState(false);
-  
+
   return (
     <Dialog open={show}>
       <section className="lg:bg-normal lg:mt-[72px] relative">
@@ -51,10 +51,10 @@ const HighlightCard = () => {
               className="text-left block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
               leading-[1.5] md:leading-9 xl:mb-[20px]"
             >
-              Find peace of mind with Joint Power Security Services, the foremost
-              private security company in California and Texas. With our vigilant watch,
-              rest assured and sleep soundly, knowing your safety is our
-              priority.
+              Find peace of mind with Joint Power Security Services, the
+              foremost private security company in California and Texas. With
+              our vigilant watch, rest assured and sleep soundly, knowing your
+              safety is our priority.
             </Text>
             <p
               className="w-fit md:m-[unset] m-auto"
@@ -62,9 +62,9 @@ const HighlightCard = () => {
               onClick={() => setShow(true)}
             >
               <button
-                className={`bg-[#fff] mt-2 text-normal px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
+                className={`uppercase bg-[#fff] mt-2 text-normal px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
               >
-                Get in Touch
+                Get a Free Quote
               </button>
             </p>
           </div>

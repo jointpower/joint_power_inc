@@ -64,7 +64,7 @@ const MallSecurity = () => {
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)}>
             <Button
-              className={`mt-4 md:mt-8 ${xtraSmall && "px-4"} hidden md:flex`}
+              className={`uppercase mt-4 md:mt-8 ${xtraSmall && "px-4"} hidden md:flex`}
               variants="primary"
             >
               Get a Free Quote{" "}

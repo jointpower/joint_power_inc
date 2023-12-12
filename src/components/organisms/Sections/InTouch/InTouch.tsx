@@ -45,7 +45,7 @@ const InTouch = () => {
           <Button
             data-aos="fade-up"
             variants="primary"
-            className="mt-3 shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]  md:mb-[43.5px]"
+            className="uppercase mt-3 shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]  md:mb-[43.5px]"
           >
             <span className="md:hidden " onClick={() => setShow(true)}>
              Contact Us Today

@@ -60,7 +60,7 @@ const ServicesHero = () => {
             <div onClick={() => setShow(true)}>
               <Button
                 data-aos="fade-up"
-                className="mt-4 mb-[59px]"
+                className="uppercase mt-4 mb-[59px]"
                 variants="primary"
               >
                 Get a Free Quote

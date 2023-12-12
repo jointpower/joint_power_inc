@@ -54,7 +54,7 @@ const MainHero = () => {
             <p onClick={() => setShow(true)}>
               <Button
                 data-aos="fade-up"
-                className={`mt-8 md:mt-10md:mx-0`}
+                className={`uppercase mt-8 md:mt-10 md:mx-0`}
                 variants="primary"
               >
                 GET A FREE QUOTE
