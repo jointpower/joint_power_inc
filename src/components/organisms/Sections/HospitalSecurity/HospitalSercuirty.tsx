@@ -34,7 +34,7 @@ const HospitalSecurity = () => {
             <button
               className={`uppercase bg-normal text-[#fff] px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
-              Get in Touch
+              Get a Free Quote
             </button>
           </div>
         </div>
