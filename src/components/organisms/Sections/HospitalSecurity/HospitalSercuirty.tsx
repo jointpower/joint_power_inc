@@ -32,7 +32,7 @@ const HospitalSecurity = () => {
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)} className={`my-2 mt-5`}>
             <button
-              className={`bg-normal text-[#fff] px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
+              className={`uppercase bg-normal text-[#fff] px-8 py-4 rounded-[.2rem] cursor-pointer font-medium `}
             >
               Get in Touch
             </button>
