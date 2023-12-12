@@ -177,7 +177,7 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="uppercase gap-2 w-full flex items-center justify-center py-3 text-black bg-white rounded"
+                  className="gap-2 w-full flex items-center justify-center py-3 text-black bg-white rounded"
                 >
                   {loading ? (
                     <ImSpinner2 className="animate-spin" size={20} />
