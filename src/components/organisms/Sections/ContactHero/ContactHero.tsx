@@ -39,7 +39,7 @@ const ContactHero = () => {
           <div onClick={() => setShow(true)}>
             <button
               data-aos="fade-up"
-              className={`md:px-8 md:py-3 md:my-6 px-6 py-3 bg-normal text-white my-2 rounded-[.2rem] cursor-pointer`}
+              className={`uppercase md:px-8 md:py-3 md:my-6 px-6 py-3 bg-normal text-white my-2 rounded-[.2rem] cursor-pointer`}
             >
               Get in Touch
             </button>

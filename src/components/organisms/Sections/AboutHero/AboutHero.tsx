@@ -102,7 +102,7 @@ const AboutHero = () => {
               className="mt-10 flex justify-center"
               onClick={() => setShow(true)}
             >
-              <Button className="text-base " variants="primary">
+              <Button className="uppercase text-base " variants="primary">
                 Get a Free Quote{" "}
               </Button>
             </div>
