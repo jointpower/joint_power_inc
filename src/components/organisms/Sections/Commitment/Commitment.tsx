@@ -170,7 +170,7 @@ export const Commitment = () => {
                 return (
                   <button data-aos="fade-up"
                     key={index}
-                    className={`min-h-[70px] md:min-h-[unset] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
+                    className={`uppercase min-h-[70px] md:min-h-[unset] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
                   >
                       <p>{data.service}</p>
                   </button>

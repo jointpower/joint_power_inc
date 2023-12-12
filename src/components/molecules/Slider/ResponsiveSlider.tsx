@@ -119,13 +119,13 @@ const ResponsiveSlider = () => {
       >
         <button
           onClick={previous}
-          className="bg-normal w-14 aspect-square rounded-full grid place-content-center"
+          className="uppercase bg-normal w-14 aspect-square rounded-full grid place-content-center"
         >
           <MdOutlineArrowBackIosNew size={20} />
         </button>
         <button
           onClick={next}
-          className="bg-normal w-14 aspect-square rounded-full grid place-content-center"
+          className="uppercase bg-normal w-14 aspect-square rounded-full grid place-content-center"
         >
           <MdOutlineArrowForwardIos size={20} />
         </button>

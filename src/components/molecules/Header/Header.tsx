@@ -57,7 +57,7 @@ const Header = (): JSX.Element => {
           </nav>
           <button
             onClick={() => setShow(true)}
-            className="font-semibold items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded"
+            className="uppercase font-semibold items-center gap-1.5 hidden md:flex bg-normal text-white py-4 px-8 rounded"
           >
             Get a Free Quote
           </button>
