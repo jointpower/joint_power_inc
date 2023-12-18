@@ -44,8 +44,16 @@ const BlogPage = () => {
           blogs.map((item) => (<div className="">
             <NextImage src={item.img_url} alt={item.title} className="w-full h-[200px]" />
             <div className="mt-3 flex flex-col gap-5">
-<p className="font-medium">{item.title}</p>
-<p className="font-medium text-sm">{item.content}</p>
+<p className="font-semibold">{item.title}</p>
+<p className="text-sm">{item.content}</p>
+<div className="flex items-center justify-between text-sm">
+  <div className="flex items-center">
+          <span>By:</span>
+          <span className="font-medium">{item.author}</span>
+  </div>
+<p>{item.date}</p>
+</div>
+<button className="text-sm mt-5 font-medium bg-primary text-white py-3 rounded-lg">Read More</button>
             </div>
           </div>))
         }
