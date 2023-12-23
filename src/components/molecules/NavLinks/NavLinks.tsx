@@ -23,6 +23,10 @@ const NavLinks = () => {
       url: '/services',
     },
     {
+      name: 'Blogs',
+      url: '/blog',
+    },
+    {
       name: 'Contact Us',
       url: '/contact-us',
     },
@@ -43,11 +47,10 @@ const NavLinks = () => {
             </div> */}
 
             <div
-              className={`${
-                router.pathname === url
+              className={`${router.pathname === url
                   ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
                   : null
-              } font-bold text-[1rem] uppercase  p-2`}
+                } font-bold text-[1rem] uppercase  p-2`}
             >
               {name}
             </div>
