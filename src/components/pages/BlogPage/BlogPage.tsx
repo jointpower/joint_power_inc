@@ -53,12 +53,12 @@ const BlogPage = () => {
           <input
             type="text"
             placeholder="Search Blog by Title"
-            className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!max-w-[250px]"
+            className="w-full p-3 py-4 border border-primary outline-none rounded-lg min-w-[unset] sm:!max-w-[250px]"
           />
           <button
-            onClick={() => router.push('/blog/edit')}
+            onClick={() => router.push('/blog/create')}
             className="flex items-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
-            <BsPlus size={16} /> Create New Blog
+            <BsPlus size={26} /> Create New Blog
           </button>
         </div>
         <div className="mt-10 grid grid-cols-4 gap-5 ">

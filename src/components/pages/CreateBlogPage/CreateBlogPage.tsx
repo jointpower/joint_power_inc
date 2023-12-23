@@ -6,6 +6,7 @@ import * as Yup from 'yup'
 import 'react-quill/dist/quill.snow.css';
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -13,9 +14,8 @@ export const ValidationError = ({ text }: { text: string }) => {
   return <span className="text-xs text-red-700 block">{text}</span>;
 };
 
-
 const CreateBlogPage = () => {
-
+  const router = useRouter()
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(false);
   const formik = useFormik({
@@ -116,12 +116,20 @@ const CreateBlogPage = () => {
 
               </div>
             </div>
-            <div className="flex">
+            <div className="flex justify-center items-center gap-5">
+              <button
+                // showLoadingSpinner
+                // loading={isLoading}
+                onClick={() => router.back()}
+                className=" text-slate-900 bg-slate-100 py-4 p-10 w-fit mt-20 rounded-lg"
+              >
+                Back
+              </button>
               <button
                 // showLoadingSpinner
                 // loading={isLoading}
                 type="submit"
-                className=" bg-slate-900 text-slate-100 py-4 p-10 w-fit m-auto mt-20 rounded-lg"
+                className=" bg-slate-900 text-slate-100 py-4 p-10 w-fit mt-20 rounded-lg"
               >
                 Save Blog
               </button>
