@@ -6,16 +6,19 @@ import news from 'public/team-member-1.jpg'
 import { ImMail } from "react-icons/im";
 import { HiThumbUp } from "react-icons/hi";
 import { MdOutlineFacebook } from "react-icons/md";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 const BlogDetailsPage = () => {
 
+  const router = useRouter()
 
   return (
     <div className="text-grey-2 pt-24 ">
       {/* @ts-ignore */}
       <div className="mt-10 max-w-[1200px] mx-auto pt-10 px-5">
         <h3 className="font-semibold text-2xl sm:text-5xl text-center mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quia ducimus!</h3>
-        <NextImage src={news} alt="news image" className="w-full sm:w-[550px] h-96" />
+        <NextImage src={news} alt="news image" className="w-full sm:w-[500px] h-[400px]" />
         <div className="pt-6 mt-10 flex items-center justify-between border-t">
           <div className="flex items-center gap-6 !text-xs">
             <span>DECEMBER 18, 2023</span>
@@ -43,16 +46,30 @@ const BlogDetailsPage = () => {
           <div className="mt-10">
             <span>Please Like, Follow and Share.</span>
           </div>
-          <div className="mt-5 flex items-center gap-3">
-            <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-              <ImMail /> Follow
-            </button>
-            <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-              <HiThumbUp size={16} /> Like
-            </button>
-            <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-              <MdOutlineFacebook size={17} /> Share
-            </button>
+          <div className="mt5 flex flex-col sm:flex-row gap-10 items-center justify-between">
+            <div className="mt-5 flex items-center gap-3">
+              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+                <ImMail /> Follow
+              </button>
+              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+                <HiThumbUp size={16} /> Like
+              </button>
+              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+                <MdOutlineFacebook size={17} /> Share
+              </button>
+            </div>
+            <div className="mt-5 flex items-center gap-3">
+              <button className="flex items-center gap-1 bg-red-600 text-white p-2 px-3 text-xs rounded-lg">
+                <FaTrashAlt /> Delete
+              </button>
+              <button
+                onClick={() => router.push('/blog/edit')}
+                className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+                <FaEdit size={16} /> Edit Blog
+              </button>
+
+            </div>
+
           </div>
         </div>
       </div>

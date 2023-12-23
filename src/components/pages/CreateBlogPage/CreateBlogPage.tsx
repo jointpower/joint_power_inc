@@ -26,12 +26,14 @@ const CreateBlogPage = () => {
       date: "",
       content: "",
       category: "",
+      image: ''
     },
     validationSchema: Yup.object().shape({
       title: Yup.string().required("This field is required"),
       author: Yup.string().required("This field is required"),
       content: Yup.string(),
       category: Yup.string().required("This field is required"),
+      image: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
       values.content = value;
@@ -50,6 +52,18 @@ const CreateBlogPage = () => {
         <div className="max-w-[600px] m-auto mt-20">
           <form onSubmit={handleSubmit} className="my-8">
             <div className="grid gap-5">
+              <div className="flex flex-col gap-2 mb-5">
+                <label htmlFor="title" >Blog Image</label>
+                <input
+                  type="file"
+                  placeholder="Enter Blog Title"
+                  className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
+                  {...getFieldProps("image")}
+                />
+                {touched.title && errors.title && (
+                  <ValidationError text={errors.title} />
+                )}
+              </div>
               <div className="flex flex-col gap-2 mb-5">
                 <label htmlFor="title" >Title</label>
                 <input
