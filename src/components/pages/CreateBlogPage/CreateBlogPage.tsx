@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from 'yup'
 // import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
@@ -16,6 +16,7 @@ export const ValidationError = ({ text }: { text: string }) => {
 
 const CreateBlogPage = () => {
   const router = useRouter()
+  const [file, setFile] = useState<string | ArrayBuffer>('');
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(false);
   const formik = useFormik({
@@ -26,24 +27,35 @@ const CreateBlogPage = () => {
       date: "",
       content: "",
       category: "",
-      image: ''
+      image_url: '',
     },
     validationSchema: Yup.object().shape({
       title: Yup.string().required("This field is required"),
       author: Yup.string().required("This field is required"),
       content: Yup.string(),
       category: Yup.string().required("This field is required"),
-      image: Yup.string().required("This field is required"),
+      image_url: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
       values.content = value;
-      console.log('whats')
-      console.log(value)
       console.log(values)
     },
   });
 
-  const { getFieldProps, errors, touched, handleSubmit } = formik;
+  const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    let file = event.target.files![0];
+    let reader = new FileReader();
+    reader.onloadend = () => {
+      if (reader.result) {
+        setFieldValue('image_url', reader.result);
+        setFile(reader.result)
+      }
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  const { getFieldProps, errors, touched, handleSubmit, setFieldValue } = formik;
 
   return (
     <div className="text-grey-2 pt-24 ">
@@ -55,13 +67,14 @@ const CreateBlogPage = () => {
               <div className="flex flex-col gap-2 mb-5">
                 <label htmlFor="title" >Blog Image</label>
                 <input
+                  name="image_url"
                   type="file"
-                  placeholder="Enter Blog Title"
+                  accept="image/*"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
-                  {...getFieldProps("image")}
+                  onChange={event => handleFileUpload(event)}
                 />
-                {touched.title && errors.title && (
-                  <ValidationError text={errors.title} />
+                {touched.image_url && errors.image_url && (
+                  <ValidationError text={errors.image_url} />
                 )}
               </div>
               <div className="flex flex-col gap-2 mb-5">
