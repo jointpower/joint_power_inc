@@ -12,6 +12,7 @@
     "@radix-ui/react-dialog": "^1.0.4",
     "@types/react-slick": "^0.23.12",
     "aos": "^2.3.4",
+    "axios": "^1.6.2",
     "clsx": "^1.2.1",
     "formik": "^2.4.5",
     "next": "^13.0.2",

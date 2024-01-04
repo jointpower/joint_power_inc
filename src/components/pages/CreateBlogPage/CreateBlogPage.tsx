@@ -7,6 +7,7 @@ import 'react-quill/dist/quill.snow.css';
 import { ChangeEvent, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import axios from 'axios';
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -19,6 +20,21 @@ const CreateBlogPage = () => {
   const [file, setFile] = useState<string | ArrayBuffer>('');
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const saveBlog = (payload: any) => {
+    try {
+      axios.post('http://localhost/jps-blog-server/server.php', payload, {
+        headers: {
+          "Content-Type": 'application/x-www-form-urlencoded'
+        }
+      }).then(res => {
+        console.log(res)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -37,8 +53,9 @@ const CreateBlogPage = () => {
       image_url: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
-      values.content = value;
+      // values.content = value;
       console.log(values)
+      saveBlog(values)
     },
   });
 
@@ -115,17 +132,17 @@ const CreateBlogPage = () => {
               </div>
               <div className="flex flex-col gap-2 mb-5">
                 <label htmlFor="cotent" >Content</label>
-                {/* <input
+                <input
                   type="text"
-
-                  placeholder="Confirm your password"
+                  {...getFieldProps("content")}
+                  placeholder="Content"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
-                /> */}
-                <ReactQuill theme="snow"
+                />
+                {/* <ReactQuill theme="snow"
                   value={value}
                   onChange={setValue}
                 // {...getFieldProps("content")}
-                />
+                /> */}
 
               </div>
             </div>
