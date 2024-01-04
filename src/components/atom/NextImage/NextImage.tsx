@@ -7,6 +7,7 @@ interface NextImageProps {
   alt: string;
   priority?: boolean;
   isImage?: boolean;
+  blurDataURL?:string | StaticImageData;
 }
 const NextImage = ({
   className,
@@ -14,6 +15,8 @@ const NextImage = ({
   priority,
   src,
   isImage = false,
+  blurDataURL,
+  ...rest
 }: NextImageProps) => {
   return (
     <div className={`${className ? className : null} relative`}>
@@ -24,6 +27,9 @@ const NextImage = ({
         fill
         placeholder="blur"
         className={`${isImage ? 'object-cover' : ''}`}
+        // @ts-ignore
+        blurDataURL={blurDataURL}
+        {...rest}
       ></Image>
     </div>
   );

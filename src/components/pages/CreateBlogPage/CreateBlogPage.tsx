@@ -7,7 +7,9 @@ import 'react-quill/dist/quill.snow.css';
 import { ChangeEvent, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
+import { ToastContainer, toast } from "react-toastify";
+import { ImSpinner2 } from "react-icons/im";
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -22,16 +24,24 @@ const CreateBlogPage = () => {
   const [loading, setLoading] = useState(false);
 
   const saveBlog = (payload: any) => {
+    setLoading(true)
     try {
       axios.post('http://localhost/jps-blog-server/server.php', payload, {
         headers: {
           "Content-Type": 'application/x-www-form-urlencoded'
         }
       }).then(res => {
+        toast(res.data.message, { type: 'success' })
+        router.push('/blog');
         console.log(res)
       })
-    } catch (error) {
-      console.log(error)
+    } catch (error: any) {
+      console.log('hey')
+      console.log(error.response.data.error)
+      toast(error.error, { type: 'error' })
+      toast(error.error, { type: 'error' })
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -148,25 +158,31 @@ const CreateBlogPage = () => {
             </div>
             <div className="flex justify-center items-center gap-5">
               <button
-                // showLoadingSpinner
-                // loading={isLoading}
                 onClick={() => router.back()}
                 className=" text-slate-900 bg-slate-100 py-4 p-10 w-fit mt-20 rounded-lg"
               >
                 Back
               </button>
               <button
-                // showLoadingSpinner
-                // loading={isLoading}
+                disabled={loading}
                 type="submit"
-                className=" bg-slate-900 text-slate-100 py-4 p-10 w-fit mt-20 rounded-lg"
+                className="disabled:bg-opacity-60 flex items-center gap-2 bg-slate-900 text-slate-100 py-4 p-10 w-fit mt-20 rounded-lg"
               >
+                {loading ? <span><ImSpinner2 className="animate-spin" size={16} /></span> : null}
                 Save Blog
               </button>
             </div>
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
