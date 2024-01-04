@@ -37,7 +37,7 @@ const BlogPage = () => {
       {/* @ts-ignore */}
       <Banner text={"Blog"} />
       <div className="max-w-[1200px] mx-auto">
-        <div className="mt-20 flex justify-end items-center gap-5">
+        <div className="px-5 mt-20 flex flex-col sm:flex-row justify-end items-center gap-5">
           <input
             type="text"
             placeholder="Search Blog by Title"
@@ -45,11 +45,11 @@ const BlogPage = () => {
           />
           <button
             onClick={() => router.push('/blog/create')}
-            className="flex items-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
+            className="w-full sm:w-[unset] flex items-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
             <BsPlus size={26} /> Create New Blog
           </button>
         </div>
-        <div className="mt-10 grid grid-cols-4 gap-5 gap-y-12">
+        <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
           {
             blogs.map((item, idx) => (<div className="">
               <NextImage
