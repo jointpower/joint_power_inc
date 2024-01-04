@@ -4,8 +4,6 @@ import React from 'react'
 
 const BlogDetais = () => {
 
-    console.log('object')
-
     return (
         <Layout >
             <BlogDetailsPage />

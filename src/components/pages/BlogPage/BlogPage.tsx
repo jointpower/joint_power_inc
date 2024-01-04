@@ -8,7 +8,7 @@ import { BsPlus } from "react-icons/bs";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-type BlogType = {
+export type BlogType = {
   id: string,
   title: string,
   body: string,
