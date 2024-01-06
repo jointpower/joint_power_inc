@@ -45,7 +45,7 @@ const BlogPage = () => {
           />
           <button
             onClick={() => router.push('/blog/create')}
-            className="w-full sm:w-[unset] flex items-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
+            className="w-full sm:w-[unset] flex items-center justify-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
             <BsPlus size={26} /> Create New Blog
           </button>
         </div>
@@ -59,7 +59,7 @@ const BlogPage = () => {
                 className="w-full h-[200px]" />
               <div className="mt-3 flex flex-col gap-5">
                 <p className="font-semibold">{item.title}</p>
-                <p className="text-sm">{item.body.substring(0,40)}...</p>
+                <div className="text-sm" dangerouslySetInnerHTML={{ __html: `${item.body.substring(0, 40)}...` }} ></div>
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center">
                     <span>By:</span>

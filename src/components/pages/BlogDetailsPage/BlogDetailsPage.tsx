@@ -71,7 +71,7 @@ const BlogDetailsPage = () => {
           </div>
         </div>
         <div className="my-20">
-          {blog?.body}
+          <div className="" dangerouslySetInnerHTML={{ __html: blog?.body }} ></div>
           <br />  <br />
           <p>
             Read More About. </p>

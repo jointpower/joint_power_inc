@@ -4,11 +4,12 @@ import { useFormik } from "formik";
 import * as Yup from 'yup'
 // import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import axios, { AxiosResponse } from "axios";
 import { BlogType } from "../BlogPage/BlogPage";
+import { toast } from "react-toastify";
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -23,6 +24,39 @@ const EditBlogPage = () => {
   const [blog, setBlog] = useState({} as BlogType)
   const [loading, setLoading] = useState(false);
   const router = useRouter()
+
+  const saveChanges = (payload: any) => {
+    setLoading(true)
+    try {
+      axios.patch('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId, payload, {
+        headers: {
+          "Content-Type": 'application/x-www-form-urlencoded'
+        }
+      }).then(res => {
+        toast(res.data.message, { type: 'success' })
+        router.push('/blog');
+        console.log(res)
+      })
+    } catch (error: any) {
+      toast(error.error, { type: 'error' })
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    let file = event.target.files![0];
+    let reader = new FileReader();
+    reader.onloadend = () => {
+      if (reader.result) {
+        formik.setFieldValue('image_url', reader.result);
+      }
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -31,20 +65,21 @@ const EditBlogPage = () => {
       date: blog?.created_date,
       content: blog?.body,
       category: blog?.category,
-      image: ''
     },
     validationSchema: Yup.object().shape({
       title: Yup.string().required("This field is required"),
       author: Yup.string().required("This field is required"),
       content: Yup.string(),
       category: Yup.string().required("This field is required"),
-      image: Yup.string().required("This field is required"),
+      // image_url: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
       values.content = value;
-      console.log('whats')
+      // @ts-ignore
+      values.image_url = blog.image_url;
       console.log(value)
       console.log(values)
+      saveChanges(values);
     },
   });
 
@@ -52,7 +87,7 @@ const EditBlogPage = () => {
 
   useEffect(() => {
     console.log(router.query)
-    axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res:AxiosResponse) => {
+    axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res: AxiosResponse) => {
       setBlog(res.data.data);
       setValue(res.data.data.body)
     })
@@ -71,7 +106,7 @@ const EditBlogPage = () => {
                   type="file"
                   placeholder="Enter Blog Title"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
-                  {...getFieldProps("image")}
+                  onChange={event => handleFileUpload(event)}
                 />
                 {touched.title && errors.title && (
                   <ValidationError text={errors.title} />
