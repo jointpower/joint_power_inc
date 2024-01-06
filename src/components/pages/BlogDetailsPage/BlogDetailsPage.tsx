@@ -46,6 +46,7 @@ const BlogDetailsPage = () => {
     }
   }
 
+
   useEffect(() => {
     axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res) => {
       setBlog(res.data.data);
@@ -97,7 +98,7 @@ const BlogDetailsPage = () => {
                 {loading ? <ImSpinner2 size={12} className="animate-spin" /> : <FaTrashAlt />}Delete
               </button>
               <button
-                onClick={() => router.push('/blog/edit')}
+                onClick={() => router.push('/blog/edit/' + blog.id)}
                 className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
                 <FaEdit size={16} /> Edit Blog
               </button>

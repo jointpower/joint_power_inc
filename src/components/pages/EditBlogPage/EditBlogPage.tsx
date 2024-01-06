@@ -4,9 +4,11 @@ import { useFormik } from "formik";
 import * as Yup from 'yup'
 // import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import axios, { AxiosResponse } from "axios";
+import { BlogType } from "../BlogPage/BlogPage";
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -18,16 +20,17 @@ export const ValidationError = ({ text }: { text: string }) => {
 const EditBlogPage = () => {
 
   const [value, setValue] = useState('');
+  const [blog, setBlog] = useState({} as BlogType)
   const [loading, setLoading] = useState(false);
   const router = useRouter()
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
-      title: '',
-      author: "",
-      date: "",
-      content: "",
-      category: "",
+      title: blog?.title,
+      author: blog?.author,
+      date: blog?.created_date,
+      content: blog?.body,
+      category: blog?.category,
       image: ''
     },
     validationSchema: Yup.object().shape({
@@ -46,6 +49,14 @@ const EditBlogPage = () => {
   });
 
   const { getFieldProps, errors, touched, handleSubmit } = formik;
+
+  useEffect(() => {
+    console.log(router.query)
+    axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res:AxiosResponse) => {
+      setBlog(res.data.data);
+      setValue(res.data.data.body)
+    })
+  }, [])
 
   return (
     <div className="text-grey-2 pt-24 ">
