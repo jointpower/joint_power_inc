@@ -35,7 +35,7 @@ const NavLinks = () => {
   return (
     <ul className="md:flex md:gap-3 container">
       {nav_links.map(({ name, url }, index) => (
-        <li key={`${name}/${url + index}`}>
+        <li className='!list-none' key={`${name}/${url + index}`}>
           <Links url={url}>
             {/* <div
               className={`${
@@ -48,8 +48,8 @@ const NavLinks = () => {
 
             <div
               className={`${router.pathname === url
-                  ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
-                  : null
+                ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
+                : null
                 } font-bold text-[1rem] uppercase  p-2`}
             >
               {name}

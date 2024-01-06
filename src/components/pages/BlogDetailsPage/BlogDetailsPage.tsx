@@ -73,8 +73,6 @@ const BlogDetailsPage = () => {
         <div className="my-20">
           <div className="" dangerouslySetInnerHTML={{ __html: blog?.body }} ></div>
           <br />  <br />
-          <p>
-            Read More About. </p>
           <div className="mt-10">
             <span>Please Like, Follow and Share.</span>
           </div>

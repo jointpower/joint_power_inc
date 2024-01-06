@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { BsPlus } from "react-icons/bs";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 export type BlogType = {
   id: string,
@@ -33,7 +34,7 @@ const BlogPage = () => {
 
 
   return (
-    <div className="text-grey-2 pt-24 ">
+    <div className="text-grey-2 pt-24 blog">
       {/* @ts-ignore */}
       <Banner text={"Blog"} />
       <div className="max-w-[1200px] mx-auto">
@@ -76,6 +77,14 @@ const BlogPage = () => {
           }
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

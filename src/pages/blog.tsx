@@ -4,7 +4,9 @@ import BlogPage from "@/components/pages/BlogPage/BlogPage";
 const About: NextPage = () => {
     return (
         <Layout>
-            <BlogPage />
+            <div className="blog">
+                <BlogPage />
+            </div>
         </Layout>
     );
 };
