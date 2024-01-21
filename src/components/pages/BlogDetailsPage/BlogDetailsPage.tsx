@@ -1,3 +1,4 @@
+'use client'
 import Banner from "../../molecules/Banner/Banner";
 
 import blog1 from 'public/bank-security.jpg';
@@ -48,11 +49,12 @@ const BlogDetailsPage = () => {
 
 
   useEffect(() => {
+    console.log(router.query.blogId)
     axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res) => {
       setBlog(res.data.data);
       console.log(res);
     })
-  }, [])
+  }, [router.query.blogId])
 
   return (
     <div className="text-grey-2 pt-24 ">

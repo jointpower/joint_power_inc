@@ -8,6 +8,7 @@ import { BsPlus } from "react-icons/bs";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
+import { ImSpinner2 } from "react-icons/im";
 
 export type BlogType = {
   id: string,
@@ -19,18 +20,29 @@ export type BlogType = {
   image_url: string,
 }
 
+type PaginationType = {
+  currentPage: number,
+  totalPages: number,
+}
+
 const BlogPage = () => {
 
   const router = useRouter();
   const [blogs, setBlogs] = useState([] as Array<BlogType>);
   const randomLink = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7';
+  const [page, setPage] = useState(1);
+  const [pagination, setPagination] = useState({ currentPage: 1, totalPages: 1 } as PaginationType)
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
-    axios.get('http://localhost/jps-blog-server/server.php').then(res => {
+    setLoading(true)
+    axios.get(`http://localhost/jps-blog-server/server.php?page=${page}`).then(res => {
       setBlogs(res.data.data)
+      setPagination(res.data.pagination)
       console.log(res.data)
-    })
-  }, [])
+    }).finally(() => setLoading(false))
+  }, [page])
 
 
   return (
@@ -50,7 +62,7 @@ const BlogPage = () => {
             <BsPlus size={26} /> Create New Blog
           </button>
         </div>
-        <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
+        {!loading ? <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
           {
             blogs.map((item, idx) => (<div className="">
               <NextImage
@@ -75,7 +87,25 @@ const BlogPage = () => {
               </div>
             </div>))
           }
-        </div>
+        </div> :
+          <div className="py-20 text-center grid place-content-center gap-2 mt-20">
+            <div className="flex items-center gap-2">
+              <span><ImSpinner2 className="animate-spin" /></span>
+              <span>Loading..</span>
+            </div>
+            <p>Please Wait</p>
+          </div>
+        }
+        {!loading ? <div className="flex justify-center items-center gap-2 mt-20">
+          {
+            Array.from({ length: pagination.totalPages }, (_, idx) => idx + 1).map(item => (
+              <button
+                className={`hover:!text-white px-3 py-2 rounded-lg ${pagination.currentPage === item ? 'bg-normal text-white' : 'bg-slate-600 text-black'}`}
+                onClick={() => setPage(item)}
+              >{item}</button>
+            ))
+          }
+        </div> : null}
       </div>
       <ToastContainer
         position="top-right"
