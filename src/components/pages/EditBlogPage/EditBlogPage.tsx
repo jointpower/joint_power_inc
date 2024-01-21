@@ -86,12 +86,11 @@ const EditBlogPage = () => {
   const { getFieldProps, errors, touched, handleSubmit } = formik;
 
   useEffect(() => {
-    console.log(router.query)
     axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res: AxiosResponse) => {
       setBlog(res.data.data);
       setValue(res.data.data.body)
     })
-  }, [])
+  }, [router.query.blogId])
 
   return (
     <div className="text-grey-2 pt-24 ">

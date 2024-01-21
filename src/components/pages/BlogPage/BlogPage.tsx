@@ -51,11 +51,6 @@ const BlogPage = () => {
       <Banner text={"Blog"} />
       <div className="max-w-[1200px] mx-auto">
         <div className="px-5 mt-20 flex flex-col sm:flex-row justify-end items-center gap-5">
-          <input
-            type="text"
-            placeholder="Search Blog by Title"
-            className="w-full p-3 py-4 border border-primary outline-none rounded-lg min-w-[unset] sm:!max-w-[250px]"
-          />
           <button
             onClick={() => router.push('/blog/create')}
             className="w-full sm:w-[unset] flex items-center justify-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
@@ -64,12 +59,12 @@ const BlogPage = () => {
         </div>
         {!loading ? <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
           {
-            blogs.map((item, idx) => (<div className="">
+            blogs.map((item, idx) => (<div className="h-full">
               <NextImage
                 blurDataURL={randomLink}
                 src={item.image_url}
                 alt={item.title}
-                className="w-full h-[200px]" />
+                className="w-full h-[200px] object-cover" />
               <div className="mt-3 flex flex-col gap-5">
                 <p className="font-semibold">{item.title}</p>
                 <div className="text-sm" dangerouslySetInnerHTML={{ __html: `${item.body.substring(0, 40)}...` }} ></div>

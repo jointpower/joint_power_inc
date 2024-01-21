@@ -7,7 +7,7 @@ import news from 'public/team-member-1.jpg'
 import { ImMail, ImSpinner2 } from "react-icons/im";
 import { HiThumbUp } from "react-icons/hi";
 import { MdOutlineFacebook } from "react-icons/md";
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import { FaBackward, FaEdit, FaTrashAlt } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -58,8 +58,12 @@ const BlogDetailsPage = () => {
 
   return (
     <div className="text-grey-2 pt-24 ">
-      <div className="mt-10 max-w-[1200px] mx-auto pt-10 px-5">
-        <h3 className="font-semibold text-2xl sm:text-5xl text-center mb-10">{blog?.title}</h3>
+      <button onClick={() => router.back()} className="w-full mb-5 mt-20 pt-10  flex items-center justify-center gap-1 text-sm">
+        <FaBackward />
+        <span>Back</span>
+      </button>
+      <div className=" max-w-[1200px] mx-auto px-5">
+        <h3 className="font-semibold text-2xl sm:text-5xl text-center mb-14">{blog?.title}</h3>
         <NextImage
           blurDataURL={blurDataURL}
           src={blog?.image_url} alt="news image" className="w-full sm:w-[500px] h-[400px]" />
