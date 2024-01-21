@@ -65,6 +65,7 @@ const EditBlogPage = () => {
       date: blog?.created_date,
       content: blog?.body,
       category: blog?.category,
+      image_url: blog?.image_url,
     },
     validationSchema: Yup.object().shape({
       title: Yup.string().required("This field is required"),
@@ -75,10 +76,6 @@ const EditBlogPage = () => {
     }),
     onSubmit: (values) => {
       values.content = value;
-      // @ts-ignore
-      values.image_url = blog.image_url;
-      console.log(value)
-      console.log(values)
       saveChanges(values);
     },
   });
@@ -88,7 +85,7 @@ const EditBlogPage = () => {
   useEffect(() => {
     axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res: AxiosResponse) => {
       setBlog(res.data.data);
-      setValue(res.data.data.body)
+      setValue(res.data?.data?.body)
     })
   }, [router.query.blogId])
 

@@ -34,6 +34,7 @@ const BlogPage = () => {
   const [pagination, setPagination] = useState({ currentPage: 1, totalPages: 1 } as PaginationType)
   const [loading, setLoading] = useState(false);
 
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     setLoading(true)
@@ -42,6 +43,14 @@ const BlogPage = () => {
       setPagination(res.data.pagination)
       console.log(res.data)
     }).finally(() => setLoading(false))
+
+    if (typeof window != undefined) {
+      const auth = window.localStorage.getItem('loggedIn');
+      if (auth === 'yes') {
+        setLoggedIn(true)
+      }
+    }
+
   }, [page])
 
 
@@ -51,11 +60,11 @@ const BlogPage = () => {
       <Banner text={"Blog"} />
       <div className="max-w-[1200px] mx-auto">
         <div className="px-5 mt-20 flex flex-col sm:flex-row justify-end items-center gap-5">
-          <button
+          {loggedIn ? <button
             onClick={() => router.push('/blog/create')}
             className="w-full sm:w-[unset] flex items-center justify-center gap-1 bg-primary text-white p-4 px-10 text-sm rounded-lg">
             <BsPlus size={26} /> Create New Blog
-          </button>
+          </button> : null}
         </div>
         {!loading ? <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
           {

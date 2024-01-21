@@ -63,8 +63,11 @@ const CreateBlogPage = () => {
       image_url: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
-      // values.content = value;
-      console.log(values)
+      if (!value) {
+        toast.error('Please supply the content of the blog');
+        return;
+      }
+      values.content = value;
       saveBlog(values)
     },
   });
@@ -142,17 +145,17 @@ const CreateBlogPage = () => {
               </div>
               <div className="flex flex-col gap-2 mb-5">
                 <label htmlFor="cotent" >Content</label>
-                <input
+                {/* <input
                   type="text"
                   {...getFieldProps("content")}
                   placeholder="Content"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
-                />
-                {/* <ReactQuill theme="snow"
+                /> */}
+                <ReactQuill theme="snow"
                   value={value}
                   onChange={setValue}
                 // {...getFieldProps("content")}
-                /> */}
+                />
 
               </div>
             </div>
