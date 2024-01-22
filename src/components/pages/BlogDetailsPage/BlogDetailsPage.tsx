@@ -21,6 +21,7 @@ const BlogDetailsPage = () => {
   const [blog, setBlog] = useState({} as BlogType);
   const blurDataURL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7';
   const [loading, setLoading] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const deleteBlog = () => {
     setLoading(true)
@@ -54,6 +55,14 @@ const BlogDetailsPage = () => {
       setBlog(res.data.data);
       console.log(res);
     })
+
+    if (typeof window != undefined) {
+      const auth = window.localStorage.getItem('loggedIn');
+      if (auth === 'yes') {
+        setLoggedIn(true)
+      }
+    }
+
   }, [router.query.blogId])
 
   return (
@@ -94,7 +103,7 @@ const BlogDetailsPage = () => {
                 <MdOutlineFacebook size={17} /> Share
               </button>
             </div>
-            <div className="mt-5 flex items-center gap-3">
+            {loggedIn ? <div className="mt-5 flex items-center gap-3">
               <button
                 disabled={loading}
                 onClick={deleteBlog}
@@ -107,8 +116,8 @@ const BlogDetailsPage = () => {
                 <FaEdit size={16} /> Edit Blog
               </button>
 
-            </div>
-
+            </div> : null
+            }
           </div>
         </div>
       </div>

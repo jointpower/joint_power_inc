@@ -1,6 +1,7 @@
 import Links from '@/components/atom/Links/Links';
 import { useRouter } from 'next/router';
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 interface navLinksProps {
   setIsOpen?: Dispatch<SetStateAction<boolean>>;
@@ -8,6 +9,15 @@ interface navLinksProps {
 
 const NavLinks = () => {
   const router = useRouter();
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const logout = () => {
+    if (typeof window != undefined) {
+      window.localStorage.removeItem('loggedIn');
+      toast.success('log out successful');
+      router.push('/')
+    }
+  }
 
   const nav_links = [
     {
@@ -32,12 +42,25 @@ const NavLinks = () => {
     },
   ];
 
+  const login = () => router.push('/login')
+
+  useEffect(() => {
+    if (typeof window != undefined) {
+      const auth = window.localStorage.getItem('loggedIn');
+      if (auth === 'yes') {
+        setLoggedIn(true)
+      }
+    }
+  }, [])
+
+
   return (
-    <ul className="md:flex md:gap-3 container">
-      {nav_links.map(({ name, url }, index) => (
-        <li className='!list-none' key={`${name}/${url + index}`}>
-          <Links url={url}>
-            {/* <div
+    <>
+      <ul className="md:flex md:gap-3 container">
+        {nav_links.map(({ name, url }, index) => (
+          <li className='!list-none' key={`${name}/${url + index}`}>
+            <Links url={url}>
+              {/* <div
               className={`${
                 router.pathname === url &&
                 "bg-[#D9D9D9]/10  before:left-0 before:w-0 before:top-0 before:h-[1px] before:absolute before:bg-secondary before:rounded-lg before:block before:contents-['*'] before: md:bg-white text-white md:text-grey-1 md:before:w-full md:before:h-[7px] md:before:top-7  md:before:bg-grey-1"
@@ -46,18 +69,34 @@ const NavLinks = () => {
               {name}
             </div> */}
 
-            <div
-              className={`${router.pathname === url
-                ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
-                : null
-                } font-bold text-[1rem] uppercase  p-2`}
-            >
-              {name}
-            </div>
-          </Links>
-        </li>
-      ))}
-    </ul>
+              <div
+                className={`${router.pathname === url
+                  ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
+                  : null
+                  } font-bold text-[1rem] uppercase  p-2`}
+              >
+                {name}
+              </div>
+            </Links>
+          </li>
+        ))}
+        {loggedIn ? <button className='!list-none font-bold text-[1rem] uppercase  p-2 text-red-500' onClick={logout}>Logout</button> :
+          <button className='!list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
+        }
+      </ul >
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </>
   );
 };
 
