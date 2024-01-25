@@ -100,6 +100,7 @@ const EditBlogPage = () => {
                 <label htmlFor="title" >Blog Image</label>
                 <input
                   type="file"
+                  accept=".jpg,.jpeg"
                   placeholder="Enter Blog Title"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
                   onChange={event => handleFileUpload(event)}

@@ -99,9 +99,10 @@ const BlogDetailsPage = () => {
               <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
                 <HiThumbUp size={16} /> Like
               </button>
-              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_BLOG_POST_URL" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
                 <MdOutlineFacebook size={17} /> Share
-              </button>
+              </a>
             </div>
             {loggedIn ? <div className="mt-5 flex items-center gap-3">
               <button

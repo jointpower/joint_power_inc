@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from 'yup'
 // import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import axios, { AxiosError } from 'axios';
@@ -23,6 +23,11 @@ const CreateBlogPage = () => {
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    console.log('loading', loading)
+  }, [])
+
+
   const saveBlog = (payload: any) => {
     setLoading(true)
     try {
@@ -33,12 +38,9 @@ const CreateBlogPage = () => {
       }).then(res => {
         toast(res.data.message, { type: 'success' })
         router.push('/blog');
-        console.log(res)
       })
     } catch (error: any) {
-      console.log('hey')
       console.log(error.response.data.error)
-      toast(error.error, { type: 'error' })
       toast(error.error, { type: 'error' })
     } finally {
       setLoading(false)
@@ -63,12 +65,14 @@ const CreateBlogPage = () => {
       image_url: Yup.string().required("This field is required"),
     }),
     onSubmit: (values) => {
+      setLoading(true);
       if (!value) {
         toast.error('Please supply the content of the blog');
         return;
       }
       values.content = value;
       saveBlog(values)
+      setLoading(false);
     },
   });
 
@@ -99,7 +103,7 @@ const CreateBlogPage = () => {
                 <input
                   name="image_url"
                   type="file"
-                  accept="image/*"
+                  accept=".jpg,.jpeg"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
                   onChange={event => handleFileUpload(event)}
                 />
