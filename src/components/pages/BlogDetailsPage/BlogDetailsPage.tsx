@@ -4,15 +4,16 @@ import Banner from "../../molecules/Banner/Banner";
 import blog1 from 'public/bank-security.jpg';
 import NextImage from "@/components/atom/NextImage/NextImage";
 import news from 'public/team-member-1.jpg'
-import { ImMail, ImSpinner2 } from "react-icons/im";
+import { ImMail, ImSpinner2, ImTwitter } from "react-icons/im";
 import { HiThumbUp } from "react-icons/hi";
 import { MdOutlineFacebook } from "react-icons/md";
-import { FaBackward, FaEdit, FaTrashAlt } from "react-icons/fa";
+import { FaBackward, FaEdit, FaLinkedinIn, FaTrashAlt } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BlogType } from "../BlogPage/BlogPage";
 import { ToastContainer, toast } from "react-toastify";
+import { FiLinkedin, FiX } from "react-icons/fi";
 
 
 const BlogDetailsPage = () => {
@@ -22,6 +23,11 @@ const BlogDetailsPage = () => {
   const blurDataURL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7';
   const [loading, setLoading] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [blogUrl, setBlogUrl] = useState(() => {
+    if (typeof window !== 'undefined')
+      return window.location.href
+    else return ''
+  });
 
   const deleteBlog = () => {
     setLoading(true)
@@ -61,7 +67,9 @@ const BlogDetailsPage = () => {
       if (auth === 'yes') {
         setLoggedIn(true)
       }
+      setBlogUrl(window.location.href);
     }
+
 
   }, [router.query.blogId])
 
@@ -93,14 +101,17 @@ const BlogDetailsPage = () => {
           </div>
           <div className="mt5 flex flex-col sm:flex-row gap-10 items-center justify-between">
             <div className="mt-5 flex items-center gap-3">
-              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-                <ImMail /> Follow
-              </button>
-              <button className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-                <HiThumbUp size={16} /> Like
-              </button>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_BLOG_POST_URL" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
+
+              <a href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg">
+                <FaLinkedinIn size={17} /> Share
+              </a>
+              <a href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg">
+                <ImTwitter size={17} /> Share
+              </a>
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg">
                 <MdOutlineFacebook size={17} /> Share
               </a>
             </div>
