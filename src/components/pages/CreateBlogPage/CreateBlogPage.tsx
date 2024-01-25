@@ -26,7 +26,7 @@ const CreateBlogPage = () => {
   const saveBlog = (payload: any) => {
     setLoading(true)
     try {
-      axios.post('http://blog.jointpowersecurity.com/server.php', payload, {
+      axios.post('https://blog.jointpowersecurity.com/server.php', payload, {
         headers: {
           "Content-Type": 'application/x-www-form-urlencoded'
         }

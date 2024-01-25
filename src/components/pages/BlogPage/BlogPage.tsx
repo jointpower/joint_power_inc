@@ -38,7 +38,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://blog.jointpowersecurity.com/server.php?page=${page}`).then(res => {
+    axios.get(`https://blog.jointpowersecurity.com/server.php?page=${page}`).then(res => {
       setBlogs(res.data.data)
       setPagination(res.data.pagination)
       console.log(res.data)

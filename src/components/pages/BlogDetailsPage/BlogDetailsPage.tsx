@@ -29,7 +29,7 @@ const BlogDetailsPage = () => {
       id: router.query.blogId,
     }
     try {
-      axios.delete('http://blog.jointpowersecurity.com/server.php/?id=' + payload.id, {
+      axios.delete('https://blog.jointpowersecurity.com/server.php/?id=' + payload.id, {
         headers: {
           "Content-Type": 'application/x-www-form-urlencoded'
         }
@@ -51,7 +51,7 @@ const BlogDetailsPage = () => {
 
   useEffect(() => {
     console.log(router.query.blogId)
-    axios.get('http://blog.jointpowersecurity.com/server.php?id=' + router.query.blogId).then((res) => {
+    axios.get('https://blog.jointpowersecurity.com/server.php?id=' + router.query.blogId).then((res) => {
       setBlog(res.data.data);
       console.log(res);
     })
