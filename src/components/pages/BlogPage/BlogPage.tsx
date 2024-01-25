@@ -66,50 +66,57 @@ const BlogPage = () => {
             <BsPlus size={26} /> Create New Blog
           </button> : null}
         </div>
-        {!loading ? <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
-          {
-            blogs.map((item, idx) => (<div className="h-full">
-              <NextImage
-                blurDataURL={randomLink}
-                src={item.image_url}
-                alt={item.title}
-                className="w-full h-[200px] object-cover" />
-              <div className="mt-3 flex flex-col gap-5">
-                <p className="font-semibold">{item.title}</p>
-                <div className="text-sm" dangerouslySetInnerHTML={{ __html: `${item.body.substring(0, 40)}...` }} ></div>
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center">
-                    <span>By:</span>
-                    <span className="font-medium">{item.author}</span>
+        {
+          !loading ? <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-12">
+            {
+              blogs.map((item, idx) => (<div key={idx} className="h-full">
+                <NextImage
+                  blurDataURL={randomLink}
+                  src={item.image_url}
+                  alt={item.title}
+                  className="w-full h-[200px] object-cover" />
+                <div className="mt-3 flex flex-col gap-5">
+                  <p className="font-semibold">{item.title}</p>
+                  <div className="text-sm" dangerouslySetInnerHTML={{ __html: `${item.body.substring(0, 40)}...` }} ></div>
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center">
+                      <span>By:</span>
+                      <span className="font-medium">{item.author}</span>
+                    </div>
+                    <p>{item.created_date}</p>
                   </div>
-                  <p>{item.created_date}</p>
+                  <button className="text-sm mt-5 font-medium bg-primary text-white py-3 rounded-lg flex">
+                    <Link className="flex-1" href={`blog/${item.id}`} > Read More
+                    </Link>
+                  </button>
                 </div>
-                <button className="text-sm mt-5 font-medium bg-primary text-white py-3 rounded-lg flex">
-                  <Link className="flex-1" href={`blog/${item.id}`} > Read More
-                  </Link>
-                </button>
+              </div>))
+            }
+          </div> :
+            <div className="py-20 text-center grid place-content-center gap-2 mt-20">
+              <div className="flex items-center gap-2">
+                <span><ImSpinner2 className="animate-spin" /></span>
+                <span>Loading..</span>
               </div>
-            </div>))
-          }
-        </div> :
-          <div className="py-20 text-center grid place-content-center gap-2 mt-20">
-            <div className="flex items-center gap-2">
-              <span><ImSpinner2 className="animate-spin" /></span>
-              <span>Loading..</span>
+              <p>Please Wait</p>
             </div>
-            <p>Please Wait</p>
-          </div>
         }
-        {!loading ? <div className="flex justify-center items-center gap-2 mt-20">
+        {!loading && blogs.length ? <div className="flex justify-center items-center gap-2 mt-20">
           {
             Array.from({ length: pagination.totalPages }, (_, idx) => idx + 1).map(item => (
               <button
+                key={item}
                 className={`hover:!text-white px-3 py-2 rounded-lg ${pagination.currentPage === item ? 'bg-normal text-white' : 'bg-slate-600 text-black'}`}
                 onClick={() => setPage(item)}
               >{item}</button>
             ))
           }
-        </div> : null}
+        </div> :
+          <div className="mt-14 flex flex-col gap-2 items-center justify-center text-center">
+            <p>No blog articles posted yet</p>
+            <p>Please check back later..</p>
+          </div>
+        }
       </div>
       <ToastContainer
         position="top-right"
