@@ -33,7 +33,7 @@ const NavLinks = () => {
       url: '/services',
     },
     {
-      name: 'Blogs',
+      name: 'Blog',
       url: '/blog',
     },
     {

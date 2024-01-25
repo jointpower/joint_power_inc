@@ -28,7 +28,7 @@ const EditBlogPage = () => {
   const saveChanges = (payload: any) => {
     setLoading(true)
     try {
-      axios.patch('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId, payload, {
+      axios.patch('http://blog.jointpowersecurity.com/server.php?id=' + router.query.blogId, payload, {
         headers: {
           "Content-Type": 'application/x-www-form-urlencoded'
         }
@@ -83,7 +83,7 @@ const EditBlogPage = () => {
   const { getFieldProps, errors, touched, handleSubmit } = formik;
 
   useEffect(() => {
-    axios.get('http://localhost/jps-blog-server/server.php?id=' + router.query.blogId).then((res: AxiosResponse) => {
+    axios.get('http://blog.jointpowersecurity.com/server.php?id=' + router.query.blogId).then((res: AxiosResponse) => {
       setBlog(res.data.data);
       setValue(res.data?.data?.body)
     })
