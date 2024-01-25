@@ -111,12 +111,11 @@ const BlogPage = () => {
               >{item}</button>
             ))
           }
-        </div> :
-          <div className="mt-14 flex flex-col gap-2 items-center justify-center text-center">
-            <p>No blog articles posted yet</p>
-            <p>Please check back later..</p>
-          </div>
-        }
+        </div> : null}
+        {!loading && !blogs.length ? <div className="mt-14 flex flex-col gap-2 items-center justify-center text-center">
+          <p>No blog articles posted yet</p>
+          <p>Please check back later..</p>
+        </div> : null}
       </div>
       <ToastContainer
         position="top-right"
