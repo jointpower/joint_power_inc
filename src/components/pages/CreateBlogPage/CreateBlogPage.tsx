@@ -27,6 +27,18 @@ const CreateBlogPage = () => {
     console.log('loading', loading)
   }, [])
 
+  const categories = [
+    'CHOOSE ONE',
+    'SECURITY & SAFETY',
+    'CYBER SECURITY',
+    'SCIENCE & TECHNOLOGY ',
+    'BUSINESS & MARKETING',
+    'LESSONS & TRAINING',
+    'HEALTH & WELLNESS',
+    'DESIGN & WEB',
+    'OTHERS'
+  ]
+
 
   const saveBlog = (payload: any) => {
     setLoading(true)
@@ -136,13 +148,24 @@ const CreateBlogPage = () => {
                 )}
               </div>
               <div className="flex flex-col gap-2 mb-5">
-                <label htmlFor="category" >Category</label>
-                <input
+                <label htmlFor="category" >Select Category</label>
+                {/* <input
                   type="text"
                   placeholder="Enter Category"
                   className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
                   {...getFieldProps("category")}
-                />
+                /> */}
+                <select
+                  className="w-full p-3 py-4 border rounded-lg min-w-[unset] sm:!min-w-[370px]"
+                  {...getFieldProps("category")}
+
+                >
+                  {
+                    categories.map((item, idx) => <option
+                      disabled={idx == 0}
+                      key={idx} value={item}>{item}</option>)
+                  }
+                </select>
                 {touched.category && errors.category && (
                   <ValidationError text={errors.category} />
                 )}
