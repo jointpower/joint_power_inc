@@ -2,10 +2,11 @@ import Heading from "@/components/atom/Heading/Heading";
 import ServicesCard from "@/components/molecules/ServicesCard/ServicesCard";
 import HotelSecurityOfficerImg from "public/service4.png";
 import bankSecurityOfficerImg from "public/bank-security.jpg";
-import BankSecurityOfficerImg from "public/service3.png";
-import ApartmentOfficerImg from "public/service1.png";
+import BankSecurityOfficerImg from "public/new_hotel.jpg";
+import ApartmentOfficerImg from "public/new_apartment.jpg";
 import medicalOfficerImg from "public/service2.png";
 import MedicalOfficerImg from "public/service2.png";
+import MobilePatrol from 'public/mobile_patrol.jpg';
 // import Image, { StaticImageData } from 'next/image';
 
 const OurServices = () => {
@@ -51,6 +52,11 @@ const OurServices = () => {
           <div className="font-medium text-2xl m-auto text-center">
             Medical Facilities <br />
             Security
+          </div>
+        </ServicesCard>
+        <ServicesCard alt="" image_src={MobilePatrol}>
+          <div className="font-medium text-2xl m-auto text-center">
+            Mobile Patrol
           </div>
         </ServicesCard>
       </div>

@@ -3,9 +3,12 @@ import Links from "@/components/atom/Links/Links";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import SocialLinks from "@/components/molecules/SocialLinks/SocialLinks";
+import Link from "next/link";
 import JpsBadge from "public/jps.png";
 const Footer = () => {
   const services_links = [
+    { name: "Security Guard in California", url: "/security-guard-in-california" },
+    { name: "Security Guard in Texas", url: "/security-guard-in-texas" },
     { name: "Construction site security", url: "#" },
     { name: "retail store security", url: "#" },
     { name: "Fire watch", url: "#" },
@@ -57,9 +60,9 @@ const Footer = () => {
                   Services
                 </Heading>
                 {services_links.map((link, index) => (
-                  <p key={index} className="capitalize">
+                  <Link href={link.url} key={index} className="capitalize">
                     {link.name}
-                  </p>
+                  </Link>
                 ))}
               </div>
               <div className="mt-6 flex flex-col gap-6">
