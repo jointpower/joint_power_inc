@@ -138,7 +138,7 @@ const SecurityGuardInTexas = () => {
     <div className="mt-[120px] ">
         <Layout>
         <Banner text={"Security Guard Companies in Texas"} />
-            <div className="text-black max-w-[1300px] px-10 m-auto gap-10 grid grid-cols-[2.5fr,1fr]">
+            <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">
                     <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in Texas now 844-254-8273.</h4>
                     <div className='text-sm'>
@@ -150,7 +150,7 @@ const SecurityGuardInTexas = () => {
                         <p className='leading-6 tracking-wide'>
                         Joint Power services provide business owners, event promoters, managers, and private customers with integrated solutions designed to quickly, efficiently, and effectively address any security concerns. We can even provide celebrity bodyguards and red-carpet security. The modern world is a frightening place with evolving dangers that pose extremely dangerous security concerns. Joint Power Service will address these concerns with customized solutions designed by specialists that represent the best and most up-to-date talent and technology that can be found in the industry, let alone on the West Coast. Joint Power services provide innovative solutions such as:
                         </p>
-                        <div className='grid grid-cols-2 gap-x-20 gap-y-5 mt-10'>
+                        <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
                             {
                                 problems.map((item,idx) => (
                                     <div key={idx} className='flex items-center gap-5'>
@@ -164,7 +164,7 @@ const SecurityGuardInTexas = () => {
                         If you need security guard services in: <span className='font-medium text-secondary'> Dallas
 Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Texas </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
                         </p>
-                        <div className='grid grid-cols-2 gap-x-20 gap-y-7 mt-7'>
+                        <div className='grid sm:grid-cols-2 gap-x-20 gap-y-7 mt-7'>
                             {
                                 offerings.map((item,idx) => (
                                     <div key={idx} className='flex items-start gap-5'>
@@ -194,7 +194,7 @@ Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Te
                         <p className='leading-6 tracking-wide text-xs'>
                         Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of Texas. We are also world famous for our Event and VIP Security Services.
                         </p>
-                        <div className='grid grid-cols-3 gap-x-20 gap-y-6 mt-10'>
+                        <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
                             {
                                 states.map((item,idx) => (
                                     <Link href={''} key={idx} className='flex items-center gap-5'>
