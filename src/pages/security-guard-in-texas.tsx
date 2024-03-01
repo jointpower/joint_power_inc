@@ -236,7 +236,7 @@ Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Te
                             placeholder="Service City" 
                             classNames=" w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
                             />
-                          <textarea
+                        <textarea
                                 name="more-info"
                                 placeholder="How may we help you ?" 
                                 className="p-5 border-line w-full col-span-2 text-grey-2 h-[80px] mb-8 mt-2 border focus:outline-none rounded"
