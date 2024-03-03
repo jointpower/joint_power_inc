@@ -162,7 +162,7 @@ const SecurityGuardInTexas = () => {
                         </div>
                         <p className='leading-6 tracking-wide mt-10'>
                         If you need security guard services in: <span className='font-medium text-secondary'> Dallas
-Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Texas </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
+                        Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Texas </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
                         </p>
                         <div className='grid sm:grid-cols-2 gap-x-20 gap-y-7 mt-7'>
                             {
@@ -178,7 +178,7 @@ Austin, Fort Worth, Dallas, Garland, Frisco, El Paso  or somewhere throughout Te
                             }
                         </div>
                         <div className="mt-10">
-                            <div className="">
+                            <div className="h-[400px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
                                 className='rounded-md overflow-hidden'
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.681137549222!2d-97.74292542519898!3d30.27466517480847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5a014ac8dcf%3A0xcb6f5722a795d039!2sTexas%20Capitol!5e0!3m2!1sen!2sng!4v1708496272548!5m2!1sen!2sng" 

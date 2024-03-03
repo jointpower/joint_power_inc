@@ -106,7 +106,7 @@ const SecurityGuardInCalifornia = () => {
 
 const states = [
       { name: 'Los Angeles', link: '/california/los-angeles' },
-      { name: 'Aneheim', link: '/california/aneheim' },
+      { name: 'Anaheim', link: '/california/anaheim' },
       { name: 'Carlsbad', link: '/california/carlsbad' },
       { name: 'Fresno', link: '/california/fresno' },
       { name: 'San Francisco & Oakland', link: '/california/san-francisco' },
@@ -160,7 +160,7 @@ const states = [
                             }
                         </div>
                         <div className="mt-10">
-                            <div className="">
+                            <div className="h-[400px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
                                 className='rounded-md overflow-hidden'
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.18159988272!2d-122.52000171794406!3d37.75767131454352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1708494153587!5m2!1sen!2sng" 

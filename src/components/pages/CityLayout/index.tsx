@@ -133,7 +133,7 @@ const CityLayout = ({ name, Description, mapSrc }: Props) => {
                         <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
                             {
                                 states.map((item,idx) => (
-                                    <Link href={''} key={idx} className='flex items-center gap-5'>
+                                    <Link href={item.link} key={idx} className='flex items-center gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className='font-semibold text-primary'>{item.name}</span>
                                     </Link>
