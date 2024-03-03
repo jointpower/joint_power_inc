@@ -84,14 +84,22 @@ const SecurityGuardInCalifornia = () => {
                         <p className='leading-6 tracking-wide'>
                         Joint Power services provide business owners, event promoters, managers, and private customers with integrated solutions designed to quickly, efficiently, and effectively address any security concerns. We can even provide celebrity bodyguards and red-carpet security. The modern world is a frightening place with evolving dangers that pose extremely dangerous security concerns. Joint Power Service will address these concerns with customized solutions designed by specialists that represent the best and most up-to-date talent and technology that can be found in the industry, let alone on the West Coast. Joint Power services provide innovative solutions such as:
                         </p>
-                        <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
+                        <div 
+                        className={`mt-10 px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2`}
+                        >
                             {
                                 problems.map((item,idx) => (
-                                    <div key={idx} className='flex items-center gap-3'>
-                                        <span>< BiCheck size={18} className='text-secondary' /></span>
-                                        <span className='font-medium text-primary'>{item}</span>
-                                    </div>
+                                <button data-aos=""
+                                    key={idx}
+                                    className={`h-[100px] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
+                                >
+                                    <p>{item}</p>
+                                </button>
                                 ))
+                                //     <div key={idx} className='flex items-center gap-3'>
+                                //         <span>< BiCheck size={18} className='text-secondary' /></span>
+                                //         <span className='font-medium text-primary'>{item}</span>
+                                //     </div>
                             }
                         </div>
                         <p className='leading-6 tracking-wide mt-10'>
