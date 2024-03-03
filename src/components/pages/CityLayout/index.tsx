@@ -60,14 +60,14 @@ const CityLayout = ({ name, Description, mapSrc }: Props) => {
     ]
 
     const states = [
-        { name: 'Alaska', link: '/california/alaska' },
-        { name: 'Arizona', link: '/california/arizona' },
-        { name: 'Arkansas', link: '/california/arkansas' },
-        { name: 'Colorado', link: '/california/colorado' },
-        { name: 'Connecticut', link: '/california/connecticut' },
-        { name: 'Delaware', link: '/california/delaware' },
-        { name: 'Florida', link: '/california/florida' },
-        { name: 'Georgia', link: '/california/georgia' },
+        { name: 'Alaska', link: '' },
+        { name: 'Arizona', link: '' },
+        { name: 'Arkansas', link: '' },
+        { name: 'Colorado', link: '' },
+        { name: 'Connecticut', link: '' },
+        { name: 'Delaware', link: '' },
+        { name: 'Florida', link: '' },
+        { name: 'Georgia', link: '' },
     ]
 
   return (
