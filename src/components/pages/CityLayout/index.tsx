@@ -10,9 +10,10 @@ type Props = {
     name:string,
     Description: any,
     mapSrc:string,
+    state?:string
 }
 
-const CityLayout = ({ name, Description, mapSrc }: Props) => {
+const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
 
     const problems = [ 'Theft', 'Stalkers', 'Break-ins','Large Crowd and Demonstrations', 'Terrorists','Violent Attacks','Fire preventions','VIP protections' ];
     const offerings = [
@@ -98,7 +99,7 @@ const CityLayout = ({ name, Description, mapSrc }: Props) => {
                             }
                     </div>
                         <p className='leading-6 tracking-wide mt-10'>
-                        If you need security guard services in: <span className='font-medium text-secondary'> {name} or somewhere throughout California </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
+                        If you need security guard services in: <span className='font-medium text-secondary'> {name} or somewhere throughout {state || 'California'} </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
                         </p>
                         <div className='grid sm:grid-cols-2 gap-x-20 gap-y-7 mt-7'>
                             {
@@ -126,9 +127,9 @@ const CityLayout = ({ name, Description, mapSrc }: Props) => {
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                        <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>We are also at other major cities in <b>california</b> .</h4>
+                        <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>We are also at other major cities in <b>{state || 'California'}</b> .</h4>
                         <p className='leading-6 tracking-wide text-xs'>
-                        Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of California. We are also world famous for our Event and VIP Security Services.
+                        Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of {state || 'California'}. We are also world famous for our Event and VIP Security Services.
                         </p>
                         <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
                             {
