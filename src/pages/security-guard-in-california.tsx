@@ -265,7 +265,7 @@ const business_issues = [
             </div>
             <div className='mt-14'>
                 {/* @ts-ignore */}
-            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b>Call Now: (424)-463-7600</b> .</marquee>
+            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b>Call Now: (424)-463-7600</b>.</marquee>
             </div>
         </Layout>
     </div>
