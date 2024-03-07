@@ -22,7 +22,6 @@ const Description = () => (
     </>
 )
 
-
 const SecurityGuardInCalifornia = () => {
   return (
     <CityLayout 

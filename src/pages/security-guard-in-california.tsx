@@ -7,49 +7,46 @@ import { FaArrowRight, FaCaretRight } from 'react-icons/fa'
 
 const SecurityGuardInCalifornia = () => {
 
-    const problems = [ 'Theft', 'Stalkers', 'Break-ins','Large Crowd and Demonstrations', 'Terrorists','Violent Attacks','Fire preventions','VIP protections' ];
+    const problems = [ 'Access management', 
+     'Theft',
+    'Vandalism',
+    'Fire Watch',
+    'Loitering',
+    'Asset protection',
+    'Employee protection',
+    'Terminations',
+    'VIP protection',
+    'Disgruntled employees',
+    'Unruly customers',
+      ];
     const offerings = [
         {
-            title:'Event security',
+            title:'Access control to parking areas and buildings',
             desc:'Any size event, from small gatherings to huge, filled arenas',
         },
         {
-            title:'Around the clock security',
+            title:'Enforce property regulations and company policies',
             desc:'24/7 security and monitoring',
         },
         {
-            title:'Club security',
+            title:'Monitor for suspicious behavior',
             desc:'Nightclub security and bar security of any nature',
         },
         {
-            title:'Armed security',
+            title:'Perform regular and irregular mobile patrols',
             desc:'When the cargo or customer needs trained specialists, we’re here',
         },
         {
-            title:'VIP security',
+            title:'Maintain visitor logs',
             desc:'We have guarded and protected many VIP’s of all stature',
         },
         {
-            title:'Business Ownners',
+            title:'Provide fire watch services',
         },
         {
-            title:'Private Properties',
+            title:'Lobby and front gate protection',
         },
-        {
-            title:'Parties',
-        },
-        {
-            title:'Concerts',
-        },
-        {
-            title:'Stadiums',
-        },
-        {
-            title:'Night Clubs',
-        },
-        {
-            title:'Public Expositions and Gatherings',
-        },
+         
     ]
 
 //     const states = [
@@ -122,16 +119,20 @@ const states = [
         <Banner text={"Security Guard Companies in California"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">
-                    <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in California now 844-254-8273.</h4>
+                    <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in California now (424)-463-7600.</h4>
                     <div className='text-sm'>
                         <p className='leading-6 tracking-wide'>
-                        California is a state in the Western United States. With over 38.9 million residents[6] across a total area of approximately 163,696 square miles (423,970 km2),[11] it is the most populous U.S. state, the third-largest U.S. state by area, and the most populated subnational entity in North America. California borders Oregon to the north, Nevada and Arizona to the east, and the Mexican state of Baja California to the south; it has a coastline along the Pacific Ocean to the west. Joint Power Service is the premier security guard services company in the State of California. We offer security guards and event security to all the major cities in California including Los Angeles, Anaheim, San Diego, San Jose, San Francisco, Fresno, Beverly Hills, Sacramento, and Long Beach. We take great pride in our work throughout California and the surrounding regions. Joint Power Service boasts an extremely skilled and highly trained staff of uniformed guards, movie film set security, event staff, special event security, trade show security, armed security guards, executive security, on-set security, and business security technology consultants that have years of hands-on experience. Contact Joint Power Service if you have any security concerns or needs of any type or size. Joint Power Services provides on-demand security services to all parts of California including Los Angeles, Beverly Hills, Hollywood, San Francisco, San Diego, Sacramento, San Jose, Palm Springs, Long Beach, Oakland, Fresno, Bakersfield, Anaheim, Riverside, Stockton, Chula Vista, Fremont, San Bernardino, Huntington Beach and more.
-                        </p>
+                        California is a state in the Western United States. With over 38.9 million residents across a total area of approximately 163,696 square miles, it is the most populous U.S. state, the third-largest U.S. state by land mass, and the most populated subnational entity in North America. California borders Oregon to the north, Nevada and Arizona to the east, and the Mexican state of Baja California to the south; it has a coastline along the Pacific Ocean to the west. JOINT POWER SECURITY SERVICES INC is the premier security guard services company in the State of California. We offer security guards and event security to all the major cities in California including Los Angeles, Anaheim, San Diego, San Jose, San Francisco, Fresno, Beverly Hills, Sacramento and Long Beach. We take great pride in our work throughout California and the surrounding regions.                         </p>
                         <p className='my-5 leading-6 tracking-wide'>
-                        In California, security is paramount, and numerous reputable security companies stand out. California Security Agency is a prominent name, offering top-notch services. Among the top security guard companies in California, their expertise ensures comprehensive protection. With a focus on safeguarding businesses and individuals, security companies in California play a vital role in maintaining public safety.
-                        </p>
+                        JOINT POWER SECURITY SERVICES INC boasts an extremely skilled and highly trained staff of uniformed guards, movie film set security, event staff, special event security, trade show security, executive security, on-set security and business security technology consultants that have years of hands-on experience.                        </p>
+                        <p className='my-5 leading-6 tracking-wide'>
+                        JOINT POWER SECURITY SERVICES INC continues to be the most trusted security guard company in California. Our professionally trained and licensed security teams provide unmatched services to businesses, events, and private clients searching for answers to their security problems. When they need reliable, professional security guards they can trust, they call JOINT POWER SECURITY SERVICES INC.                         </p>
+                        <p className='my-5 leading-6 tracking-wide'>
+                        If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.                         </p>
                         <p className='leading-6 tracking-wide'>
-                        Joint Power services provide business owners, event promoters, managers, and private customers with integrated solutions designed to quickly, efficiently, and effectively address any security concerns. We can even provide celebrity bodyguards and red-carpet security. The modern world is a frightening place with evolving dangers that pose extremely dangerous security concerns. Joint Power Service will address these concerns with customized solutions designed by specialists that represent the best and most up-to-date talent and technology that can be found in the industry, let alone on the West Coast. Joint Power services provide innovative solutions such as:
+                        Contact JOINT POWER SECURITY SERVICES INC if you have any security concerns or needs of any type or size. JOINT POWER SECURITY SERVICES INC provides on-demand security services to all parts of California including Los Angeles, Beverly Hills, Hollywood, San Francisco, San Diego, Sacramento, San Jose, Palm Springs, Long Beach, Oakland, Fresno, Bakersfield, Anaheim, Riverside, Stockton, Chula Vista, Fremont, San Bernardino, Huntington Beach, Ventura, Santa Barbara, Oxnard, Ridgecrest,  Santa Cruz, Redding, Hayfork, Santa Rosa, Eureka, Crescent city and more.                        </p>
+                        <p className='leading-6 tracking-wide font-semibold mt-5'>
+                        Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business. 
                         </p>
                         <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
                             {
@@ -152,8 +153,8 @@ const states = [
                                     <div key={idx} className='flex items-start gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className="span">
-                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} {item.desc ? ' - ' : null} </span>
-                                            <span>{item.desc}</span>
+                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} </span>
+                                            {/* <span>{item.desc}</span> */}
                                         </span>
                                     </div>
                                 ))
@@ -172,6 +173,23 @@ const states = [
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
+                        <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        Businesses and commercial buildings face unprecedented threats today. California business owners are not immune to this trend. No matter the size of your business or the industry you operate in, security should be one of your top concerns. High-quality security is no longer a luxury afforded to only the largest and most successful companies; all businesses need to make security a priority.                         
+                        </p>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
+                        </p>
+                        {/* <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
+                            {
+                                business_issues.map((item,idx) => (
+                                    <Link href={item.link} key={idx} className='flex items-center gap-5'>
+                                        <span>< FaCaretRight className='text-secondary' /></span>
+                                        <span className='font-semibold text-primary'>{item.name}</span>
+                                    </Link>
+                                ))
+                            }
+                        </div> */}
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Now serving all Major cities in <b>california</b> .</h4>
                         <p className='leading-6 tracking-wide text-xs'>
                         Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of California. We are also world famous for our Event and VIP Security Services.

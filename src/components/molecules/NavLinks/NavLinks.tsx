@@ -1,6 +1,9 @@
 import Links from '@/components/atom/Links/Links';
 import { useRouter } from 'next/router';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { BiCheck } from 'react-icons/bi';
+import { BsShieldCheck } from 'react-icons/bs';
+import { GiGuards } from 'react-icons/gi';
 import { ToastContainer, toast } from 'react-toastify';
 
 interface navLinksProps {
@@ -40,6 +43,33 @@ const NavLinks = () => {
       name: 'Contact Us',
       url: '/contact-us',
     },
+    {
+      url:'',
+      name: 'California',
+      states : [
+        { name: 'Los Angeles', url: '/california/los-angeles' },
+        { name: 'Anaheim', url: '/california/anaheim' },
+        { name: 'Carlsbad', url: '/california/carlsbad' },
+        { name: 'Fresno', url: '/california/fresno' },
+        { name: 'San Francisco & Oakland', url: '/california/san-francisco' },
+        { name: 'Redding & Shasta County', url: '/california/redding' },
+        { name: 'Bakersfield & Kem County', url: '/california/bakersfield' },
+        { name: 'Sacramento & Stockton', url: '/california/sacramento' },
+        { name: 'Santa Cruz', url: '/california/santa-cruz' },
+  ]
+    },
+    {
+      url:'',
+      name: 'Texas',
+      states : [
+        { name: 'Houston', url: '/texas/houston' },
+        { name: 'Dallas', url: '/texas/dallas' },
+        { name: 'Austin', url: '/texas/austin' },
+        { name: 'Fort Worth', url: '/texas/fort-worth' },
+        { name: 'El Paso', url: '/texas/el-paso' },
+        { name: 'Arlington', url: '/texas/arlington' },
+      ]
+    },
   ];
 
   const login = () => router.push('/login')
@@ -55,48 +85,47 @@ const NavLinks = () => {
 
 
   return (
-    <>
-      <ul className="md:flex md:gap-3 container">
-        {nav_links.map(({ name, url }, index) => (
-          <li className='!list-none' key={`${name}/${url + index}`}>
-            <Links url={url}>
-              {/* <div
-              className={`${
-                router.pathname === url &&
-                "bg-[#D9D9D9]/10  before:left-0 before:w-0 before:top-0 before:h-[1px] before:absolute before:bg-secondary before:rounded-lg before:block before:contents-['*'] before: md:bg-white text-white md:text-grey-1 md:before:w-full md:before:h-[7px] md:before:top-7  md:before:bg-grey-1"
-              } px-5 py-6 text-2xl relative md:py-2 md:px-2 md:flex md:text-base md:text-center md:shadow-xl`}
-            >
-              {name}
-            </div> */}
-
-              <div
-                className={`${router.pathname === url
-                  ? 'after:w-[60%] after:h-[1px] after:block after:bg-[red] max-w-max'
-                  : null
-                  } font-bold text-[1rem] uppercase  p-2`}
-              >
-                {name}
-              </div>
-            </Links>
-          </li>
-        ))}
-        {loggedIn ? <button className='!list-none font-bold text-[1rem] uppercase  p-2 text-red-500' onClick={logout}>Logout</button> :
-          <button className='!list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
-        }
-      </ul >
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-    </>
+<>
+  <ul className="md:flex md:gap-3 container">
+    {nav_links.map(({ name, url, states }, index) => (
+      <li className='group !list-none relative' key={`${name}/${url + index}`}>
+        <Links url={url}>
+          <div className="font-bold text-[1rem] uppercase p-2">
+            {name}
+          </div>
+        </Links>
+        {states && states.length > 0 && (
+          <ul className="list-none py-2 absolute top-full min-w-[270px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
+            {states.map(({ name: stateName, url: stateUrl }) => (
+              <li className=' hover:bg-slate-100 pl-3 list-none' key={stateName}>
+                <Links url={stateUrl}>
+                  <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
+                    <BiCheck />
+                    {stateName}</div>
+                </Links>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+    {loggedIn ? <button className='!list-none font-bold text-[1rem] uppercase  p-2 text-red-500' onClick={logout}>Logout</button> :
+      <button className='!list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
+    }
+  </ul >
+  <ToastContainer
+    position="top-center"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+  />
+</>
   );
 };
 
