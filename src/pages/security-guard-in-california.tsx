@@ -113,6 +113,16 @@ const states = [
       { name: 'Santa Cruz', link: '/california/santa-cruz' },
 ]
 
+const business_issues = [
+    'Access control to parking areas and buildings',
+'Enforce property regulations and company policies',
+'Monitor for suspicious behavior',
+'Perform regular and irregular mobile patrols',
+'Maintain visitor logs',
+'Provide fire watch services',
+'Lobby and front gate protection',
+]
+
   return (
     <div className="mt-[120px] ">
         <Layout>
@@ -180,16 +190,16 @@ const states = [
                         <p className='mb-5 leading-6 tracking-wide text-xs'>
                         At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
                         </p>
-                        {/* <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
+                        <div className='grid gap-x-20 gap-y-6 mt-10'>
                             {
                                 business_issues.map((item,idx) => (
-                                    <Link href={item.link} key={idx} className='flex items-center gap-5'>
+                                    <div key={idx} className='flex items-center gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
-                                        <span className='font-semibold text-primary'>{item.name}</span>
-                                    </Link>
+                                        <span className='font-semibold text-primary'>{item}</span>
+                                    </div>
                                 ))
                             }
-                        </div> */}
+                        </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Now serving all Major cities in <b>california</b> .</h4>
                         <p className='leading-6 tracking-wide text-xs'>
                         Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of California. We are also world famous for our Event and VIP Security Services.
