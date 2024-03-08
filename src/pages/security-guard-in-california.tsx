@@ -108,7 +108,7 @@ const states = [
       { name: 'Fresno', link: '/california/fresno' },
       { name: 'San Francisco & Oakland', link: '/california/san-francisco' },
       { name: 'Redding & Shasta County', link: '/california/redding' },
-      { name: 'Bakersfield & Kem County', link: '/california/bakersfield' },
+      { name: 'Bakersfield & Kern County', link: '/california/bakersfield' },
       { name: 'Sacramento & Stockton', link: '/california/sacramento' },
       { name: 'Santa Cruz', link: '/california/santa-cruz' },
 ]
