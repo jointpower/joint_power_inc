@@ -27,7 +27,7 @@ const OurServices = () => {
       >
         <ServicesCard alt="" image_src={ApartmentOfficerImg}>
           <div className="font-medium text-2xl m-auto text-center">
-            Appartment <br />
+            Apartment <br />
             Security
           </div>
         </ServicesCard>
