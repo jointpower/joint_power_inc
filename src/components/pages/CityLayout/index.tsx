@@ -115,7 +115,7 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
                             }
                         </div>
                         <div className="mt-10">
-                            <div className="">
+                            <div className="h-[500px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
                                 className='rounded-md overflow-hidden'
                                 src={mapSrc} 
