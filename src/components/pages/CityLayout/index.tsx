@@ -77,7 +77,7 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
         <Banner text={`Security Guard Companies in ${name}`} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid ">
                 <div className="mt-12 ">
-                    <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call 844-254-8273.</h4>
+                    <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call (424)-463-7600.</h4>
                     <div className='text-sm'>
                         <Description />
                     <div 
