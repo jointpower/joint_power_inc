@@ -1,13 +1,14 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import React from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface NextImageProps {
   src: string | StaticImageData;
+  style?: { [key: string]: string };
   className?: string;
   alt: string;
   priority?: boolean;
   isImage?: boolean;
-  blurDataURL?:string | StaticImageData;
+  blurDataURL?: string | StaticImageData;
 }
 const NextImage = ({
   className,
@@ -26,9 +27,10 @@ const NextImage = ({
         src={src}
         fill
         placeholder="blur"
-        className={`${isImage ? 'object-cover' : ''}`}
+        className={`${isImage ? "object-cover" : ""}`}
         // @ts-ignore
         blurDataURL={blurDataURL}
+        ob
         {...rest}
       ></Image>
     </div>
