@@ -1,135 +1,112 @@
-'use client'
-import Banner from "../../molecules/Banner/Banner";
+"use client";
 
-import blog1 from 'public/bank-security.jpg';
 import NextImage from "@/components/atom/NextImage/NextImage";
-import news from 'public/team-member-1.jpg'
-import { ImMail, ImSpinner2, ImTwitter } from "react-icons/im";
-import { HiThumbUp } from "react-icons/hi";
-import { MdOutlineFacebook } from "react-icons/md";
-import { FaBackward, FaEdit, FaLinkedinIn, FaTrashAlt } from "react-icons/fa";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { BlogType } from "../BlogPage/BlogPage";
-import { ToastContainer, toast } from "react-toastify";
-import { FiLinkedin, FiX } from "react-icons/fi";
+import news from "public/team-member-1.jpg";
+import { ImTwitter } from "react-icons/im";
 
+import { MdOutlineFacebook } from "react-icons/md";
+import { FaBackward, FaLinkedinIn } from "react-icons/fa";
+import { useRouter } from "next/router";
+import { format } from "date-fns";
+
+import { ToastContainer } from "react-toastify";
+
+import { useQuery } from "@tanstack/react-query";
+import { getPostBySlug } from "@/lib/requests";
+import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 const BlogDetailsPage = () => {
-
   const router = useRouter();
-  const [blog, setBlog] = useState({} as BlogType);
-  const blurDataURL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7';
-  const [loading, setLoading] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [blogUrl, setBlogUrl] = useState(() => {
-    if (typeof window !== 'undefined')
-      return window.location.href
-    else return ''
+  const blurDataURL =
+    "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7";
+
+  const blogUrl = typeof window !== "undefined" ? window.location.href : "";
+
+  const slug = router.query.blogId as string;
+
+  const { data: blog } = useQuery({
+    queryKey: ["post", slug],
+    queryFn: () => getPostBySlug(slug),
   });
-
-  const deleteBlog = () => {
-    setLoading(true)
-    const payload = {
-      id: router.query.blogId,
-    }
-    try {
-      axios.delete('https://blog.jointpowersecurity.com/server.php/?id=' + payload.id, {
-        headers: {
-          "Content-Type": 'application/x-www-form-urlencoded'
-        }
-      }).then(res => {
-        toast(res.data.message, { type: 'success' })
-        router.push('/blog');
-        console.log(res)
-      })
-    } catch (error: any) {
-      console.log('hey')
-      console.log(error.response.data.error)
-      toast(error.error, { type: 'error' })
-      toast(error.error, { type: 'error' })
-    } finally {
-      setLoading(false)
-    }
-  }
-
-
-  useEffect(() => {
-    console.log(router.query.blogId)
-    axios.get('https://blog.jointpowersecurity.com/server.php?id=' + router.query.blogId).then((res) => {
-      setBlog(res.data.data);
-      console.log(res);
-    })
-
-    if (typeof window != undefined) {
-      const auth = window.localStorage.getItem('loggedIn');
-      if (auth === 'yes') {
-        setLoggedIn(true)
-      }
-      setBlogUrl(window.location.href);
-    }
-
-
-  }, [router.query.blogId])
 
   return (
     <div className="text-grey-2 pt-24 ">
-      <button onClick={() => router.back()} className="w-full mb-5 mt-20 pt-10  flex items-center justify-center gap-1 text-sm">
+      <button
+        onClick={() => router.back()}
+        className="w-full mb-5 mt-20 pt-10  flex items-center justify-center gap-1 text-sm"
+      >
         <FaBackward />
         <span>Back</span>
       </button>
       <div className=" max-w-[1200px] mx-auto px-5">
-        <h3 className="font-semibold text-2xl sm:text-5xl text-center mb-14">{blog?.title}</h3>
+        <h3 className="font-semibold text-2xl sm:text-5xl text-center mb-14">
+          {blog?.title}
+        </h3>
         <NextImage
           blurDataURL={blurDataURL}
-          src={blog?.image_url} alt="news image" className="w-full sm:w-[500px] h-[400px]" />
-        <div className="pt-6 mt-10 flex items-center justify-between border-t">
-          <div className="flex items-center gap-6 !text-xs">
-            <span>{blog?.created_date}</span>
-            |
-            <span>POSTED BY: <b>{blog?.author}</b></span>
-            |
-            <span>CATEGORY: <b>{blog?.category}</b></span>
+          src={blog?.coverImage.url || news}
+          alt="news image"
+          isImage
+          className="w-full h-[200px]  md:h-[400px] rounded-lg overflow-hidden"
+        />
+        <div className="pt-6 mt-10 flex justify-between border-t">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              <NextImage
+                src={blog?.author.profilePicture as string}
+                blurDataURL={blurDataURL}
+                alt={blog?.author.name ?? ""}
+                className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden object-cover"
+              />
+              <div className="flex flex-col gap-1">
+                <p className="font-medium">{blog?.author.name}</p>
+                <span>author</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="pr-6 seft-start">
+            <span className="text-xs md:text-sm">
+              {format(
+                blog ? new Date(blog?.publishedAt) : new Date(),
+                "MMMM dd, yyyy"
+              )}
+            </span>
           </div>
         </div>
         <div className="my-20">
-          <div className="" dangerouslySetInnerHTML={{ __html: blog?.body }} ></div>
-          <br />  <br />
+          <MarkdownRenderer content={blog?.content.markdown || ""} />
+          <br /> <br />
           <div className="mt-10">
             <span>Please Like, Follow and Share.</span>
           </div>
           <div className="mt5 flex flex-col sm:flex-row gap-10 items-center justify-between">
             <div className="mt-5 flex items-center gap-3">
-
-              <a href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg">
+              <a
+                href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg"
+              >
                 <FaLinkedinIn size={17} /> Share
               </a>
-              <a href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg">
+              <a
+                href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg"
+              >
                 <ImTwitter size={17} /> Share
               </a>
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg"
+              >
                 <MdOutlineFacebook size={17} /> Share
               </a>
             </div>
-            {loggedIn ? <div className="mt-5 flex items-center gap-3">
-              <button
-                disabled={loading}
-                onClick={deleteBlog}
-                className="disabled:bg-opacity-60 flex items-center gap-1 bg-red-600 text-white p-2 px-3 text-xs rounded-lg">
-                {loading ? <ImSpinner2 size={12} className="animate-spin" /> : <FaTrashAlt />}Delete
-              </button>
-              <button
-                onClick={() => router.push('/blog/edit/' + blog.id)}
-                className="flex items-center gap-1 bg-primary text-white p-2 px-3 text-xs rounded-lg">
-                <FaEdit size={16} /> Edit Blog
-              </button>
-
-            </div> : null
-            }
           </div>
         </div>
       </div>
