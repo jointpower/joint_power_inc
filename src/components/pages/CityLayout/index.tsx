@@ -8,15 +8,27 @@ import { FaArrowRight, FaCaretRight } from 'react-icons/fa'
 
 type Props = {
     name:string,
-    Description: any,
     mapSrc:string,
     state?:string
 }
 
-const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
+const CityLayout = ({ name, mapSrc , state}: Props) => {
 
-    const problems = [ 'Theft', 'Stalkers', 'Break-ins','Large Crowd and Demonstrations', 'Terrorists','Violent Attacks','Fire preventions','VIP protections' ];
-    const offerings = [
+    const problems = [ 
+    'Access management', 
+    'Theft',
+   'Vandalism',
+   'Fire Watch',
+   'Loitering',
+   'Asset protection',
+   'Employee protection',
+   'Terminations',
+   'VIP protection',
+   'Disgruntled employees',
+   'Unruly customers',
+     ];    
+     
+     const offerings = [
         {
             title:'Event security',
             desc:'Any size event, from small gatherings to huge, filled arenas',
@@ -71,6 +83,50 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
         { name: 'Georgia', link: '' },
     ]
 
+    const business_issues = [
+        'Access control to parking areas and buildings',
+    'Enforce property regulations and company policies',
+    'Monitor for suspicious behavior',
+    'Perform regular and irregular mobile patrols',
+    'Maintain visitor logs',
+    'Provide fire watch services',
+    'Lobby and front gate protection',
+    ]
+
+    const Description = () => (
+        <>
+                <p className='leading-6 tracking-wide'>
+                JOINT POWER SECURITY SERVICES INC is one of the leading security guard services companies in {name}, {state ?? 'California'}. We provide highly trained and professional security guards and security officers to a variety of businesses and across all industries. Our team has successfully placed guards in commercial and residential buildings, hospitals, event spaces and convention centers, retail establishments and construction sites throughout { name } and the surrounding areas. With a reputation for providing reliable and competent guards, customers across the city have trusted JOINT POWER SECURITY SERVICES INC to provide protection for large-scale events, red carpets, VIP and celebrity functions and sporting events.             
+                </p>
+                <p className='my-5 leading-6 tracking-wide'>
+                We understand that every customer is different when it comes to their security needs. Our security specialists strive to make the process of hiring the best security personnel simple, straightforward and affordable. At JOINT POWER SECURITY SERVICES INC, we are your partners in security, offering customized security solutions to meet the level of security you require. From mobile patrols and access management to trade show security and VIP personal protection, we have the right solutions to meet your needs.             
+                </p>
+                <p className='mb-5 leading-6 tracking-wide'> 
+                At JOINT POWER SECURITY SERVICES INC, we take great pride in our reputation for providing the highest level of customer service and fair, affordable pricing. Our {name} customers feel confident that they are receiving the best security personnel and solutions for their needs because of the personalized attention our security specialists provide. Our team will work with you to discover your unique security threats and recommend the right services to meet your needs and your budget. With customized security solutions, you will have peace of mind that your security threats are covered.             
+                </p>
+                <p className='mb-5 leading-6 tracking-wide'> 
+                If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.            
+                </p>
+                <p className='mb-5 leading-6 tracking-wide font-semibold'> 
+                Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business.             
+                </p>
+                <p className='mb-5 leading-6 tracking-wide'> 
+                JOINT POWER SECURITY SERVICES INC provides a full-spectrum of security guard solutions for your { name } business, organization or personal needs. No matter how big or small your business, we have the experience to provide you with trained and reliable guards. Our security guard services can be tailored to address your greatest concerns including:            
+                </p>
+                <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
+                    {
+                        problems.map((item,idx) => (
+                            <div key={idx} className='flex items-center gap-5 font-medium'>
+                                <span>< FaCaretRight className='text-secondary' /></span>
+                                <span className='font-semibold text-primary'>{item}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+                
+        </>
+    )
+
   return (
     <div className="mt-[120px] ">
         <Layout>
@@ -80,40 +136,6 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
                     <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call (424)-463-7600.</h4>
                     <div className='text-sm'>
                         <Description />
-                    <div 
-                    className={`mt-10 px-3 sm:px-10 pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-white text-center py-2`}
-                    >
-                            {
-                                problems.map((item,idx) => (
-                                <button data-aos=""
-                                    key={idx}
-                                    className={`h-[100px] hover:bg-black hover:text-white transition-all duration-200 ease-linear p-3 grid place-content-center text-center content-center rounded bg-slate-200 text-normal font-medium capitalize py-2`}
-                                >
-                                    <p>{item}</p>
-                                </button>
-                                ))
-                                //     <div key={idx} className='flex items-center gap-3'>
-                                //         <span>< BiCheck size={18} className='text-secondary' /></span>
-                                //         <span className='font-medium text-primary'>{item}</span>
-                                //     </div>
-                            }
-                    </div>
-                        <p className='leading-6 tracking-wide mt-10'>
-                        If you need security guard services in: <span className='font-medium text-secondary'> {name} or somewhere throughout {state || 'California'} </span> then contact Joint Power Service today and put your fears to rest. We provide free consultations and will consider any security concerns or needs regardless of risk.
-                        </p>
-                        <div className='grid sm:grid-cols-2 gap-x-20 gap-y-7 mt-7'>
-                            {
-                                offerings.map((item,idx) => (
-                                    <div key={idx} className='flex items-start gap-3'>
-                                        <span>< BiCheck size={18} className='text-secondary' /></span>
-                                        <span className="span">
-                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} {item.desc ? ' - ' : null} </span>
-                                            <span>{item.desc}</span>
-                                        </span>
-                                    </div>
-                                ))
-                            }
-                        </div>
                         <div className="mt-10">
                             <div className="h-[500px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
@@ -126,6 +148,23 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
+                        </div>
+                        <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        Businesses and commercial buildings face unprecedented threats today. {name} business owners are not immune to this trend. No matter the size of your business or the industry you operate in, security should be one of your top concerns. High-quality security is no longer a luxury afforded to only the largest and most successful companies; all businesses need to make security a priority.                         
+                        </p>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
+                        </p>
+                        <div className='grid gap-x-20 gap-y-6 mt-10'>
+                            {
+                                business_issues.map((item,idx) => (
+                                    <div key={idx} className='flex items-center gap-5'>
+                                        <span>< FaCaretRight className='text-secondary' /></span>
+                                        <span className='font-semibold text-primary'>{item}</span>
+                                    </div>
+                                ))
+                            }
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>We are also at other major cities in <b>{state || 'California'}</b> .</h4>
                         <p className='leading-6 tracking-wide text-xs'>
@@ -189,6 +228,10 @@ const CityLayout = ({ name, Description, mapSrc , state}: Props) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='mt-14 text-center'>
+                {/* @ts-ignore */}
+            <p className='text-lg sm:text-xl my-10  mx-auto text-center mb-0 text-primary font-bold'>Request an in quote <b>Call Now: (424)-463-7600</b>.</p>
             </div>
         </Layout>
     </div>
