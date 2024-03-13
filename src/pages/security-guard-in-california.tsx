@@ -184,10 +184,10 @@ const business_issues = [
                             </div>
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
-                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        <p className='mb-5 leading-6 tracking-wide'>
                         Businesses and commercial buildings face unprecedented threats today. California business owners are not immune to this trend. No matter the size of your business or the industry you operate in, security should be one of your top concerns. High-quality security is no longer a luxury afforded to only the largest and most successful companies; all businesses need to make security a priority.                         
                         </p>
-                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        <p className='mb-5 leading-6 tracking-wide'>
                         At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
                         </p>
                         <div className='grid gap-x-20 gap-y-6 mt-10'>
@@ -201,7 +201,7 @@ const business_issues = [
                             }
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Now serving all Major cities in <b>california</b> .</h4>
-                        <p className='leading-6 tracking-wide text-xs'>
+                        <p className='leading-6 tracking-wide text'>
                         Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of California. We are also world famous for our Event and VIP Security Services.
                         </p>
                         <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>

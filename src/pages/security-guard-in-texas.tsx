@@ -7,49 +7,46 @@ import { FaArrowRight, FaCaretRight } from 'react-icons/fa'
 
 const SecurityGuardInTexas = () => {
 
-    const problems = [ 'Theft', 'Stalkers', 'Break-ins','Large Crowd and Demonstrations', 'Terrorists','Violent Attacks','Fire preventions','VIP protections' ];
-    const offerings = [
+    const problems = [ 'Access management', 
+    'Theft',
+   'Vandalism',
+   'Fire Watch',
+   'Loitering',
+   'Asset protection',
+   'Employee protection',
+   'Terminations',
+   'VIP protection',
+   'Disgruntled employees',
+   'Unruly customers',
+     ];    
+     const offerings = [
         {
-            title:'Event security',
+            title:'Access control to parking areas and buildings',
             desc:'Any size event, from small gatherings to huge, filled arenas',
         },
         {
-            title:'Around the clock security',
+            title:'Enforce property regulations and company policies',
             desc:'24/7 security and monitoring',
         },
         {
-            title:'Club security',
+            title:'Monitor for suspicious behavior',
             desc:'Nightclub security and bar security of any nature',
         },
         {
-            title:'Armed security',
+            title:'Perform regular and irregular mobile patrols',
             desc:'When the cargo or customer needs trained specialists, we’re here',
         },
         {
-            title:'VIP security',
+            title:'Maintain visitor logs',
             desc:'We have guarded and protected many VIP’s of all stature',
         },
         {
-            title:'Business Ownners',
+            title:'Provide fire watch services',
         },
         {
-            title:'Private Properties',
+            title:'Lobby and front gate protection',
         },
-        {
-            title:'Parties',
-        },
-        {
-            title:'Concerts',
-        },
-        {
-            title:'Stadiums',
-        },
-        {
-            title:'Night Clubs',
-        },
-        {
-            title:'Public Expositions and Gatherings',
-        },
+         
     ]
 
     const states = [
@@ -61,6 +58,16 @@ const SecurityGuardInTexas = () => {
         { name: 'Arlington', link: '/texas/arlington' },
       ];
 
+      const business_issues = [
+        'Access control to parking areas and buildings',
+    'Enforce property regulations and company policies',
+    'Monitor for suspicious behavior',
+    'Perform regular and irregular mobile patrols',
+    'Maintain visitor logs',
+    'Provide fire watch services',
+    'Lobby and front gate protection',
+    ]
+
   return (
     <div className="mt-[120px] ">
         <Layout>
@@ -70,12 +77,21 @@ const SecurityGuardInTexas = () => {
                     <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in Texas now 844-254-8273.</h4>
                     <div className='text-sm'>
                         <p className='leading-6 tracking-wide'>
-                        Texas, a state situated in the Southern United States, stands as a beacon of diversity and vastness, boasting a population exceeding 29 million residents and covering approximately 268,596 square miles (695,662 km2) of expansive terrain. It ranks as the second most populous and second-largest state in the nation, characterized by a rich tapestry of cultures and landscapes. Bordered by Louisiana to the east, Arkansas to the northeast, Oklahoma to the north, New Mexico to the west, and the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the southwest, Texas encompasses diverse ecosystems ranging from coastal plains to arid deserts. Joint Power Service, a premier provider of security guard services, extends its unparalleled expertise throughout the Lone Star State, offering comprehensive security solutions to major cities including Houston, San Antonio, Dallas, Austin, Fort Worth, El Paso, Arlington, Corpus Christi, Plano, and Laredo. With a commitment to safeguarding communities across Texas and beyond, Joint Power Service prides itself on its highly trained team of professionals, specializing in various security roles such as uniformed guards, event security personnel, armed security guards, executive protection specialists, and security technology consultants. With years of hands-on experience, Joint Power Service delivers top-notch services tailored to meet diverse security needs, whether it's ensuring safety at movie film sets, providing security for special events, trade shows, or businesses. Offering on-demand security services across Texas, including cities like Houston, San Antonio, Dallas, Austin, Fort Worth, El Paso, Arlington, Corpus Christi, Plano, Laredo, Lubbock, Garland, Irving, Amarillo, and Grand Prairie, Joint Power Service remains dedicated to excellence. Contact Joint Power Service today for all your security concerns, and entrust your safety to our reliable and efficient solutions.                        </p>
+                        JOINT POWER SECURITY SERVICES INC is the premier security guard services company in the State of Texas. We offer security guards and event security to all the major cities in Texas. including security guard services in Austin, Houston, San Antonio, Dallas, Fort Worth, El Paso, Arlington, Corpus Christi, Plano, Laredo, Lubbock, Garland, Irving, Amarillo, Waco, and more. We take great pride in our work throughout Texas and the surrounding regions. JOINT POWER SECURITY SERVICES INC boasts an extremely skilled and highly trained staff of uniformed guards, movie film set security, event staff, special event security, trade show security, executive security, on-set security and business security technology consultants that have years of hands-on experience. In Texas, security is paramount, and numerous reputable security companies stand out. JOINT POWER SECURITY SERVICES INC is a prominent name, offering top-notch services. Among the top security guard companies in Texas, our expertise ensures comprehensive protection. With a focus on safeguarding businesses and individuals and maintaining public safety.                          </p>
                         <p className='my-5 leading-6 tracking-wide'>
-                        In Texas, security is paramount, and numerous reputable security companies stand out. Texas Security Agency is a prominent name, offering top-notch services. Among the top security guard companies in Texas, their expertise ensures comprehensive protection. With a focus on safeguarding businesses and individuals, security companies in Texas play a vital role in maintaining public safety.
+                        JOINT POWER SECURITY SERVICES INC provide business owners, event promoters, managers, and private customers with integrated solutions designed to quickly, efficiently, and effectively address any security concerns. The modern world is a frightening place with evolving dangers that pose extremely dangerous security concerns. JOINT POWER SECURITY SERVICES INC will address these concerns with customized solutions designed by specialists that represent the best and most up-to-date talent and technology that can be found in the security industry. JOINT POWER SECURITY SERVICES INC provide innovative solutions for businesses and executives in the state of Texas. Yes security is a top concern, Too many high-value assets should be protected all time.                        </p>
+                        <p className='leading-6 my-5 tracking-wide'>
+                        As the leading security guard company in Texas, JOINT POWER SECURITY SERVICES INC is proud of our reputation for providing the highest quality service at fair rates. We take training seriously and ensure that when a guard arrives on your premises, they are ready to work hard on your behalf. Security is serious business, and we treat all of our customers like their business is our own.                         
                         </p>
-                        <p className='leading-6 tracking-wide'>
-                        Joint Power services provide business owners, event promoters, managers, and private customers with integrated solutions designed to quickly, efficiently, and effectively address any security concerns. We can even provide celebrity bodyguards and red-carpet security. The modern world is a frightening place with evolving dangers that pose extremely dangerous security concerns. Joint Power Service will address these concerns with customized solutions designed by specialists that represent the best and most up-to-date talent and technology that can be found in the industry, let alone on the West Coast. Joint Power services provide innovative solutions such as:
+                        <p className='leading-6 my-5 tracking-wide'>
+                        We understand that every customer is different when it comes to their security needs. Our security specialists strive to make the process of hiring the best security personnel simple, straightforward and affordable. At JOINT POWER SECURITY SERVICES INC, we are your partners in security, offering customized security solutions to meet the level of security you require. From mobile patrols and access management to trade show security and VIP personal protection, we have the right solutions to meet your needs.                         </p>
+                        <p className='leading-6 my-5 tracking-wide'>
+                        If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.                          </p>
+                        <p className='leading-6 my-5 tracking-wide'>
+                        As the leading security guard company in Texas, JOINT POWER SECURITY SERVICES INC is proud of our reputation for providing the highest quality service at fair rates. We take training seriously and ensure that when a guard arrives on your premises, they are ready to work hard on your behalf. Security is serious business, and we treat all of our customers like their business is our own.                        
+                         </p>
+                         <p className='leading-6 tracking-wide font-semibold mt-5'>
+                        Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business. 
                         </p>
                         <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
                             {
@@ -97,8 +113,8 @@ const SecurityGuardInTexas = () => {
                                     <div key={idx} className='flex items-start gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className="span">
-                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} {item.desc ? ' - ' : null} </span>
-                                            <span>{item.desc}</span>
+                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} </span>
+                                            {/* <span>{item.desc}</span> */}
                                         </span>
                                     </div>
                                 ))
@@ -116,6 +132,23 @@ const SecurityGuardInTexas = () => {
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
+                        </div>
+                        <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        Businesses and commercial buildings face unprecedented threats today. California business owners are not immune to this trend. No matter the size of your business or the industry you operate in, security should be one of your top concerns. High-quality security is no longer a luxury afforded to only the largest and most successful companies; all businesses need to make security a priority.                         
+                        </p>
+                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
+                        </p>
+                        <div className='grid gap-x-20 gap-y-6 mt-10'>
+                            {
+                                business_issues.map((item,idx) => (
+                                    <div key={idx} className='flex items-center gap-5'>
+                                        <span>< FaCaretRight className='text-secondary' /></span>
+                                        <span className='font-semibold text-primary'>{item}</span>
+                                    </div>
+                                ))
+                            }
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Now serving all Major cities in <b>Texas</b> .</h4>
                         <p className='leading-6 tracking-wide text-xs'>
@@ -179,6 +212,10 @@ const SecurityGuardInTexas = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='mt-14'>
+                {/* @ts-ignore */}
+            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b>Call Now: (424)-463-7600</b>.</marquee>
             </div>
         </Layout>
     </div>
