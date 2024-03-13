@@ -108,7 +108,7 @@ const CityLayout = ({ name, mapSrc , state}: Props) => {
                 If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.            
                 </p>
                 <p className='mb-5 leading-6 tracking-wide font-semibold'> 
-                Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business.             
+                Short or long term security guard services, reliable, affordable and carefully fitted to your needs. Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business.             
                 </p>
                 <p className='mb-5 leading-6 tracking-wide'> 
                 JOINT POWER SECURITY SERVICES INC provides a full-spectrum of security guard solutions for your { name } business, organization or personal needs. No matter how big or small your business, we have the experience to provide you with trained and reliable guards. Our security guard services can be tailored to address your greatest concerns including:            
@@ -231,7 +231,7 @@ const CityLayout = ({ name, mapSrc , state}: Props) => {
             </div>
             <div className='mt-14 text-center'>
                 {/* @ts-ignore */}
-            <p className='text-lg sm:text-xl my-10  mx-auto text-center mb-0 text-primary font-bold'>Request an in quote <b>Call Now: (424)-463-7600</b>.</p>
+            <p className='text-lg sm:text-xl my-10  mx-auto text-center mb-0 text-primary font-bold'>Request an instant quote <b>Call Now: (424)-463-7600</b>.</p>
             </div>
         </Layout>
     </div>
