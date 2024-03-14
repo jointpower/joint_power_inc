@@ -44,11 +44,11 @@ const NavLinks = () => {
       url: '/contact-us',
     },
     {
-      name: 'Our Coverages',
+      name: 'Locations',
       url:'',
       states: [
         {
-          url:'',
+          url:'/security-guard-in-california',
           name: 'California',
           cities : [
             { name: 'Los Angeles', url: '/california/los-angeles' },
@@ -57,13 +57,13 @@ const NavLinks = () => {
             { name: 'Fresno', url: '/california/fresno' },
             { name: 'San Francisco & Oakland', url: '/california/san-francisco' },
             { name: 'Redding & Shasta County', url: '/california/redding' },
-            { name: 'Bakersfield & Kem County', url: '/california/bakersfield' },
+            { name: 'Bakersfield & Kern County', url: '/california/bakersfield' },
             { name: 'Sacramento & Stockton', url: '/california/sacramento' },
             { name: 'Santa Cruz', url: '/california/santa-cruz' },
       ]
         },
         {
-          url:'',
+          url:'/security-guard-in-texas',
           name: 'Texas',
           cities : [
             { name: 'Houston', url: '/texas/houston' },

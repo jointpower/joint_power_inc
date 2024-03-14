@@ -31,7 +31,7 @@ const AboutPage = () => {
       </div>
 
       {/* <div> */}
-      <Heading
+      {/* <Heading
         level={1}
         className="text-black text-3xl md:text-[40px] font-bold md:leading-[47px] text-center tracking-[2px] mt-28 md:mt-44 mb-[40px] "
       >
@@ -39,7 +39,7 @@ const AboutPage = () => {
         Get to know our team.
       </Heading>
 
-      <OurTeam />
+      <OurTeam /> */}
       {/* </div> */}
     </div>
   );

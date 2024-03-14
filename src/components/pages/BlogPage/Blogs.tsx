@@ -14,8 +14,7 @@ export default function Blogs() {
       initialPageParam: "",
     });
 
-  const randomLink =
-    "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7";
+  const randomLink = "https://picsum.photos/id/1/200/300";
 
   const blogs = data?.pages.flat();
 
