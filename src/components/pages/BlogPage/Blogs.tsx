@@ -26,6 +26,7 @@ export default function Blogs() {
       </div>
     );
   }
+  
   return (
     <div className="w-full flex flex-col">
       <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 gap-y-12">
