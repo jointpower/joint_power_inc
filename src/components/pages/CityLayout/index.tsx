@@ -2,17 +2,61 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import Layout from '@/components/templates/Layout/AppLayout'
 import Link from 'next/link'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { BiCheck } from 'react-icons/bi'
 import { FaArrowRight, FaCaretRight } from 'react-icons/fa' 
 
 type Props = {
     name:string,
     mapSrc:string,
-    state?:string
+    state?:string,
+    Intro?:any,
+    children?:React.ReactNode,
+    isLosAngeles?:boolean,
 }
 
-const CityLayout = ({ name, mapSrc , state}: Props) => {
+export const  Description = ({ children, name,state,problems , isLosAngeles} : { children?:React.ReactNode, name:string, state:string, problems:string[] , isLosAngeles:boolean} ) => (
+    <>
+            {children}
+           {isLosAngeles ? <>
+                <p className='leading-6 tracking-wide'>
+                JOINT POWER SECURITY SERVICES INC is one of the leading security guard services companies in {name}, {state ?? 'California'}. We provide highly trained and professional security guards and security officers to a variety of businesses and across all industries. Our team has successfully placed guards in commercial and residential buildings, hospitals, event spaces and convention centers, retail establishments and construction sites throughout { name } and the surrounding areas. With a reputation for providing reliable and competent guards, customers across the city have trusted JOINT POWER SECURITY SERVICES INC to provide protection for large-scale events, red carpets, VIP and celebrity functions and sporting events.             
+                </p>
+                <p className='my-5 leading-6 tracking-wide'>
+                We understand that every customer is different when it comes to their security needs. Our security specialists strive to make the process of hiring the best security personnel simple, straightforward and affordable. At JOINT POWER SECURITY SERVICES INC, we are your partners in security, offering customized security solutions to meet the level of security you require. From mobile patrols and access management to trade show security and VIP personal protection, we have the right solutions to meet your needs.             
+                </p>
+            </> : null}
+            <p className="mb-5 leading tracking-wide font-bold">
+            For over 10 years, we have been the leading provider of skilled, reliable and experienced security guards and officers across the state.
+            </p>
+            <p className='mb-5 leading-6 tracking-wide'> 
+            At JOINT POWER SECURITY SERVICES INC, we take great pride in our reputation for providing the highest level of customer service and fair, affordable pricing. Our {name} customers feel confident that they are receiving the best security personnel and solutions for their needs because of the personalized attention our security specialists provide. Our team will work with you to discover your unique security threats and recommend the right services to meet your needs and your budget. With customized security solutions, you will have peace of mind that your security threats are covered.             
+            </p>
+            <p className='mb-5 leading-6 tracking-wide'> 
+            If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.            
+            </p>
+            <p className='mb-5 leading-6 tracking-wide font-semibold'> 
+            Short or long term security guard services, reliable, affordable and carefully fitted to your needs. Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business.             
+            </p>
+            <p className='mb-5 leading-6 tracking-wide'> 
+            JOINT POWER SECURITY SERVICES INC provides a full-spectrum of security guard solutions for your { name } business, organization or personal needs. No matter how big or small your business, we have the experience to provide you with trained and reliable guards. Our security guard services can be tailored to address your greatest concerns including:            
+            </p>
+            <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
+                {
+                    problems.map((item,idx) => (
+                        <div key={idx} className='flex items-center gap-5 font-medium'>
+                            <span>< FaCaretRight className='text-secondary' /></span>
+                            <span className='font-semibold text-primary'>{item}</span>
+                        </div>
+                    ))
+                }
+            </div>
+            
+    </>
+)
+
+
+const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props) => {
 
     const problems = [ 
     'Access management', 
@@ -93,39 +137,6 @@ const CityLayout = ({ name, mapSrc , state}: Props) => {
     'Lobby and front gate protection',
     ]
 
-    const Description = () => (
-        <>
-                <p className='leading-6 tracking-wide'>
-                JOINT POWER SECURITY SERVICES INC is one of the leading security guard services companies in {name}, {state ?? 'California'}. We provide highly trained and professional security guards and security officers to a variety of businesses and across all industries. Our team has successfully placed guards in commercial and residential buildings, hospitals, event spaces and convention centers, retail establishments and construction sites throughout { name } and the surrounding areas. With a reputation for providing reliable and competent guards, customers across the city have trusted JOINT POWER SECURITY SERVICES INC to provide protection for large-scale events, red carpets, VIP and celebrity functions and sporting events.             
-                </p>
-                <p className='my-5 leading-6 tracking-wide'>
-                We understand that every customer is different when it comes to their security needs. Our security specialists strive to make the process of hiring the best security personnel simple, straightforward and affordable. At JOINT POWER SECURITY SERVICES INC, we are your partners in security, offering customized security solutions to meet the level of security you require. From mobile patrols and access management to trade show security and VIP personal protection, we have the right solutions to meet your needs.             
-                </p>
-                <p className='mb-5 leading-6 tracking-wide'> 
-                At JOINT POWER SECURITY SERVICES INC, we take great pride in our reputation for providing the highest level of customer service and fair, affordable pricing. Our {name} customers feel confident that they are receiving the best security personnel and solutions for their needs because of the personalized attention our security specialists provide. Our team will work with you to discover your unique security threats and recommend the right services to meet your needs and your budget. With customized security solutions, you will have peace of mind that your security threats are covered.             
-                </p>
-                <p className='mb-5 leading-6 tracking-wide'> 
-                If you operate a business, manage events or require short-term / long-term security guards for personal or commercial needs, our highly-trained guards provide a variety of services to meet your needs. From mobile patrols and temporary assignments to VIP and executive protection, we have the staff you need to protect what is most valuable to you. We work with some of the finest guards available in the industry including off duty and retired law enforcement and military personnel. Our officers are bonded and insured so you can rest easy knowing that you have a trusted team on your side. And with training in the latest security strategies and technology, our guards can handle any risk that comes their way.            
-                </p>
-                <p className='mb-5 leading-6 tracking-wide font-semibold'> 
-                Short or long term security guard services, reliable, affordable and carefully fitted to your needs. Contact JOINT POWER SECURITY SERVICES INC today at (424)-463-7600 to learn more about our security services and to see how our security teams can protect you and your business.             
-                </p>
-                <p className='mb-5 leading-6 tracking-wide'> 
-                JOINT POWER SECURITY SERVICES INC provides a full-spectrum of security guard solutions for your { name } business, organization or personal needs. No matter how big or small your business, we have the experience to provide you with trained and reliable guards. Our security guard services can be tailored to address your greatest concerns including:            
-                </p>
-                <div className='grid sm:grid-cols-2 gap-x-20 gap-y-5 mt-10'>
-                    {
-                        problems.map((item,idx) => (
-                            <div key={idx} className='flex items-center gap-5 font-medium'>
-                                <span>< FaCaretRight className='text-secondary' /></span>
-                                <span className='font-semibold text-primary'>{item}</span>
-                            </div>
-                        ))
-                    }
-                </div>
-                
-        </>
-    )
 
   return (
     <div className="mt-[120px] ">
@@ -135,7 +146,7 @@ const CityLayout = ({ name, mapSrc , state}: Props) => {
                 <div className="mt-12 ">
                     <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call (424)-463-7600.</h4>
                     <div className='text-sm'>
-                        <Description />
+                        <Description isLosAngeles={isLosAngeles} children={children!} name={name} state={state!} problems={problems!} />
                         <div className="mt-10">
                             <div className="h-[500px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
@@ -150,10 +161,10 @@ const CityLayout = ({ name, mapSrc , state}: Props) => {
                             </div>
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
-                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        <p className='mb-5 leading-6 tracking-wide text-sm'>
                         Businesses and commercial buildings face unprecedented threats today. {name} business owners are not immune to this trend. No matter the size of your business or the industry you operate in, security should be one of your top concerns. High-quality security is no longer a luxury afforded to only the largest and most successful companies; all businesses need to make security a priority.                         
                         </p>
-                        <p className='mb-5 leading-6 tracking-wide text-xs'>
+                        <p className='mb-5 leading-6 tracking-wide text-sm'>
                         At JOINT POWER SECURITY SERVICES INC, we understand the challenges that business owners face. We work diligently to stay ahead of the trends to provide our customers with cutting-edge technology, the latest in training techniques and innovative solutions to meet their needs. Our commercial security services address common threats such as theft and vandalism as well as more serious dangers that your business could face:                        
                         </p>
                         <div className='grid gap-x-20 gap-y-6 mt-10'>
