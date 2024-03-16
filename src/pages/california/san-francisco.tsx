@@ -17,7 +17,7 @@ const SecurityGuardInCalifornia = () => {
         >
           <>
           <p className='mb-5 leading-6 tracking-wide text-sm'>
-            JOINT POWER SECURITY SERVICES INC continues to be the premier security guard company in San Francisco, Californi Oakland, San Jose, Redwood City, Daly City, San Mateo and all cities in the bay area. Our professionally trained and licensed security teams provide unmatched services to San Francisco's businesses, events, and private clients searching for answers to their security problems. When they need reliable, professional security guards they can trust, they call JOINT POWER SECURITY SERVICES INC.
+            JOINT POWER SECURITY SERVICES INC continues to be the premier security guard company in San Francisco, California Oakland, San Jose, Redwood City, Daly City, San Mateo and all cities in the bay area. Our professionally trained and licensed security teams provide unmatched services to San Francisco's businesses, events, and private clients searching for answers to their security problems. When they need reliable, professional security guards they can trust, they call JOINT POWER SECURITY SERVICES INC.
           </p>
           <p className='mb-5 leading-6 tracking-wide text-sm'>
           As the leading security guard company in San Francisco & Oakland and the surrounding areas, JOINT POWER SECURITY SERVICES INC is proud of our reputation for providing the highest quality service at fair rates. We take training seriously and ensure that when a guard arrives on your premises, they are ready to work hard on your behalf. Security is serious business, and we treat all of our customers like their business is our own.          

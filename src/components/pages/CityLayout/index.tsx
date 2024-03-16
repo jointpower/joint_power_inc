@@ -146,7 +146,9 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
                 <div className="mt-12 ">
                     <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call (424)-463-7600.</h4>
                     <div className='text-sm'>
-                        <Description isLosAngeles={isLosAngeles} children={children!} name={name} state={state!} problems={problems!} />
+                        <Description isLosAngeles={isLosAngeles} name={name} state={state!} problems={problems!} >
+                            { children! }
+                        </Description>
                         <div className="mt-10">
                             <div className="h-[500px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
