@@ -1,5 +1,6 @@
 import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
+import { ContactUs } from '@/components/organisms/Sections/ContactUs/ContactUs'
 import Layout from '@/components/templates/Layout/AppLayout'
 import Link from 'next/link'
 import React from 'react'
@@ -129,7 +130,7 @@ const business_issues = [
         <Banner text={"Security Guard Companies in California"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">
-                    <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in California now (424)-463-7600.</h4>
+                <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in California, <a href="tel:+14244637600"> Call (424)-463-7600.</a></h4>
                     <div className='text-sm'>
                         <p className='leading-6 tracking-wide'>
                         California is a state in the Western United States. With over 38.9 million residents across a total area of approximately 163,696 square miles, it is the most populous U.S. state, the third-largest U.S. state by land mass, and the most populated subnational entity in North America. California borders Oregon to the north, Nevada and Arizona to the east, and the Mexican state of Baja California to the south; it has a coastline along the Pacific Ocean to the west. JOINT POWER SECURITY SERVICES INC is the premier security guard services company in the State of California. We offer security guards and event security to all the major cities in California including Los Angeles, Anaheim, San Diego, San Jose, San Francisco, Fresno, Beverly Hills, Sacramento and Long Beach. We take great pride in our work throughout California and the surrounding regions.                         </p>
@@ -219,7 +220,7 @@ const business_issues = [
                 <div className="mt-12">
                     <div className="request-demo">
                     <h4 className='text-xl mb-10 text-primary font-medium'>Request a Demo</h4>
-                        <div className="grid grid-cols-2 gap-x-5 text-sm ">
+                        {/* <div className="grid grid-cols-2 gap-x-5 text-sm ">
                         <InputText
                             placeholder="Comapany Name" 
                             classNames="col-span-2 w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
@@ -256,16 +257,20 @@ const business_issues = [
                             // disabled={loading}
                             className="col-span-2 gap-2 w-full flex items-center justify-center py-3 text-white bg-normal rounded"
                             >
-                            {/* {loading ? <ImSpinner2 className="animate-spin" size={20} /> : null} */}
                             Submit
                         </button>
-                        </div>
+                        </div> */}
+                        <ContactUs
+                            isContactDetailsRequired={false}
+                            className="md:mt-0 mx-0"
+                            noHeader={true}
+                        />
                     </div>
                 </div>
             </div>
             <div className='mt-14'>
                 {/* @ts-ignore */}
-            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b>Call Now: (424)-463-7600</b>.</marquee>
+            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b><a href="tel:+14244637600"> Call now (424)-463-7600.</a></b>.</marquee>
             </div>
         </Layout>
     </div>
