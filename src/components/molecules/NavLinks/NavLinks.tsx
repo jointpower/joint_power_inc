@@ -107,7 +107,7 @@ const NavLinks = () => {
         {states && states.length > 0 && (
           <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
             {states.map(({ name: stateName, url: stateUrl, cities }) => (
-              <li className=' relative group/test hover:bg-slate-100 pl-3 list-none' key={stateName}>
+              <li className=' relative group/test hover:bg-slate-100 pl-2 list-none' key={stateName}>
                 <Links url={stateUrl}>
                   <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
                     <BiCheck />
@@ -160,7 +160,22 @@ const NavLinks = () => {
       </li>
     ))}
     {loggedIn ? <button className='!list-none font-bold text-[1rem] uppercase  p-2 text-red-500' onClick={logout}>Logout</button> :
-      <button className='!list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
+     <div className='relative group'> 
+        <button className=' !list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
+        <ul className='py-2 overflow-hidden absolute top-[25px] min-w-[150px] left-[0px] bg-white shadow-md rounded-md hidden group-hover:block'>
+          {['Investors','Companies','Employees'].map((item) => (
+                <li className=' pl-3 list-none hover:bg-slate-100' key={item}>
+                  <Links url={'/login'}>
+                    <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
+                      <BiCheck />
+                      {item}</div>
+                  </Links>
+                </li>
+          ))}
+        </ul>
+
+      </div>
+
     }
   </ul >
   <ToastContainer

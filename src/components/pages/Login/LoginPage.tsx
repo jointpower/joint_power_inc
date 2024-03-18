@@ -31,8 +31,10 @@ const LoginPage = () => {
   return (
     <div className="pt-24">
       <div className="mt-32 text-black w-[90%] sm:w-96 mx-auto overflow-x-hidden">
-        <div className="">
-          <p>Email</p>
+          <p className="text-sm mb-5">Fill the login form below to access our exclusive content.</p>
+          <p className="text-xs">Required Fields <span className="text-red-500 text-base font-bold">*</span></p>
+        <div className="mt-4">
+          <p className="font-medium">Email Address <span className="text-red-500 text-base font-bold">*</span></p>
           <InputText
             placeholder="Email Address"
             name={"email"}
@@ -44,7 +46,7 @@ const LoginPage = () => {
           />
         </div>
         <div className="mt-3">
-          <p>Password</p>
+          <p  className="font-medium">Password <span className="text-red-500 text-base font-bold">*</span> </p>
           <InputText
             placeholder="Enter Password"
             name={"password"}
@@ -59,7 +61,7 @@ const LoginPage = () => {
           onClick={login}
           type="submit"
           disabled={loading}
-          className="mt-5 gap-2 w-full flex items-center justify-center py-4 text-white bg-normal rounded"
+          className="mt-5 gap-2 w-full flex items-center justify-center py-4 text-white bg-normal rounded-xl"
         >
           {loading ? <ImSpinner2 className="animate-spin" size={20} /> : null}
           Submit
