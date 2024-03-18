@@ -30,7 +30,7 @@ const LoginPage = () => {
 
   return (
     <div className="pt-24">
-      <div className="mt-32 text-black w-96 mx-auto overflow-x-hidden">
+      <div className="mt-32 text-black w-[90%] sm:w-96 mx-auto overflow-x-hidden">
         <div className="">
           <p>Email</p>
           <InputText
@@ -40,11 +40,11 @@ const LoginPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required={true}
-            classNames=" w-full px-[21px] py-4 text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow"
+            classNames="w-full px-[21px] py-4 text-grey-2 mb-[14.4px] border focus:outline-none rounded shadow"
           />
         </div>
         <div className="mt-3">
-          <p>Passwords</p>
+          <p>Password</p>
           <InputText
             placeholder="Enter Password"
             name={"password"}

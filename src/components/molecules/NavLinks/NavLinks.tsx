@@ -74,6 +74,10 @@ const NavLinks = () => {
             { name: 'Arlington', url: '/texas/arlington' },
           ]
         },
+        {
+          url:'/multiple-location-security',
+          name: 'Multiple Location',
+        },
       ]
     },
   ];
@@ -101,7 +105,7 @@ const NavLinks = () => {
           </div>
         </Links>
         {states && states.length > 0 && (
-          <ul className="group/state list-none py-2 absolute top-full min-w-[150px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
+          <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
             {states.map(({ name: stateName, url: stateUrl, cities }) => (
               <li className=' relative group/test hover:bg-slate-100 pl-3 list-none' key={stateName}>
                 <Links url={stateUrl}>
@@ -110,7 +114,7 @@ const NavLinks = () => {
                     {stateName}</div>
                 </Links>
                 {cities && cities.length > 0 && (
-                <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[145px] bg-white shadow-md rounded-md hidden group-hover/test:block">
+                <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[185px] bg-white shadow-md rounded-md hidden group-hover/test:block">
                   {cities.map(({ name: cityName, url: cityUrl }) => (
                     <li className=' hover:bg-slate-100 pl-3 list-none' key={cityName}>
                       <Links url={cityUrl}>

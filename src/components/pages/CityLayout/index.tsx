@@ -1,5 +1,6 @@
 import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
+import { ContactUs } from '@/components/organisms/Sections/ContactUs/ContactUs'
 import Layout from '@/components/templates/Layout/AppLayout'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
@@ -116,16 +117,27 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
         },
     ]
 
-    const states = [
-        { name: 'Alaska', link: '' },
-        { name: 'Arizona', link: '' },
-        { name: 'Arkansas', link: '' },
-        { name: 'Colorado', link: '' },
-        { name: 'Connecticut', link: '' },
-        { name: 'Delaware', link: '' },
-        { name: 'Florida', link: '' },
-        { name: 'Georgia', link: '' },
-    ]
+    const  california_states = [
+        { name: 'Los Angeles', link: '/california/los-angeles' },
+        { name: 'Anaheim', link: '/california/anaheim' },
+        { name: 'Carlsbad', link: '/california/carlsbad' },
+        { name: 'Fresno', link: '/california/fresno' },
+        { name: 'San Francisco & Oakland', link: '/california/san-francisco' },
+        { name: 'Redding & Shasta County', link: '/california/redding' },
+        { name: 'Bakersfield & Kern County', link: '/california/bakersfield' },
+        { name: 'Sacramento & Stockton', link: '/california/sacramento' },
+        { name: 'Santa Cruz', link: '/california/santa-cruz' },
+  ]
+
+  const texas_states = [
+    { name: 'Houston', link: '/texas/houston' },
+    { name: 'Dallas', link: '/texas/dallas' },
+    { name: 'Austin', link: '/texas/austin' },
+    { name: 'Fort Worth', link: '/texas/fort-worth' },
+    { name: 'El Paso', link: '/texas/el-paso' },
+    { name: 'Arlington', link: '/texas/arlington' },
+  ];
+
 
     const business_issues = [
         'Access control to parking areas and buildings',
@@ -144,7 +156,7 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
         <Banner text={`Security Guard Companies in ${name}`} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid ">
                 <div className="mt-12 ">
-                    <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> Call (424)-463-7600.</h4>
+                    <h4 className='text-2xl md:text-3xl !leading-10 mb-10 text-primary font-bold text-center'>Hire a security guard in {name} now. <br /> <a href="tel:+14244637600"> Call (424)-463-7600.</a> </h4>
                     <div className='text-sm'>
                         <Description isLosAngeles={isLosAngeles} name={name} state={state!} problems={problems!} >
                             { children! }
@@ -184,8 +196,15 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
                         Joint Power Service provides armed, unarmed, Firewatch and event staff security guards to all of {state || 'California'}. We are also world famous for our Event and VIP Security Services.
                         </p>
                         <div className='grid grid-cols-2 sm:grid-cols-3 gap-x-20 gap-y-6 mt-10'>
-                            {
-                                states.map((item,idx) => (
+                            {  state?.toLowerCase() != 'texas' ?
+                                california_states.map((item,idx) => (
+                                    <Link href={item.link} key={idx} className='flex items-center gap-5'>
+                                        <span>< FaCaretRight className='text-secondary' /></span>
+                                        <span className='font-semibold text-primary'>{item.name}</span>
+                                    </Link>
+                                ))
+                                :
+                                texas_states.map((item,idx) => (
                                     <Link href={item.link} key={idx} className='flex items-center gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className='font-semibold text-primary'>{item.name}</span>
@@ -198,47 +217,11 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
                 <div className="mt-12">
                     <div className="request-demo max-w-[500px] m-auto">
                     <h4 className='text-2xl text-center mb-10 text-primary font-medium'>Request a Demo, Today</h4>
-                        <div className="grid grid-cols-2 gap-x-5 text-sm ">
-                        <InputText
-                            placeholder="Comapany Name" 
-                            classNames="col-span-2 w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                        <InputText
-                            placeholder="Email Address"
-                            name={"email"}
-                            type="email"
-                            classNames="col-span-2 w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                        <InputText
-                            placeholder="First Name" 
-                            classNames=" w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                        <InputText
-                            placeholder="Last Name" 
-                            classNames=" w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                        <InputText
-                            placeholder="phone Number" 
-                            classNames=" w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                        <InputText
-                            placeholder="Service City" 
-                            classNames=" w-full px-[21px] py-3 text-grey-2 mb-[14.4px] border focus:outline-none rounded"
-                            />
-                          <textarea
-                                name="more-info"
-                                placeholder="How may we help you ?" 
-                                className="p-5 border-line w-full col-span-2 text-grey-2 h-[80px] mb-8 mt-2 border focus:outline-none rounded"
-                        />
-                        <button
-                            type="submit"
-                            // disabled={loading}
-                            className="col-span-2 gap-2 w-full flex items-center justify-center py-3 text-white bg-normal rounded"
-                            >
-                            {/* {loading ? <ImSpinner2 className="animate-spin" size={20} /> : null} */}
-                            Submit
-                        </button>
-                        </div>
+                    <ContactUs
+                        isContactDetailsRequired={false}
+                        className="md:mt-0"
+                        noHeader={true}
+                    />
                     </div>
                 </div>
             </div>
