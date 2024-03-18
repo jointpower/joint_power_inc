@@ -130,7 +130,7 @@ const NavLinks = () => {
             ))}
           </ul>
         )}
-                    {/* {states && states.length > 0 && (
+            {/* {states && states.length > 0 && (
               <ul className="list-none py-2 absolute top-full min-w-[270px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
                 {states.map(({ name: stateName, url: stateUrl, cities }) => (
                   <li className=' hover:bg-slate-100 pl-3 list-none' key={stateName}>

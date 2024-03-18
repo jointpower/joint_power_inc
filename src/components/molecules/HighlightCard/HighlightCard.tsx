@@ -36,25 +36,19 @@ const HighlightCard = () => {
             <div>
               <Heading
                 data-aos="fade-up"
-                className="!text-left text-2xl md:text-3xl lg:text-5xl"
-                level={3}
+                className="!text-left text-2xl"
+                level={5}
               >
-                <span className="xl:leading-[52px]">
-                  Our security guards are extensively trained in the latest
-                  security methods and techniques to ensure top-notch
-                  protection.
+                <span className="">
+                Security Guard Companies are every where, so what makes JOINT POWER SECURITY SERVICES INC different?
                 </span>
               </Heading>
             </div>
             <Text
               data-aos="fade-up"
-              className="text-left block md:text-base lg:text-xl md:text-grey-6 lg:w-[85%]
-              leading-[1.5] md:leading-9 xl:mb-[20px]"
+              className="text-left block text-sm md:text-grey-6 leading-relaxed xl:mb-[20px]"
             >
-              Find peace of mind with Joint Power Security Services, the
-              foremost private security company in California and Texas. With
-              our vigilant watch, rest assured and sleep soundly, knowing your
-              safety is our priority.
+              To start JOINT POWER SECURITY SERVICES INC is the only company in the United States that guarantees that the client experience will be curated and nurtured by a single point of contact. What that means to the client is that no matter when, no matter what we will be on line and ready to assist you. At times when communication is critical we provide the answers you need; let us be the strategic security guard company that you call when you are experiencing an emergency.
             </Text>
             <p
               className="w-fit md:m-[unset] m-auto"

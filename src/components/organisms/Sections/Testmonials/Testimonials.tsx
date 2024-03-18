@@ -33,9 +33,10 @@ const Testimonials = () => {
       textClass: "relative md:right-[2vw]",
     },
   ];
+  
   return (
     <section className="bg-grey-7/10">
-      <div className="container pb-5">
+      <div className="container pb-14">
         <Heading
           data-aos="fade-up"
           level={3}
