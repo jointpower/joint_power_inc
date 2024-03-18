@@ -46,7 +46,12 @@ const HighlightCard = () => {
             </div>
             <Text
               data-aos="fade-up"
-              className="text-left block text-sm md:text-grey-6 leading-relaxed xl:mb-[20px]"
+              className="text-left block text-sm text-grey-6 leading-relaxed xl:mb-[10px]"
+            >
+            For over a decade, JOINT POWER SECURITY SERVICES INC has proudly stood as America’s trusted partner when in need of a Security Guard Company and Firewatch service provider. When it comes to safeguarding what matters most, we’re the name you can rely on.            </Text>
+            <Text
+              data-aos="fade-up"
+              className="text-left block text-sm text-grey-6 leading-relaxed xl:mb-[10px]"
             >
               To start JOINT POWER SECURITY SERVICES INC is the only company in the United States that guarantees that the client experience will be curated and nurtured by a single point of contact. What that means to the client is that no matter when, no matter what we will be on line and ready to assist you. At times when communication is critical we provide the answers you need; let us be the strategic security guard company that you call when you are experiencing an emergency.
             </Text>

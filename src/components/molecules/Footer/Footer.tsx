@@ -9,6 +9,7 @@ const Footer = () => {
   const services_links = [
     { name: "Security Guard in California", url: "/security-guard-in-california" },
     { name: "Security Guard in Texas", url: "/security-guard-in-texas" },
+    { name: "Multi Location Security Guard", url: "/multiple-location-security" },
     { name: "Construction site security", url: "#" },
     { name: "retail store security", url: "#" },
     { name: "Fire watch", url: "#" },
