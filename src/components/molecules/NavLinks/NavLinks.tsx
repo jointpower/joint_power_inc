@@ -80,7 +80,7 @@ const NavLinks = () => {
       name: 'Contact Us',
       url: '/contact-us',
     },
-  
+
   ];
 
   const login = () => router.push('/login')
@@ -99,23 +99,23 @@ const NavLinks = () => {
 <>
   <ul className="md:flex md:gap-3 container">
     {nav_links.map(({ name, url, states }, index) => (
-      <li className='group !list-none relative' key={`${name}/${url + index}`}>
+      <li className={`group !list-none relative z-10 ${states && states.length && 'z-20'}`} key={`${name}/${url + index}`}>
         <Links url={url}>
           <div className="font-bold text-[1rem] uppercase p-2">
             {name}
           </div>
         </Links>
         {states && states.length > 0 && (
-          <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
+          <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block z-10">
             {states.map(({ name: stateName, url: stateUrl, cities }) => (
-              <li className=' relative group/test hover:bg-slate-100 pl-2 list-none' key={stateName}>
+              <li className=' relative group/test hover:bg-slate-100 pl-2 list-none z-10' key={stateName}>
                 <Links url={stateUrl}>
                   <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
                     <BiCheck />
                     {stateName}</div>
                 </Links>
                 {cities && cities.length > 0 && (
-                <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[185px] bg-white shadow-md rounded-md hidden group-hover/test:block">
+                <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[185px] bg-white shadow-md rounded-md hidden group-hover/test:block z-10">
                   {cities.map(({ name: cityName, url: cityUrl }) => (
                     <li className=' hover:bg-slate-100 pl-3 list-none' key={cityName}>
                       <Links url={cityUrl}>
@@ -164,7 +164,7 @@ const NavLinks = () => {
      <div className='relative group'> 
         <button className=' !list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
         <ul className='py-2 overflow-hidden absolute top-[25px] min-w-[150px] left-[0px] bg-white shadow-md rounded-md hidden group-hover:block'>
-          {['Investors','Companies','Employees'].map((item) => (
+          {['Investors','Clients','Employees'].map((item) => (
                 <li className=' pl-3 list-none hover:bg-slate-100' key={item}>
                   <Links url={'/login'}>
                     <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
