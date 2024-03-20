@@ -130,7 +130,7 @@ const business_issues = [
         <Banner text={"Security Guard Companies in California"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">
-                <h4 className='text-2xl mb-10 text-primary font-bold'>Hire a security guard in California, <a href="tel:+14244637600"> Call (424)-463-7600.</a></h4>
+                <h4 className='text-xl sm:text-2xl mb-10 text-primary font-bold'>Hire a security guard in <br className='block sm:hidden' /> California, <a href="tel:+14244637600"> Call (424)-463-7600.</a></h4>
                     <div className='text-sm'>
                         <p className='leading-6 tracking-wide'>
                         California is a state in the Western United States. With over 38.9 million residents across a total area of approximately 163,696 square miles, it is the most populous U.S. state, the third-largest U.S. state by land mass, and the most populated subnational entity in North America. California borders Oregon to the north, Nevada and Arizona to the east, and the Mexican state of Baja California to the south; it has a coastline along the Pacific Ocean to the west. JOINT POWER SECURITY SERVICES INC is the premier security guard services company in the State of California. We offer security guards and event security to all the major cities in California including Los Angeles, Anaheim, San Diego, San Jose, San Francisco, Fresno, Beverly Hills, Sacramento and Long Beach. We take great pride in our work throughout California and the surrounding regions.                         </p>
@@ -164,7 +164,7 @@ const business_issues = [
                                     <div key={idx} className='flex items-start gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className="span">
-                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} </span>
+                                            <span className='font-semibold text-primary whitespace-normal sm:whitespace-nowrap'>{item.title} </span>
                                             {/* <span>{item.desc}</span> */}
                                         </span>
                                     </div>
@@ -219,7 +219,7 @@ const business_issues = [
                 </div>
                 <div className="mt-12">
                     <div className="request-demo">
-                    <h4 className='text-xl mb-10 text-primary font-medium'>Request a Demo</h4>
+                    <h4 className='text-xl mb-10 text-primary font-medium'>Request a Quote</h4>
                         {/* <div className="grid grid-cols-2 gap-x-5 text-sm ">
                         <InputText
                             placeholder="Comapany Name" 

@@ -216,7 +216,7 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
                 </div>
                 <div className="mt-12">
                     <div className="request-demo max-w-[500px] m-auto">
-                    <h4 className='text-2xl text-center mb-10 text-primary font-medium'>Request a Demo, Today</h4>
+                    <h4 className='text-2xl text-center mb-10 text-primary font-medium'>Request a Quote, Today</h4>
                     <ContactUs
                         isContactDetailsRequired={false}
                         className="md:mt-0"

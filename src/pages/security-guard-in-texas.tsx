@@ -116,7 +116,7 @@ const SecurityGuardInTexas = () => {
                                     <div key={idx} className='flex items-start gap-5'>
                                         <span>< FaCaretRight className='text-secondary' /></span>
                                         <span className="span">
-                                            <span className='font-semibold text-primary whitespace-nowrap'>{item.title} </span>
+                                            <span className='font-semibold text-primary whitespace-normal sm:whitespace-nowrap'>{item.title} </span>
                                             {/* <span>{item.desc}</span> */}
                                         </span>
                                     </div>

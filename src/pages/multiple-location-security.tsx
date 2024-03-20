@@ -156,7 +156,7 @@ const MultipleLocationSecurity = () => {
                 </div>
                 <div className="mt-12">
                     <div className="request-demo">
-                    <h4 className='text-xl mb-10 text-primary font-medium pl-5'>Request a Demo</h4>
+                    <h4 className='text-xl mb-10 text-primary font-medium pl-5'>Request a Quote</h4>
                     <ContactUs
                         isContactDetailsRequired={false}
                         className="md:mt-0"

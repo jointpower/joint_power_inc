@@ -36,14 +36,6 @@ const NavLinks = () => {
       url: '/services',
     },
     {
-      name: 'Blog',
-      url: '/blog',
-    },
-    {
-      name: 'Contact Us',
-      url: '/contact-us',
-    },
-    {
       name: 'Locations',
       url:'',
       states: [
@@ -80,6 +72,15 @@ const NavLinks = () => {
         },
       ]
     },
+    {
+      name: 'Blog',
+      url: '/blog',
+    },
+    {
+      name: 'Contact Us',
+      url: '/contact-us',
+    },
+  
   ];
 
   const login = () => router.push('/login')
