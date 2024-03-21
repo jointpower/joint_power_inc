@@ -96,7 +96,7 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
                   name="name"
                   id="name"
                   value={name}
-                  placeholder="Name"
+                  placeholder="Name or Business Name"
                   onChange={(e) => setName(e.target.value)}
                   className="w-full py-3 rounded-[.2rem] cursor-pointer pl-2 text-[black] border border-normal"
                 />
@@ -152,7 +152,7 @@ const ContactUsModal = ({ show, setShow, type }: Props) => {
                   value={address}
                   id="homeAddress"
                   onChange={(e) => setAddress(e.target.value)}
-                  placeholder="Enter City and Zip Code"
+                  placeholder="Enter Service City and Zip Code"
                   className="w-full  py-3 rounded-[.2rem] cursor-pointer pl-2 text-[black] border border-normal"
                 />
               </div>

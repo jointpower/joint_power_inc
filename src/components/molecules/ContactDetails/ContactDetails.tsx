@@ -59,7 +59,7 @@ const ContactDetails = () => {
       <form action="" className="flex flex-col " onSubmit={handleSubmit}>
         <InputText
           data-aos="fade-up"
-          placeholder="Name"
+          placeholder="Name or Business Name"
           name={"name"}
           onChange={(e) => setName(e.target.value)}
           value={name}
@@ -88,7 +88,7 @@ const ContactDetails = () => {
           classNames=" w-full lg:w-[431px] px-[21px] py-4 text-grey-2 mb-[14.4px] border-t focus:outline-none rounded shadow"
         />
         <InputText
-          placeholder="Enter City and Zip Code"
+          placeholder="Enter Service City and Zip Code"
           name={"address"}
           type="text"
           onChange={(e) => setAddress(e.target.value)}

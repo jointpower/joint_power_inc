@@ -44,7 +44,7 @@ const BlogDetailsPage = () => {
         </h3>
         <NextImage
           blurDataURL={blurDataURL}
-          src={blog?.coverImage.url || news}
+          src={blog?.coverImage.url as string}
           alt="news image"
           isImage
           className="w-full h-[200px]  md:h-[400px] rounded-lg overflow-hidden"
