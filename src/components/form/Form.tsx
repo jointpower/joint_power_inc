@@ -99,7 +99,7 @@ const Form = ({ show, setShow }: Props) => {
                   name="name"
                   id="name"
                   value={name}
-                  placeholder="Name"
+                  placeholder="Business Name"
                   onChange={(e) => setName(e.target.value)}
                   className="w-full md:w-[80%] py-3 rounded-[.2rem] cursor-pointer pl-2 text-[black] focus:outline-none"
                 />
@@ -155,7 +155,7 @@ const Form = ({ show, setShow }: Props) => {
                   value={address}
                   id="homeAddress"
                   onChange={(e) => setAddress(e.target.value)}
-                  placeholder="Enter City and Zip Code"
+                  placeholder="Enter Service City and Zip Code"
                   className="w-full  py-3 rounded-[.2rem] cursor-pointer pl-2 text-[black] border border-normal"
                 />
               </div>
@@ -171,12 +171,12 @@ const Form = ({ show, setShow }: Props) => {
               ></textarea>
 
               <div className="text-center">
-              <button
+                <button
                   type="submit"
                   disabled={loading}
                   className="gap-2 w-full flex items-center justify-center py-3 text-white bg-normal rounded"
                 >
-                 {loading ? (
+                  {loading ? (
                     <ImSpinner2 className="animate-spin" size={20} />
                   ) : null}
                   Submit
