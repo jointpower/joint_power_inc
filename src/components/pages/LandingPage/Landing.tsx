@@ -5,6 +5,7 @@ import OurServices from "@/components/organisms/Sections/OurServices/OurServices
 import InTouch from "@/components/organisms/Sections/InTouch/InTouch";
 import Opportunities from "@/components/organisms/Sections/Opportunities/Opportunities";
 import Testimonials from "@/components/organisms/Sections/Testmonials/Testimonials";
+import YoutubeVideo from "@/components/YoutubeVideo";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <Hightlight />
       <InTouch />
       <OurServices />
+      <YoutubeVideo />
       <Opportunities />
       <Testimonials />
     </>
