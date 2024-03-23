@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function YoutubeVideo() {
   const [showVideo, setShowVideo] = useState(false);
   return (
-    <section className="mx-auto max-w-5xl mt-5">
+    <section className="mx-auto max-w-4xl mt-20" data-aos="fade-up">
       <div className="relative">
         {showVideo ? (
           <iframe
