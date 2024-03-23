@@ -1,7 +1,7 @@
 "use client";
 
 import NextImage from "@/components/atom/NextImage/NextImage";
-import news from "public/team-member-1.jpg";
+import { AiOutlineEye } from "react-icons/ai";
 import { ImTwitter } from "react-icons/im";
 
 import { MdOutlineFacebook } from "react-icons/md";
@@ -65,13 +65,16 @@ const BlogDetailsPage = () => {
             </div>
           </div>
 
-          <div className="pr-6 seft-start">
-            <span className="text-xs md:text-sm">
+          <div className="pr-6 seft-start text-xs md:text-sm">
+            <span className="">
               {format(
                 blog ? new Date(blog?.publishedAt) : new Date(),
                 "MMMM dd, yyyy"
               )}
             </span>
+            <p className="flex items-center gap-1 justify-end my-2">
+              <AiOutlineEye /> {blog?.views}
+            </p>
           </div>
         </div>
         <div className="my-20">

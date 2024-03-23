@@ -1,8 +1,9 @@
+import React from "react";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import { getPosts } from "@/lib/requests";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import React from "react";
+import { AiOutlineRead } from "react-icons/ai";
 
 export default function Blogs() {
   const { data, hasNextPage, fetchNextPage, isFetching, isLoading } =
@@ -26,7 +27,7 @@ export default function Blogs() {
       </div>
     );
   }
-  
+
   return (
     <div className="w-full flex flex-col">
       <div className="px-4 sm:px-5 mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 gap-y-12">
@@ -55,6 +56,9 @@ export default function Blogs() {
                     className="w-8 h-8 rounded-full overflow-hidden object-cover"
                   />
                   <span className="font-medium">{node.author.name}</span>
+                </div>
+                <div className="flex items-center gap-1.5 pr-4 text-xs">
+                  {node.readTimeInMinutes} min read
                 </div>
               </div>
               <button className="text-sm font-medium bg-primary text-white py-3 rounded-lg flex">

@@ -21,6 +21,7 @@ export async function getPosts({ first = 9, pageParam = "" }: GetPostsArgs) {
               brief
               publishedAt
               readTimeInMinutes
+              views
               slug
               content {
                 text
@@ -59,6 +60,7 @@ export async function getPostBySlug(slug: string) {
           publishedAt
           readTimeInMinutes
           brief
+          views
           coverImage {
             url
           }

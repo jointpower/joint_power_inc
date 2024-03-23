@@ -13,6 +13,8 @@ interface PostMetadata {
   subtitle?: string;
   slug: string;
   publishedAt: string;
+  readTimeInMinutes: number;
+  views: number;
   brief: string;
   content: {
     text: string;
@@ -63,6 +65,7 @@ interface GetPostBySlugResponse {
       publishedAt: string;
       readTimeInMinutes: number;
       brief: string;
+      views: number;
       coverImage: {
         url: string;
       };
