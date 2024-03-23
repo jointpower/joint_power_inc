@@ -1,10 +1,8 @@
-import Links from '@/components/atom/Links/Links';
-import { useRouter } from 'next/router';
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { BiCheck } from 'react-icons/bi';
-import { BsShieldCheck } from 'react-icons/bs';
-import { GiGuards } from 'react-icons/gi';
-import { ToastContainer, toast } from 'react-toastify';
+import Links from "@/components/atom/Links/Links";
+import { useRouter } from "next/router";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { BiCheck } from "react-icons/bi";
+import { ToastContainer, toast } from "react-toastify";
 
 interface navLinksProps {
   setIsOpen?: Dispatch<SetStateAction<boolean>>;
@@ -16,121 +14,138 @@ const NavLinks = () => {
 
   const logout = () => {
     if (typeof window != undefined) {
-      window.localStorage.removeItem('loggedIn');
-      toast.success('log out successful');
-      router.push('/')
+      window.localStorage.removeItem("loggedIn");
+      toast.success("log out successful");
+      router.push("/");
     }
-  }
+  };
 
   const nav_links = [
     {
-      name: 'Home',
-      url: '/',
+      name: "Home",
+      url: "/",
     },
     {
-      name: 'About Us',
-      url: '/about',
+      name: "About Us",
+      url: "/about",
     },
     {
-      name: 'Services',
-      url: '/services',
+      name: "Services",
+      url: "/services",
     },
     {
-      name: 'Locations',
-      url:'',
+      name: "Locations",
+      url: "",
       states: [
         {
-          url:'/security-guard-in-california',
-          name: 'California',
-          cities : [
-            { name: 'Los Angeles', url: '/california/los-angeles' },
-            { name: 'Anaheim', url: '/california/anaheim' },
-            { name: 'Carlsbad', url: '/california/carlsbad' },
-            { name: 'Fresno', url: '/california/fresno' },
-            { name: 'San Francisco & Oakland', url: '/california/san-francisco' },
-            { name: 'Redding & Shasta County', url: '/california/redding' },
-            { name: 'Bakersfield & Kern County', url: '/california/bakersfield' },
-            { name: 'Sacramento & Stockton', url: '/california/sacramento' },
-            { name: 'Santa Cruz', url: '/california/santa-cruz' },
-      ]
+          url: "",
+          name: "California",
+          cities: [
+            { name: "California", url: "/security-guard-in-california" },
+            { name: "Los Angeles", url: "/california/los-angeles" },
+            { name: "Anaheim", url: "/california/anaheim" },
+            { name: "Carlsbad", url: "/california/carlsbad" },
+            { name: "Fresno", url: "/california/fresno" },
+            {
+              name: "San Francisco & Oakland",
+              url: "/california/san-francisco",
+            },
+            { name: "Redding & Shasta County", url: "/california/redding" },
+            {
+              name: "Bakersfield & Kern County",
+              url: "/california/bakersfield",
+            },
+            { name: "Sacramento & Stockton", url: "/california/sacramento" },
+            { name: "Santa Cruz", url: "/california/santa-cruz" },
+          ],
         },
         {
-          url:'/security-guard-in-texas',
-          name: 'Texas',
-          cities : [
-            { name: 'Houston', url: '/texas/houston' },
-            { name: 'Dallas', url: '/texas/dallas' },
-            { name: 'Austin', url: '/texas/austin' },
-            { name: 'Fort Worth', url: '/texas/fort-worth' },
-            { name: 'El Paso', url: '/texas/el-paso' },
-            { name: 'Arlington', url: '/texas/arlington' },
-          ]
+          url: "",
+          name: "Texas",
+          cities: [
+            { name: "Texas", url: "/security-guard-in-texas" },
+            { name: "Houston", url: "/texas/houston" },
+            { name: "Dallas", url: "/texas/dallas" },
+            { name: "Austin", url: "/texas/austin" },
+            { name: "Fort Worth", url: "/texas/fort-worth" },
+            { name: "El Paso", url: "/texas/el-paso" },
+            { name: "Arlington", url: "/texas/arlington" },
+          ],
         },
         {
-          url:'/multiple-location-security',
-          name: 'Multiple Location',
+          url: "/multiple-location-security",
+          name: "Multiple Location",
         },
-      ]
+      ],
     },
     {
-      name: 'Blog',
-      url: '/blog',
+      name: "Blog",
+      url: "/blog",
     },
     {
-      name: 'Contact Us',
-      url: '/contact-us',
+      name: "Contact Us",
+      url: "/contact-us",
     },
-
   ];
 
-  const login = () => router.push('/login')
+  const login = () => router.push("/login");
 
   useEffect(() => {
     if (typeof window != undefined) {
-      const auth = window.localStorage.getItem('loggedIn');
-      if (auth === 'yes') {
-        setLoggedIn(true)
+      const auth = window.localStorage.getItem("loggedIn");
+      if (auth === "yes") {
+        setLoggedIn(true);
       }
     }
-  }, [])
-
+  }, []);
 
   return (
-<>
-  <ul className="md:flex md:gap-3 container">
-    {nav_links.map(({ name, url, states }, index) => (
-      <li className={`group !list-none relative z-10 ${states && states.length && 'z-20'}`} key={`${name}/${url + index}`}>
-        <Links url={url}>
-          <div className="font-bold text-[1rem] uppercase p-2">
-            {name}
-          </div>
-        </Links>
-        {states && states.length > 0 && (
-          <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block z-10">
-            {states.map(({ name: stateName, url: stateUrl, cities }) => (
-              <li className=' relative group/test hover:bg-slate-100 pl-2 list-none z-10' key={stateName}>
-                <Links url={stateUrl}>
-                  <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
-                    <BiCheck />
-                    {stateName}</div>
-                </Links>
-                {cities && cities.length > 0 && (
-                <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[185px] bg-white shadow-md rounded-md hidden group-hover/test:block z-10">
-                  {cities.map(({ name: cityName, url: cityUrl }) => (
-                    <li className=' hover:bg-slate-100 pl-3 list-none' key={cityName}>
-                      <Links url={cityUrl}>
-                        <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
-                          <BiCheck />
-                          {cityName}</div>
-                      </Links>
-                    </li>
-                  ))}
-                </ul>
-        )}
-              </li>
-            ))}
-          </ul>
-        )}
+    <>
+      <ul className="md:flex md:gap-3 container">
+        {nav_links.map(({ name, url, states }, index) => (
+          <li
+            className={`group !list-none relative z-10 ${
+              states && states.length && "z-20"
+            }`}
+            key={`${name}/${url + index}`}
+          >
+            <Links url={url}>
+              <div className="font-bold text-[1rem] uppercase p-2">{name}</div>
+            </Links>
+            {states && states.length > 0 && (
+              <ul className="group/state list-none py-2 absolute top-full min-w-[190px] left-0 bg-white shadow-md rounded-md hidden group-hover:block z-10">
+                {states.map(({ name: stateName, url: stateUrl, cities }) => (
+                  <li
+                    className=" relative group/test hover:bg-slate-100 pl-2 list-none z-10"
+                    key={stateName}
+                  >
+                    <Links url={stateUrl}>
+                      <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
+                        <BiCheck />
+                        {stateName}
+                      </div>
+                    </Links>
+                    {cities && cities.length > 0 && (
+                      <ul className="list-none py-2 absolute top-[0px] min-w-[270px] left-[185px] bg-white shadow-md rounded-md hidden group-hover/test:block z-10">
+                        {cities.map(({ name: cityName, url: cityUrl }) => (
+                          <li
+                            className=" hover:bg-slate-100 pl-3 list-none"
+                            key={cityName}
+                          >
+                            <Links url={cityUrl}>
+                              <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
+                                <BiCheck />
+                                {cityName}
+                              </div>
+                            </Links>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
             {/* {states && states.length > 0 && (
               <ul className="list-none py-2 absolute top-full min-w-[270px] left-0 bg-white shadow-md rounded-md hidden group-hover:block">
                 {states.map(({ name: stateName, url: stateUrl, cities }) => (
@@ -158,40 +173,51 @@ const NavLinks = () => {
                 ))}
               </ul>
             )} */}
-      </li>
-    ))}
-    {loggedIn ? <button className='!list-none font-bold text-[1rem] uppercase  p-2 text-red-500' onClick={logout}>Logout</button> :
-     <div className='relative group'> 
-        <button className=' !list-none font-bold text-[1rem] uppercase  p-2' onClick={login}>Login</button>
-        <ul className='py-2 overflow-hidden absolute top-[25px] min-w-[150px] left-[0px] bg-white shadow-md rounded-md hidden group-hover:block'>
-          {['Investors','Clients','Employees'].map((item) => (
-                <li className=' pl-3 list-none hover:bg-slate-100' key={item}>
-                  <Links url={'/login'}>
+          </li>
+        ))}
+        {loggedIn ? (
+          <button
+            className="!list-none font-bold text-[1rem] uppercase  p-2 text-red-500"
+            onClick={logout}
+          >
+            Logout
+          </button>
+        ) : (
+          <div className="relative group">
+            <button
+              className=" !list-none font-bold text-[1rem] uppercase  p-2"
+              onClick={login}
+            >
+              Login
+            </button>
+            <ul className="py-2 overflow-hidden absolute top-[25px] min-w-[150px] left-[0px] bg-white shadow-md rounded-md hidden group-hover:block">
+              {["Investors", "Clients", "Employees"].map((item) => (
+                <li className=" pl-3 list-none hover:bg-slate-100" key={item}>
+                  <Links url={"/login"}>
                     <div className="flex items-center gap-2 text-black hover:font-medium hover:text-primary p-2">
                       <BiCheck />
-                      {item}</div>
+                      {item}
+                    </div>
                   </Links>
                 </li>
-          ))}
-        </ul>
-
-      </div>
-
-    }
-  </ul >
-  <ToastContainer
-    position="top-center"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="light"
-  />
-</>
+              ))}
+            </ul>
+          </div>
+        )}
+      </ul>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </>
   );
 };
 
