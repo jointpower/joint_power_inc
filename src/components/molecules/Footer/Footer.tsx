@@ -3,13 +3,24 @@ import Links from "@/components/atom/Links/Links";
 import NextImage from "@/components/atom/NextImage/NextImage";
 import Text from "@/components/atom/Text/Text";
 import SocialLinks from "@/components/molecules/SocialLinks/SocialLinks";
+import { StaticImageData } from "next/image";
 import Link from "next/link";
 import JpsBadge from "public/jps.png";
+import MasterCard from "public/mastercard.png";
+import Visa from "public/visa.png";
+import Discover from "public/discover.png";
+import AmericaExpress from "public/america-express.png";
 const Footer = () => {
   const services_links = [
-    { name: "Security Guard in California", url: "/security-guard-in-california" },
+    {
+      name: "Security Guard in California",
+      url: "/security-guard-in-california",
+    },
     { name: "Security Guard in Texas", url: "/security-guard-in-texas" },
-    { name: "Multi Location Security Guard", url: "/multiple-location-security" },
+    {
+      name: "Multi Location Security Guard",
+      url: "/multiple-location-security",
+    },
     { name: "Construction site security", url: "#" },
     { name: "retail store security", url: "#" },
     { name: "Fire watch", url: "#" },
@@ -35,6 +46,28 @@ const Footer = () => {
     { name: "Dispatch: 24/7", url: "#" },
   ];
 
+  const payment_options: {
+    name: string;
+    img: StaticImageData;
+  }[] = [
+    {
+      name: "Mastercard",
+      img: MasterCard,
+    },
+    {
+      name: "Visa",
+      img: Visa,
+    },
+    {
+      name: "American Express",
+      img: AmericaExpress,
+    },
+    {
+      name: "Discover",
+      img: Discover,
+    },
+  ];
+
   const date = new Date();
   const year = date.getFullYear();
 
@@ -44,12 +77,34 @@ const Footer = () => {
       <div className="bg-primary md:p-10 pb-0">
         <div className="container">
           <div className="text-sm flex flex-col md:flex-row  gap-10 md:gap-0 justify-between ">
-            <div className="flex md:-mt-5">
+            <div className="flex flex-col gap-4 md:-mt-5">
               <NextImage
-                className=" w-[180px] h-[196px] "
+                className=" w-[180px] h-[196px] mx-auto"
                 src={JpsBadge}
                 alt="Joint power security badge"
               />
+              <div className="mx-auto">
+                <p className="w-64 text-xs text-center leading-5">
+                  As a premier security company, we offer thorough, responsive
+                  services with convenient payment options through the world's
+                  most trusted payment platforms.
+                </p>
+                <div className="flex items-center mt-6">
+                  {payment_options.map((payment, index) => (
+                    <NextImage
+                      key={index}
+                      className="mx-auto aspect-video w-14"
+                      src={payment.img}
+                      alt={payment.name}
+                    />
+                  ))}
+                  {/* <NextImage
+                    className="mx-auto aspect-video w-24"
+                    src={MasterCard}
+                    alt="Mastercard"
+                  /> */}
+                </div>
+              </div>
             </div>
             <div className=" grid grid-cols-2 md:flex gap-x-6 gap-y-12 lg:gap-x-24 lg:gap-y-24 mb-[80px]">
               {" "}
