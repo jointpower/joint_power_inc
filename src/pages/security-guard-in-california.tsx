@@ -175,13 +175,12 @@ const business_issues = [
                             <div className="h-[400px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
                                 className='rounded-md overflow-hidden'
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.18159988272!2d-122.52000171794406!3d37.75767131454352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1708494153587!5m2!1sen!2sng" 
-                                width="100%" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512754.968756722!2d-124.59701070310881!3d37.15136466310988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20USA!5e0!3m2!1sen!2sng!4v1711535816020!5m2!1sen!2sng"                                 width="100%" 
                                 height="400" 
                                 style={{border:0}} 
                                 allowFullScreen={false}
                                 loading="lazy" 
-                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                referrerPolicy="no-referrer-when-downgrade" />
                             </div>
                         </div>
                         <h4 className='text-2xl my-10  mb-0 text-primary font-bold'>Commercial Security Services.</h4>
@@ -270,7 +269,7 @@ const business_issues = [
             </div>
             <div className='mt-14'>
                 {/* @ts-ignore */}
-            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b><a href="tel:+14244637600"> Call now (424)-463-7600.</a></b>.</marquee>
+            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b><a href="tel:+14244637600"> Call now (424)-463-7600</a></b></marquee>
             </div>
         </Layout>
     </div>

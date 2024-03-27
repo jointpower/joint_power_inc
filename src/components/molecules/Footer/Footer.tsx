@@ -30,7 +30,7 @@ const Footer = () => {
 
   const services_links_2 = [
     { name: "Health facilities", url: "#" },
-    { name: "Telecommunication towers", url: "#" },
+    { name: "Telecommunication Tower Protection", url: "#" },
     { name: "aviation security", url: "#" },
     { name: "access control security", url: "#" },
     { name: "Event security", url: "#" },

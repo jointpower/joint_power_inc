@@ -24,11 +24,10 @@ const HospitalSecurity = () => {
               level={1}
               className={`text-[24px] md:text-[40px] xl:text-[45px] md:w-full flex-1 font-semibold leading-tight  md:mb-[30px]`}
             >
-              Hospital Security
+              Bank and Government Facility Security
             </Heading>
-            <Text data-aos="fade-up" className="text-left font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-2xl">
-            Our aim is to provide the highest quality security services tailored for hospitals in California and Texas to all our clients.
-            </Text>
+            <Text data-aos="fade-up" className="text-left font-medium mt-3 w-full md:w-[90%] text-lg text-gray-800  lg:text-xl">
+              Joint Power Security Services Inc. has the expertise to develop efficient strategies to deter theft and minimize inventory loss. Our services are tailored to meet the unique security needs of banks and government institutions.            </Text>
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)} className={`my-2 mt-5`}>
             <button

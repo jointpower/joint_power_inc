@@ -43,10 +43,10 @@ const MainHero = () => {
             </Heading>
             <Text
               data-aos="fade-up"
-              className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[85%] sm:leading-loose md:leading-snug text-lg md:text-[30px]"
+              className=" text-gray-600 font-medium mt-3 w-full md:w-[80%] xl:w-[90%] sm:leading-loose md:leading-snug text-lg sm:text-xl"
             >
-              The best security guard company in California & Texas. Safety is our
-              priority!
+              Leading private security firm in California and Texas, we offer comprehensive, efficient, and proactive security solutions. 
+              <p className="text-secondary">Safety is our priority!</p>
             </Text>
           </div>
           <div>

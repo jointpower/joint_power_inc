@@ -43,23 +43,19 @@ const MallSecurity = () => {
                 xtraSmall && "text-[22px]"
               } xl:text-[40px] md:w-full text-[26px] flex-1 font-semibold leading-tight  md:mb-[30px] text-black`}
             >
-              Shopping Mall Security
+              Healthcare Facility Security Services
             </Heading>
             <Text
               data-aos="fade-up"
               className="font-medium mt-3 w-full leading-relaxed md:hidden text-lg text-black  pb-[35px]"
             >
-              Joint Power Security can devise effective strategies to prevent
-              theft and reduce shrinkage. The demand for top-notch retail
-              security guards is on the rise.
+              Our mission is to deliver exceptional security solutions specifically designed for hospitals in California and Texas, ensuring the utmost safety and protection for our valued clients.
             </Text>
             <Text
               data-aos="fade-up"
               className="mt-3 w-full leading-relaxed hidden md:flex text-xl text-black font-medium"
             >
-              Joint Power Security can devise effective strategies to prevent
-              theft and reduce shrinkage. The demand for top-notch retail
-              security guards is on the rise.
+             Our mission is to deliver exceptional security solutions specifically designed for hospitals in California and Texas, ensuring the utmost safety and protection for our valued clients.
             </Text>
           </div>
           <div data-aos="fade-up" onClick={() => setShow(true)}>
