@@ -36,17 +36,10 @@ export const Security = () => {
             Emergency
           </Heading>
           <p className="text-left" data-aos="fade-up">
-            Joint Power Security offers{" "}
-            <span className="font-medium text-[purple]">24 Hours</span> emergency security
-            guard services. Whether it's for hospitals, shopping malls, hotels,
-            apartments, or construction sites, we've got you covered.
+          <span className="font-medium text-[purple]"> Joint Power Security Services Inc. </span>provides round-the-clock emergency security guard services. We cater to a wide range of clients, including hospitals, shopping malls, hotels, apartments, and construction sites.
             <br />
             <br />
-            Our skilled security guards are accessible
-            <span className="font-medium text-[purple]">
-              {" "}
-              24/7, every day of the week.
-            </span>
+            Our highly trained security personnel are <span className="font-medium text-[purple]"> available 24/7 </span> to ensure the safety and security of your premises.
           </p>
         </Text>
       </div>

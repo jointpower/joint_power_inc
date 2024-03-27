@@ -227,7 +227,7 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
             </div>
             <div className='mt-14 text-center'>
                 {/* @ts-ignore */}
-            <p className='text-lg sm:text-xl my-10  mx-auto text-center mb-0 text-primary font-bold'>Request an instant quote <b>Call Now: (424)-463-7600</b>.</p>
+            <p className='text-lg sm:text-xl my-10  mx-auto text-center mb-0 text-primary font-bold'>Request an instant quote <b>Call Now: (424)-463-7600</b></p>
             </div>
         </Layout>
     </div>

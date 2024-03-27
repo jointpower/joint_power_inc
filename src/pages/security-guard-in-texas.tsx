@@ -59,14 +59,14 @@ const SecurityGuardInTexas = () => {
         { name: 'Arlington', link: '/texas/arlington' },
       ];
 
-      const business_issues = [
+    const business_issues = [
         'Access control to parking areas and buildings',
-    'Enforce property regulations and company policies',
-    'Monitor for suspicious behavior',
-    'Perform regular and irregular mobile patrols',
-    'Maintain visitor logs',
-    'Provide fire watch services',
-    'Lobby and front gate protection',
+        'Enforce property regulations and company policies',
+        'Monitor for suspicious behavior',
+        'Perform regular and irregular mobile patrols',
+        'Maintain visitor logs',
+        'Provide fire watch services',
+        'Lobby and front gate protection',
     ]
 
   return (
@@ -127,7 +127,7 @@ const SecurityGuardInTexas = () => {
                             <div className="h-[400px] rounded-md overflow-hidden bg-gray-100">
                             <iframe 
                                 className='rounded-md overflow-hidden'
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.681137549222!2d-97.74292542519898!3d30.27466517480847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5a014ac8dcf%3A0xcb6f5722a795d039!2sTexas%20Capitol!5e0!3m2!1sen!2sng!4v1708496272548!5m2!1sen!2sng" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6999589.15290925!2d-105.37082292033655!3d31.060553586448485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864070360b823249%3A0x16eb1c8f1808de3c!2sTexas%2C%20USA!5e0!3m2!1sen!2sng!4v1711535902153!5m2!1sen!2sng"
                                 width="100%" 
                                 height="400" 
                                 style={{border:0}} 
@@ -182,7 +182,7 @@ const SecurityGuardInTexas = () => {
             </div>
             <div className='mt-14'>
                 {/* @ts-ignore */}
-            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b><a href="tel:+14244637600"> Call Now (424)-463-7600.</a></b>.</marquee>
+            <marquee className='text-lg sm:text-xl my-10  mb-0 text-primary font-bold'>Request an Instant quote <b><a href="tel:+14244637600"> Call Now (424)-463-7600</a></b></marquee>
             </div>
         </Layout>
     </div>
