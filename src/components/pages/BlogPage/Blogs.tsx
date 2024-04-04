@@ -48,15 +48,6 @@ export default function Blogs() {
                 }}
               ></div>
               <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-3">
-                  <NextImage
-                    src={node.author.profilePicture as string}
-                    blurDataURL={randomLink}
-                    alt={node.author.name}
-                    className="w-8 h-8 rounded-full overflow-hidden object-cover"
-                  />
-                  <span className="font-medium">{node.author.name}</span>
-                </div>
                 <div className="flex items-center gap-1.5 pr-4 text-xs">
                   {node.readTimeInMinutes} min read
                 </div>

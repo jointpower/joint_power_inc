@@ -50,20 +50,7 @@ const BlogDetailsPage = () => {
           className="w-full h-[200px]  md:h-[400px] rounded-lg overflow-hidden"
         />
         <div className="pt-6 mt-10 flex justify-between border-t">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-3">
-              <NextImage
-                src={blog?.author.profilePicture as string}
-                blurDataURL={blurDataURL}
-                alt={blog?.author.name ?? ""}
-                className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden object-cover"
-              />
-              <div className="flex flex-col gap-1">
-                <p className="font-medium">{blog?.author.name}</p>
-                <span>author</span>
-              </div>
-            </div>
-          </div>
+          <div className="flex items-center gap-6"></div>
 
           <div className="pr-6 seft-start text-xs md:text-sm">
             <span className="">
