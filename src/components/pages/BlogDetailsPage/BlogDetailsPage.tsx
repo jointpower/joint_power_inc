@@ -3,6 +3,7 @@
 import NextImage from "@/components/atom/NextImage/NextImage";
 import { AiOutlineEye } from "react-icons/ai";
 import { ImTwitter } from "react-icons/im";
+import { FiShare } from "react-icons/fi";
 
 import { MdOutlineFacebook } from "react-icons/md";
 import { FaBackward, FaLinkedinIn } from "react-icons/fa";
@@ -14,6 +15,11 @@ import { ToastContainer } from "react-toastify";
 import { useQuery } from "@tanstack/react-query";
 import { getPostBySlug } from "@/lib/requests";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/molecules/Dialog";
 
 const BlogDetailsPage = () => {
   const router = useRouter();
@@ -59,9 +65,6 @@ const BlogDetailsPage = () => {
                 "MMMM dd, yyyy"
               )}
             </span>
-            <p className="flex items-center gap-1 justify-end my-2">
-              <AiOutlineEye /> {blog?.views}
-            </p>
           </div>
         </div>
         <div className="my-20">
@@ -71,31 +74,42 @@ const BlogDetailsPage = () => {
             <span>Please Like, Follow and Share.</span>
           </div>
           <div className="mt5 flex flex-col sm:flex-row gap-10 items-center justify-between">
-            <div className="mt-5 flex items-center gap-3">
-              <a
-                href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg"
-              >
-                <FaLinkedinIn size={17} /> Share
-              </a>
-              <a
-                href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg"
-              >
-                <ImTwitter size={17} /> Share
-              </a>
-              <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg"
-              >
-                <MdOutlineFacebook size={17} /> Share
-              </a>
+            <div className="mt-5 self-start">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="flex items-center gap-2 bg-primary text-white p-2 px-4 text-xs rounded-lg">
+                    <FiShare size={17} /> Share
+                  </button>
+                </DialogTrigger>
+                <DialogContent>
+                  <div className="mt-5 flex items-center gap-3 justify-center bg-primary max-sm:w-4/5 max-sm:mx-auto md:px-6 py-8 rounded-lg">
+                    <a
+                      href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg"
+                    >
+                      <FaLinkedinIn size={17} /> Share
+                    </a>
+                    <a
+                      href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg"
+                    >
+                      <ImTwitter size={17} /> Share
+                    </a>
+                    <a
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg"
+                    >
+                      <MdOutlineFacebook size={17} /> Share
+                    </a>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
