@@ -23,6 +23,7 @@ import {
 
 const BlogDetailsPage = () => {
   const router = useRouter();
+  const navigator = typeof window !== "undefined" ? window.navigator : null;
   const blurDataURL =
     "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7";
 
@@ -75,41 +76,50 @@ const BlogDetailsPage = () => {
           </div>
           <div className="mt5 flex flex-col sm:flex-row gap-10 items-center justify-between">
             <div className="mt-5 self-start">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="flex items-center gap-2 bg-primary text-white p-2 px-4 text-xs rounded-lg">
-                    <FiShare size={17} /> Share
-                  </button>
-                </DialogTrigger>
-                <DialogContent>
-                  <div className="mt-5 flex items-center gap-3 justify-center bg-primary max-sm:w-4/5 max-sm:mx-auto md:px-6 py-8 rounded-lg">
-                    <a
-                      href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg"
-                    >
-                      <FaLinkedinIn size={17} /> Share
-                    </a>
-                    <a
-                      href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg"
-                    >
-                      <ImTwitter size={17} /> Share
-                    </a>
-                    <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg"
-                    >
-                      <MdOutlineFacebook size={17} /> Share
-                    </a>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              {navigator?.share ? (
+                <button
+                  onClick={() => navigator?.share({ url: blogUrl })}
+                  className="flex items-center gap-2 bg-primary text-white p-2 px-4 text-xs rounded-lg"
+                >
+                  <FiShare size={17} /> Share
+                </button>
+              ) : (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="flex items-center gap-2 bg-primary text-white p-2 px-4 text-xs rounded-lg">
+                      <FiShare size={17} /> Share
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <div className="mt-5 flex items-center gap-3 justify-center bg-primary max-sm:w-4/5 max-sm:mx-auto md:px-6 py-8 rounded-lg">
+                      <a
+                        href={`https://www.linkedin.com/shareArticle?url=${blogUrl}&title=Check out this blog post!`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-blue-700 text-white p-2 px-3 text-xs rounded-lg"
+                      >
+                        <FaLinkedinIn size={17} /> Share
+                      </a>
+                      <a
+                        href={`https://twitter.com/intent/tweet?url=${blogUrl}&text=Check out this blog post!`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 bg-black text-white p-2 px-3 text-xs rounded-lg"
+                      >
+                        <ImTwitter size={17} /> Share
+                      </a>
+                      <a
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 bg-blue-500 text-white p-2 px-3 text-xs rounded-lg"
+                      >
+                        <MdOutlineFacebook size={17} /> Share
+                      </a>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              )}
             </div>
           </div>
         </div>
