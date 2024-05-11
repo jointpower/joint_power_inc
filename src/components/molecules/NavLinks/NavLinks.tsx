@@ -57,6 +57,7 @@ const NavLinks = () => {
             },
             { name: "Sacramento & Stockton", url: "/california/sacramento" },
             { name: "Santa Cruz", url: "/california/santa-cruz" },
+            { name: "San Bernardino", url: "/california/san-bernardino" },
           ],
         },
         {
