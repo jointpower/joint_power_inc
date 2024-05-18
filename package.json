@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@golivwell/ui": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.4",
     "@tanstack/react-query": "^5.25.0",
     "@types/react-slick": "^0.23.12",
