@@ -127,6 +127,7 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
         { name: 'Bakersfield & Kern County', link: '/california/bakersfield' },
         { name: 'Sacramento & Stockton', link: '/california/sacramento' },
         { name: 'Santa Cruz', link: '/california/santa-cruz' },
+        { name: 'San Bernardino', link: '/california/san-bernardino' },
   ]
 
   const texas_states = [
