@@ -8,7 +8,12 @@ import medicalOfficerImg from "public/service2.png";
 import MedicalOfficerImg from "public/service2.png";
 import MobilePatrol from 'public/mobile_patrol.jpg';
 import { BiCheck } from "react-icons/bi";
+import NextImage from "@/components/atom/NextImage/NextImage";
 // import Image, { StaticImageData } from 'next/image';
+import fire1 from 'public/fire1.jpeg';
+import fire2 from 'public/fire2.jpeg';
+import Text from "@/components/atom/Text/Text";
+
 
 const OurServices = () => {
 
@@ -131,7 +136,60 @@ const OurServices = () => {
         </div>
         {/* <ResponsiveSlider /> */}
       </div>
-    </section>
+      </section>
+      <div className="container mb-20 pb-12 md:pb-24">
+      <Heading
+          data-aos="fade-up"
+          level={3}
+          className="text-black text-2xl md:text-3xl text-center mt-[60px] mb-8 pt-[50px] font-semibold"
+        >
+          Joint Power Fire Services.
+        </Heading>
+        <p className="text-left sm:text-center text-black text-base sm:text-xl">
+        As a firewatch service provider, we understand that ensuring the safety of personnel, infrastructure, and assets from fire hazards is a fundamental obligation for every organization. Conducting routine inspections and testing of fire protection systems forms a crucial component of a comprehensive fire safety program.
+
+        </p>
+        <div className="flex flex-col md:flex-row-reverse justify-between items-center px-3 gap-1 rounded-2xl mt-10">
+          <div data-aos="fade-up" className="pr-0 md:pr-4 rounded-xl">
+            <NextImage
+              src={fire1}
+              alt="joint security officer"
+              className="mr-0 md:mr-5 mb-5 md:mb-0 !rounded-xl h-[200px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[500px] lg:h-[300px]"
+            />
+          </div>
+          <div
+            data-aos="fade-up"
+            className="flex flex-col text-center md:text-left gap-4 lg:px-4 lg:w-[53%]"
+          >
+            <Text
+              data-aos="fade-up"
+              className="ml-0 md:ml-10 text-left  block text-base sm:text-xl leading-relaxed text-black"
+            >
+              Fire protection services play a critical role in safeguarding individuals, property, and the environment from the devastating effects of fires. These services encompass both preventive measures to avert fires and responsive strategies to effectively manage and extinguish them.            </Text>
+            
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center px-3 gap-1 rounded-2xl mt-10 md:mt-0">
+          <div data-aos="fade-up" className="pr-0 md:pr-4 rounded-xl">
+            <NextImage
+              src={fire2}
+              alt="joint security officer"
+              className="mb-5 md:mb-0 ml-0 md:ml-10 !rounded-xl h-[200px] w-[300px] md:w-[270.59px] md:h-[248.54px] lg:w-[500px] lg:h-[300px]"
+            />
+          </div>
+          <div
+            data-aos="fade-up"
+            className="flex flex-col text-center md:text-left gap-4 lg:px-4 lg:w-[53%]"
+          >
+            <Text
+              data-aos="fade-up"
+              className="text-left  block text-base sm:text-xl leading-relaxed text-black"
+            >
+            The design, installation, and maintenance of fire detection systems, sprinkler systems, fire alarms, and fire-resistant building materials require meticulous attention to detail. These precautions are essential in minimizing the risk of fire outbreaks and providing timely alerts to occupants.
+            Joint Power Security Service Inc. offers Statewide Fire watch services and is usually prompt, and we often have a guard at your location in less than 4 hours when contacted.              </Text>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
