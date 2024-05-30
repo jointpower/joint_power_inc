@@ -143,7 +143,7 @@ const OurServices = () => {
           level={3}
           className="text-black text-2xl md:text-3xl text-center mt-[60px] mb-8 pt-[50px] font-semibold"
         >
-          Joint Power Fire Services.
+          Joint Power Firewatch Services.
         </Heading>
         <p className="text-left sm:text-center text-black text-base sm:text-xl">
         As a firewatch service provider, we understand that ensuring the safety of personnel, infrastructure, and assets from fire hazards is a fundamental obligation for every organization. Conducting routine inspections and testing of fire protection systems forms a crucial component of a comprehensive fire safety program.
