@@ -3,7 +3,6 @@ import NextImage from "@/components/atom/NextImage/NextImage";
 import { getPosts } from "@/lib/requests";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { AiOutlineRead } from "react-icons/ai";
 
 export default function Blogs() {
   const { data, hasNextPage, fetchNextPage, isFetching, isLoading } =
@@ -35,7 +34,7 @@ export default function Blogs() {
           <div key={cursor} className="h-full rounded-lg shadow-lg pb-4">
             <NextImage
               blurDataURL={randomLink}
-              src={node.coverImage.url}
+              src={(node.coverImage && node.coverImage.url) ?? randomLink}
               alt={node.title}
               className="w-full h-[200px] object-cover overflow-hidden rounded-t-lg"
             />
