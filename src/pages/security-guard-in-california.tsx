@@ -77,7 +77,7 @@ const business_issues = [
   return (
     <div className="mt-[120px] ">
         <Layout>
-        <Banner text={"Security Guard Companies in California"} />
+        <Banner text={"Security Guard Company in California"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">
                 <h4 className='text-xl sm:text-2xl mb-10 text-primary font-bold'>Hire a security guard in <br className='block sm:hidden' /> California, <a href="tel:+14244637600"> Call (424)-463-7600.</a></h4>
