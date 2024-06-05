@@ -2,13 +2,25 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react' 
  
 
 const SecurityGuardInCalifornia = () => {
+
+  const renderHead = () => {
+    return <Head>
+    <title>Security Guard Company in Fort Worth | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in Fort Worth with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs across all major cities in Texas." />
+    <meta name="keywords" content="security guard services Fort Worth, security company in Fort Worth, hire security guards Fort Worth, fire watch services Fort Worth, event security Fort Worth, VIP protection Fort Worth, mobile patrols Fort Worth, access management Fort Worth, commercial security Fort Worth, Construction Site Security fort worth, hospital security Fort Worth, security near me, homeless security fort Worth, hotel security fort Worth, emergency security fort Worth, warehouse security fort Worth, security company benbrook, security company burleson, Joint Power Security Fort Worth" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+  }
+
   return (
     <CityLayout 
+    renderHead={renderHead}
         name={'Fort Worth'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429272.7882295859!2d-97.61898151196158!3d32.80038110222982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e6e122dc807ad%3A0xa4af8bf8dd69acbd!2sFort%20Worth%2C%20TX%2C%20USA!5e0!3m2!1sen!2sng!4v1709618452537!5m2!1sen!2sng"}
         state={'Texas'}

@@ -2,13 +2,23 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react' 
  
 
 const SecurityGuardInCalifornia = () => {
+  const renderHead = () => {
+    return <Head>
+    <title>Security Guard Company in Dallas | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in Dallas with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs across all major cities in Texas." />
+    <meta name="keywords" content="security guard services Dallas, security company in Dallas, hire security guards Dallas, fire watch services Dallas, event security Dallas, VIP protection Dallas, mobile patrols Dallas, access management Dallas, commercial security Dallas, Construction Site Security Dallas, Emergency security dallas, homeless security dallas, hospital security Dallas, security company near me, security in Irving,  Security company in Mansfield, security company in grapevine, Security company in Plano, Security company in Richardson, Security company in Murphy, Security company University Park, Security company in Highland park, Joint Power Security Dallas" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+  }
   return (
     <CityLayout 
+    renderHead={renderHead}
         name={'Dallas'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429176.9100843101!2d-97.06121509403876!3d32.820232566642844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX%2C%20USA!5e0!3m2!1sen!2sng!4v1709618112110!5m2!1sen!2sng"}
         state={'Texas'}

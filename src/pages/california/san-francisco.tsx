@@ -2,6 +2,7 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { BiCheck } from 'react-icons/bi'
@@ -10,8 +11,18 @@ import { FaArrowRight, FaCaretRight } from 'react-icons/fa'
 
 const SecurityGuardInCalifornia = () => {
 
+  const renderHead = () => {
+    return  <Head>
+    <title>Security Guard Company in San Francisco & Oakland | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in San Francisco & Oakland with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs." />
+    <meta name="keywords" content="security guard services San Francisco, security company in San Francisco, hire security guards San Francisco, fire watch services San Francisco, event security San Francisco, VIP protection San Francisco, mobile patrols San Francisco, access management San Francisco, commercial security San Francisco, homeless security in San Francisco, construction site security San Francisco, warehouse security San Francisco, Firewatch Guard San Francisco, Apartment security san Francisco, Firewatch Guard Oakland, Firewatch Guard daly city, Firewatch service san jose, Firewatch service Redwood City,  Firewatch Guard Berkeley,  security company Berkeley, construction site security Oakland, security company near me, Security company in Oakland, Security company in San Jose, Security company in Redwood City, Security company in Daly City, Security company in San Mateo, Emergency security San Francisco, Joint Power Security San Francisco" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+  }
+
   return (
     <CityLayout 
+    renderHead={renderHead}
         name={'San Francisco & Oakland'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.18159988272!2d-122.52000171794406!3d37.75767131454352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1709492577923!5m2!1sen!2sng"}
         >

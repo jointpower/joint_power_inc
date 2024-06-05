@@ -2,13 +2,23 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react' 
 
 
 const SecurityGuardInCalifornia = () => {
+  const renderHead = () => {
+    return <Head>
+    <title>Security Guard Company in Austin | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in Austin with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs across all major cities in Texas." />
+    <meta name="keywords" content="security guard services Austin, security company in Austin, hire security guards Austin, warehouse security in Austin, construction site security in Austin, Apartment security in Austin, hospital security in Austin, fire watch services Austin, event security Austin, VIP protection Austin, mobile patrols Austin, access management Austin, commercial security Austin, security company in Kyle, security company in buda, security company in round rock, security company in Georgetown, joint Power Security Austin" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+  }
   return (
     <CityLayout 
+        renderHead={renderHead}
         name={'Austin'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440900.2508945735!2d-98.08540718840314!3d30.307347705980646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sng!4v1709618280617!5m2!1sen!2sng"}
         state={'Texas'}

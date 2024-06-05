@@ -2,6 +2,7 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { BiCheck } from 'react-icons/bi'
@@ -12,8 +13,18 @@ import { FaArrowRight, FaCaretRight } from 'react-icons/fa'
 
 const SecurityGuardInCalifornia = () => {
 
+  const renderHead = () => {
+    return <Head>
+    <title>Security Guard Company in Bakersfield & Kern County | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in Bakersfield & Kern County with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs." />
+    <meta name="keywords" content="security guard services Bakersfield, security company near me, security company in kern county, security company in Bakersfield, hire security guards Bakersfield, fire watch services Bakersfield, event security Bakersfield, VIP protection Bakersfield, mobile patrols Bakersfield, access management Bakersfield, commercial security Bakersfield, homeless security in Bakersfield, construction site security Bakersfield, warehouse security Bakersfield, Firewatch Guard Bakersfield, Security company in Grapevine, Security company in Tulare, Security company in Porterville, Security company in Arvin, Security company in Oildale, Emergency security Bakersfield, Joint Power Security Bakersfield" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+  }
+
   return (
     <CityLayout 
+    renderHead={renderHead}
         name={'Bakersfield & Kern County'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208345.50899325017!2d-119.18349946115573!3d35.32092262873064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea6bc8b994cb0d%3A0x59360c0998fe74c8!2sBakersfield%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1709493087203!5m2!1sen!2sng"}
       >

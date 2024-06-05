@@ -2,6 +2,7 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import { ContactUs } from '@/components/organisms/Sections/ContactUs/ContactUs'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { FaArrowRight, FaCaretRight } from 'react-icons/fa' 
@@ -72,6 +73,12 @@ const SecurityGuardInTexas = () => {
   return (
     <div className="mt-[120px] ">
         <Layout>
+        <Head>
+    <title>Security Guard Company in Texas | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire professional security guards in Texas with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs across all major cities in Texas." />
+    <meta name="keywords" content="security guard services Texas, security company in Texas, hire security guards Texas, fire watch services Texas, event security Texas, VIP protection Texas, mobile patrols Texas, access management Texas, commercial security Texas, construction site security texas, homeless security Texas, hospital security in texas, Apartment security texas, hotel security texas, unarmed security in texas, Joint Power Security Texas" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
         <Banner text={"Security Guard Company in Texas"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">

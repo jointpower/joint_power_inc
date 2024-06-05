@@ -2,6 +2,7 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import { ContactUs } from '@/components/organisms/Sections/ContactUs/ContactUs'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { FaArrowRight, FaCaretRight } from 'react-icons/fa' 
@@ -77,6 +78,12 @@ const business_issues = [
   return (
     <div className="mt-[120px] ">
         <Layout>
+        <Head>
+    <title>Security Guard Company in California | Joint Power Security Services Inc.</title>
+    <meta name="description" content="Hire the best security guard service provider in California with Joint Power Security Services Inc. We provide reliable, Firewatch service, professional security solutions for businesses, events, and private clients across major cities including Los Angeles, San Francisco, San Diego, Bakersfield, and more" />
+    <meta name="keywords" content="security guard services, security guard company in California, security near me,hire security guards California, fire watch services, event security, VIP protection, mobile patrols, access control, commercial security, Joint Power Security, Los Angeles security, San Francisco security, San Diego security, California security, warehouse security, homeless security, construction site security" />
+    <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
         <Banner text={"Security Guard Company in California"} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid lg:grid-cols-[2.5fr,1fr]">
                 <div className="mt-12 ">

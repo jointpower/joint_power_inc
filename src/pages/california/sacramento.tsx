@@ -2,14 +2,26 @@ import InputText from '@/components/atom/InputText/InputText'
 import Banner from '@/components/molecules/Banner/Banner'
 import CityLayout from '@/components/pages/CityLayout'
 import Layout from '@/components/templates/Layout/AppLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react' 
 
  
 
 const SecurityGuardInCalifornia = () => {
+
+const renderHead = () => {
+  return <Head>
+  <title>Security Guard Company in Sacramento & Stockton | Joint Power Security Services Inc.</title>
+  <meta name="description" content="Hire professional security guards in Sacramento & Stockton with Joint Power Security Services Inc. We offer reliable and affordable security solutions for businesses, events, and personal needs." />
+  <meta name="keywords" content="security guard service Sacramento, security company in Sacramento, hire security guards Sacramento, fire watch services Sacramento, event security Sacramento, VIP protection Sacramento, mobile patrols Sacramento, access management Sacramento, commercial security Sacramento, homeless security in Sacramento, construction site security Sacramento, warehouse security Sacramento, Firewatch Guard Sacramento, Security company in Stockton, Security company in Napa, Security company in Elk Grove, Security company in Citrus Heights, Security company in Rancho Cordova, Emergency security Sacramento, security company in Modesto, security company in Fairﬁeld, security company Dixon, Apartment security in Sacramento,  Hospital security in Sacramento, security company vacaville, Joint Power Security Sacramento" />
+  <meta name="author" content="Joint Power Security Services Inc." />
+</Head>
+}
+
   return (
     <CityLayout 
+    renderHead={renderHead}
         name={'Sacramento & Stockton'}
         mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.65307277394!2d-121.62624174124278!3d38.56161840982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1709493388433!5m2!1sen!2sng"}
         >

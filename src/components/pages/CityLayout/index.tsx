@@ -14,6 +14,7 @@ type Props = {
     Intro?:any,
     children?:React.ReactNode,
     isLosAngeles?:boolean,
+    renderHead?:Function,
 }
 
 export const  Description = ({ children, name,state,problems , isLosAngeles} : { children?:React.ReactNode, name:string, state:string, problems:string[] , isLosAngeles:boolean} ) => (
@@ -57,7 +58,7 @@ export const  Description = ({ children, name,state,problems , isLosAngeles} : {
 )
 
 
-const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props) => {
+const CityLayout = ({ renderHead, name, mapSrc , state, children, isLosAngeles=false}: Props) => {
 
     const problems = [ 
     'Access management', 
@@ -154,6 +155,7 @@ const CityLayout = ({ name, mapSrc , state, children, isLosAngeles=false}: Props
   return (
     <div className="mt-[120px] ">
         <Layout>
+            { renderHead && renderHead()}
         <Banner text={`Security Guard Company in ${name}`} />
             <div className="text-black max-w-[1300px] px-5 sm:px-10 m-auto gap-10 grid ">
                 <div className="mt-12 ">
