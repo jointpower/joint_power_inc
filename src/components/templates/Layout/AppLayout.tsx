@@ -16,9 +16,9 @@ interface LayoutProps {
 const Layout = ({ children, ...customMeta }: LayoutProps) => {
   const meta = {
     type: "website",
-    title: "Trusted security services",
-    description:
-      "JPS - Joint Power Security is among the best security service industry that offers 100% security to lives and property.They also train people that has interest in safeguarding lives and properties. They are simply the best with affordable service charge ",
+    // title: "Trusted security services",
+    // description:
+    //   "JPS - Joint Power Security is among the best security service industry that offers 100% security to lives and property.They also train people that has interest in safeguarding lives and properties. They are simply the best with affordable service charge ",
     ...customMeta,
   };
 
@@ -32,7 +32,7 @@ const Layout = ({ children, ...customMeta }: LayoutProps) => {
   return (
     <div className="w-full max-w-[1440px] mx-auto overflow-x-hidden">
       <Head>
-        <title>{`${meta.title || ""} | Joint Power`}</title>
+        {/* <title>{`${meta.title || ""} | Joint Power`}</title> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -44,7 +44,7 @@ const Layout = ({ children, ...customMeta }: LayoutProps) => {
           rel="stylesheet"
         ></link>
         <meta content={meta.description} name="description" />
-        <meta property="og:type" content={meta.type} />
+        {/* <meta property="og:type" content={meta.type} />
         <meta
           property="og:site_name"
           content="Joint Power Security, Rest easy knowing that you have the best security services watching over you"
@@ -60,7 +60,7 @@ const Layout = ({ children, ...customMeta }: LayoutProps) => {
         <meta name="twitter:site" content="@O_sunday15" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:image" content={meta.image} /> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preload" as="image" href="/images/brand-logo.svg"></link>
