@@ -1,7 +1,7 @@
 ---
-title: "Best Firewatch Security Guards in Torrance"
+title: "Firewatch Security Guards in Torrance"
 seoTitle: "Top Firewatch Security Provider In Torrance"
-seoDescription: "Professional fire watch security guards in Torrance with over a decade of experience, offering 24/7 protection and rapid response to fire emergencies"
+seoDescription: "Professional fire watch security guards in Torrance with over a decade of experience, offering 24/7 protection and fire control"
 datePublished: Mon Jun 10 2024 03:21:04 GMT+0000 (Coordinated Universal Time)
 cuid: clx8eot9i000r0al0ah085v3j
 slug: best-firewatch-security-guards-in-torrance
